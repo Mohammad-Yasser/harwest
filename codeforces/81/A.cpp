@@ -1,22 +1,23 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <vector>
+#define PB push_back
 
 using namespace std;
 
-int main() {
-    string s;
-    cin >> s;
-    bool arr[s.size()];
-    fill(arr, arr + s.size(), 1);
-    vector<int> tmp;
-    for (int i = 0; i < s.size(); ++i) {
-        if (tmp.size() && s[i] == s[tmp[tmp.size() - 1]]) {
-            arr[i] = arr[tmp[tmp.size() - 1]] = 0;
-            tmp.erase(tmp.end() - 1);
+string s;
+vector<char> st;
 
-        } else
-            tmp.push_back(i);
-    }
-    for (int i = 0; i < s.size(); ++i)
-        if (arr[i])
-            cout << s[i];
+int main () {
+  cin >> s;
+  for (int i=0; i<s.size(); i++) {
+    if (st.size() > 0 && st.back() == s[i])
+      st.pop_back();
+    else
+      st.PB(s[i]);
+  }
+  for (int i=0; i<st.size(); i++)
+    cout << st[i];
+  cout << endl;
 }
