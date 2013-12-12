@@ -11770,6 +11770,23 @@
     ],
     "timestamp": "May/11/2019 06:40"
   },
+  "CF5413573": {
+    "contest_id": 11,
+    "language": "GNU C++",
+    "path": "codeforces/11/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Increasing Sequence",
+    "problem_url": "https://codeforces.com/contest/11/problem/A",
+    "submission_id": "CF5413573",
+    "submission_url": "https://codeforces.com/contest/11/submission/5413573",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "math",
+      "*900"
+    ],
+    "timestamp": "Dec/12/2013 10:06"
+  },
   "CF54153779": {
     "contest_id": 1158,
     "language": "GNU C++17",
