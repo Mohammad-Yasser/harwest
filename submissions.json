@@ -11787,6 +11787,22 @@
     ],
     "timestamp": "May/15/2019 04:44"
   },
+  "CF5416937": {
+    "contest_id": 190,
+    "language": "GNU C++",
+    "path": "codeforces/190/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Vasya and the Bus",
+    "problem_url": "https://codeforces.com/contest/190/problem/A",
+    "submission_id": "CF5416937",
+    "submission_url": "https://codeforces.com/contest/190/submission/5416937",
+    "tags": [
+      "greedy",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Dec/12/2013 21:16"
+  },
   "CF5417196": {
     "contest_id": 186,
     "language": "GNU C++",
