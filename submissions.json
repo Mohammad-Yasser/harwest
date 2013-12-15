@@ -11808,6 +11808,21 @@
     ],
     "timestamp": "May/16/2019 19:53"
   },
+  "CF5446424": {
+    "contest_id": 340,
+    "language": "GNU C++",
+    "path": "codeforces/340/A.cpp",
+    "problem_index": "A",
+    "problem_name": "The Wall",
+    "problem_url": "https://codeforces.com/contest/340/problem/A",
+    "submission_id": "CF5446424",
+    "submission_url": "https://codeforces.com/contest/340/submission/5446424",
+    "tags": [
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Dec/15/2013 18:56"
+  },
   "CF5446570": {
     "contest_id": 61,
     "language": "GNU C++",
