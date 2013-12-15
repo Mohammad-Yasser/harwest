@@ -11808,6 +11808,22 @@
     ],
     "timestamp": "May/16/2019 19:53"
   },
+  "CF5447029": {
+    "contest_id": 92,
+    "language": "GNU C++",
+    "path": "codeforces/92/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Chips",
+    "problem_url": "https://codeforces.com/contest/92/problem/A",
+    "submission_id": "CF5447029",
+    "submission_url": "https://codeforces.com/contest/92/submission/5447029",
+    "tags": [
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Dec/15/2013 21:48"
+  },
   "CF5453395": {
     "contest_id": 58,
     "language": "GNU C++",
