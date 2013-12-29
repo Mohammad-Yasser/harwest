@@ -12048,6 +12048,22 @@
     ],
     "timestamp": "Jun/07/2019 15:42"
   },
+  "CF5558946": {
+    "contest_id": 378,
+    "language": "GNU C++",
+    "path": "codeforces/378/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Semifinals",
+    "problem_url": "https://codeforces.com/contest/378/problem/B",
+    "submission_id": "CF5558946",
+    "submission_url": "https://codeforces.com/contest/378/submission/5558946",
+    "tags": [
+      "implementation",
+      "sortings",
+      "*1300"
+    ],
+    "timestamp": "Dec/29/2013 18:46"
+  },
   "CF55880586": {
     "contest_id": 1179,
     "language": "GNU C++17",
