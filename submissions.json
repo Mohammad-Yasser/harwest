@@ -12100,6 +12100,22 @@
     ],
     "timestamp": "Jun/22/2019 06:44"
   },
+  "CF5622112": {
+    "contest_id": 131,
+    "language": "GNU C++",
+    "path": "codeforces/131/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Opposites Attract",
+    "problem_url": "https://codeforces.com/contest/131/problem/B",
+    "submission_id": "CF5622112",
+    "submission_url": "https://codeforces.com/contest/131/submission/5622112",
+    "tags": [
+      "implementation",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Jan/05/2014 14:56"
+  },
   "CF5623495": {
     "contest_id": 215,
     "language": "GNU C++",
