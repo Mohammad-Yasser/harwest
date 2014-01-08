@@ -12166,6 +12166,21 @@
     ],
     "timestamp": "Jun/30/2019 18:20"
   },
+  "CF5638330": {
+    "contest_id": 332,
+    "language": "GNU C++",
+    "path": "codeforces/332/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Down the Hatch!",
+    "problem_url": "https://codeforces.com/contest/332/problem/A",
+    "submission_id": "CF5638330",
+    "submission_url": "https://codeforces.com/contest/332/submission/5638330",
+    "tags": [
+      "implementation",
+      "*1300"
+    ],
+    "timestamp": "Jan/08/2014 17:12"
+  },
   "CF5638976": {
     "contest_id": 239,
     "language": "GNU C++",
