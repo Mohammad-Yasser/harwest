@@ -12215,6 +12215,23 @@
     ],
     "timestamp": "Jul/05/2019 18:20"
   },
+  "CF5686968": {
+    "contest_id": 149,
+    "language": "GNU C++",
+    "path": "codeforces/149/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Business trip",
+    "problem_url": "https://codeforces.com/contest/149/problem/A",
+    "submission_id": "CF5686968",
+    "submission_url": "https://codeforces.com/contest/149/submission/5686968",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings",
+      "*900"
+    ],
+    "timestamp": "Jan/13/2014 23:43"
+  },
   "CF5688547": {
     "contest_id": 313,
     "language": "GNU C++",
