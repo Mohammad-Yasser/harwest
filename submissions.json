@@ -12215,6 +12215,22 @@
     ],
     "timestamp": "Jul/05/2019 18:20"
   },
+  "CF5698589": {
+    "contest_id": 200,
+    "language": "GNU C++",
+    "path": "codeforces/200/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Drinks",
+    "problem_url": "https://codeforces.com/contest/200/problem/B",
+    "submission_id": "CF5698589",
+    "submission_url": "https://codeforces.com/contest/200/submission/5698589",
+    "tags": [
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jan/15/2014 20:08"
+  },
   "CF5698683": {
     "contest_id": 221,
     "language": "GNU C++",
