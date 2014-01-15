@@ -12215,6 +12215,22 @@
     ],
     "timestamp": "Jul/05/2019 18:20"
   },
+  "CF5698683": {
+    "contest_id": 221,
+    "language": "GNU C++",
+    "path": "codeforces/221/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Little Elephant and Function",
+    "problem_url": "https://codeforces.com/contest/221/problem/A",
+    "submission_id": "CF5698683",
+    "submission_url": "https://codeforces.com/contest/221/submission/5698683",
+    "tags": [
+      "implementation",
+      "math",
+      "*1000"
+    ],
+    "timestamp": "Jan/15/2014 20:30"
+  },
   "CF5698811": {
     "contest_id": 337,
     "language": "GNU C++",
