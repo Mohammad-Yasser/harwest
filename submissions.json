@@ -12316,6 +12316,22 @@
     ],
     "timestamp": "Jul/23/2019 13:01"
   },
+  "CF5770298": {
+    "contest_id": 62,
+    "language": "GNU C++",
+    "path": "codeforces/62/A.cpp",
+    "problem_index": "A",
+    "problem_name": "A Student's Dream",
+    "problem_url": "https://codeforces.com/contest/62/problem/A",
+    "submission_id": "CF5770298",
+    "submission_url": "https://codeforces.com/contest/62/submission/5770298",
+    "tags": [
+      "greedy",
+      "math",
+      "*1300"
+    ],
+    "timestamp": "Jan/22/2014 13:45"
+  },
   "CF5773145": {
     "contest_id": 38,
     "language": "GNU C++",
