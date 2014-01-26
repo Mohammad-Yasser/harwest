@@ -12316,6 +12316,21 @@
     ],
     "timestamp": "Jul/23/2019 13:01"
   },
+  "CF5813803": {
+    "contest_id": 49,
+    "language": "GNU C++",
+    "path": "codeforces/49/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Sum",
+    "problem_url": "https://codeforces.com/contest/49/problem/B",
+    "submission_id": "CF5813803",
+    "submission_url": "https://codeforces.com/contest/49/submission/5813803",
+    "tags": [
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Jan/26/2014 18:31"
+  },
   "CF5817307": {
     "contest_id": 222,
     "language": "GNU C++",
