@@ -12316,6 +12316,21 @@
     ],
     "timestamp": "Jul/23/2019 13:01"
   },
+  "CF5819162": {
+    "contest_id": 169,
+    "language": "GNU C++",
+    "path": "codeforces/169/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Replacing Digits",
+    "problem_url": "https://codeforces.com/contest/169/problem/B",
+    "submission_id": "CF5819162",
+    "submission_url": "https://codeforces.com/contest/169/submission/5819162",
+    "tags": [
+      "greedy",
+      "*1100"
+    ],
+    "timestamp": "Jan/27/2014 14:26"
+  },
   "CF58270513": {
     "contest_id": 1201,
     "language": "GNU C++17",
