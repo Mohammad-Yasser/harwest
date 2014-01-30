@@ -12384,6 +12384,21 @@
     ],
     "timestamp": "Aug/04/2019 19:54"
   },
+  "CF5839818": {
+    "contest_id": 387,
+    "language": "GNU C++",
+    "path": "codeforces/387/A.cpp",
+    "problem_index": "A",
+    "problem_name": "George and Sleep",
+    "problem_url": "https://codeforces.com/contest/387/problem/A",
+    "submission_id": "CF5839818",
+    "submission_url": "https://codeforces.com/contest/387/submission/5839818",
+    "tags": [
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Jan/30/2014 17:36"
+  },
   "CF5844900": {
     "contest_id": 387,
     "language": "GNU C++",
