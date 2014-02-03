@@ -4,6 +4,7 @@ bool e(int i) {
 	return i % 2;
 }
 int main() {
+	ios_base::sync_with_stdio(1);
 	int n;
 	cin >> n;
 	int a[n];
