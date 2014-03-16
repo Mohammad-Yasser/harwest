@@ -12384,6 +12384,22 @@
     ],
     "timestamp": "Aug/04/2019 19:54"
   },
+  "CF6032952": {
+    "contest_id": 402,
+    "language": "GNU C++",
+    "path": "codeforces/402/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Nuts",
+    "problem_url": "https://codeforces.com/contest/402/problem/A",
+    "submission_id": "CF6032952",
+    "submission_url": "https://codeforces.com/contest/402/submission/6032952",
+    "tags": [
+      "greedy",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Mar/16/2014 17:56"
+  },
   "CF6048144": {
     "contest_id": 402,
     "language": "GNU C++",
