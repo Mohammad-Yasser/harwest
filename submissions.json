@@ -12384,6 +12384,22 @@
     ],
     "timestamp": "Aug/04/2019 19:54"
   },
+  "CF6048144": {
+    "contest_id": 402,
+    "language": "GNU C++",
+    "path": "codeforces/402/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Trees in a Row",
+    "problem_url": "https://codeforces.com/contest/402/problem/B",
+    "submission_id": "CF6048144",
+    "submission_url": "https://codeforces.com/contest/402/submission/6048144",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Mar/16/2014 21:04"
+  },
   "CF60576495": {
     "contest_id": 1209,
     "language": "GNU C++17",
