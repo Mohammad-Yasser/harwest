@@ -12401,6 +12401,22 @@
     ],
     "timestamp": "Sep/14/2019 18:50"
   },
+  "CF6083840": {
+    "contest_id": 404,
+    "language": "GNU C++",
+    "path": "codeforces/404/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Marathon",
+    "problem_url": "https://codeforces.com/contest/404/problem/B",
+    "submission_id": "CF6083840",
+    "submission_url": "https://codeforces.com/contest/404/submission/6083840",
+    "tags": [
+      "implementation",
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Mar/19/2014 22:42"
+  },
   "CF6097151": {
     "contest_id": 92,
     "language": "GNU C++",
