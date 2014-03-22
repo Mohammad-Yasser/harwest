@@ -12401,6 +12401,21 @@
     ],
     "timestamp": "Sep/14/2019 18:50"
   },
+  "CF6104923": {
+    "contest_id": 43,
+    "language": "GNU C++",
+    "path": "codeforces/43/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Lucky Tickets",
+    "problem_url": "https://codeforces.com/contest/43/problem/C",
+    "submission_id": "CF6104923",
+    "submission_url": "https://codeforces.com/contest/43/submission/6104923",
+    "tags": [
+      "greedy",
+      "*1300"
+    ],
+    "timestamp": "Mar/22/2014 14:13"
+  },
   "CF61196096": {
     "contest_id": 1198,
     "language": "GNU C++17",
