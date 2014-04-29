@@ -12712,6 +12712,22 @@
     ],
     "timestamp": "Nov/15/2019 17:02"
   },
+  "CF6506866": {
+    "contest_id": 71,
+    "language": "GNU C++",
+    "path": "codeforces/71/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Progress Bar",
+    "problem_url": "https://codeforces.com/contest/71/problem/B",
+    "submission_id": "CF6506866",
+    "submission_url": "https://codeforces.com/contest/71/submission/6506866",
+    "tags": [
+      "implementation",
+      "math",
+      "*1300"
+    ],
+    "timestamp": "Apr/29/2014 18:05"
+  },
   "CF65170294": {
     "contest_id": 1253,
     "language": "GNU C++17",
