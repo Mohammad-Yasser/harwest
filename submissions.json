@@ -13063,6 +13063,21 @@
     ],
     "timestamp": "Dec/20/2019 08:23"
   },
+  "CF6750045": {
+    "contest_id": 435,
+    "language": "GNU C++",
+    "path": "codeforces/435/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Cardiogram",
+    "problem_url": "https://codeforces.com/contest/435/problem/C",
+    "submission_id": "CF6750045",
+    "submission_url": "https://codeforces.com/contest/435/submission/6750045",
+    "tags": [
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "May/30/2014 20:06"
+  },
   "CF6766361": {
     "contest_id": 437,
     "language": "GNU C++",
