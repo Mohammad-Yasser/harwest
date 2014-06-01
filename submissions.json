@@ -13063,6 +13063,21 @@
     ],
     "timestamp": "Dec/20/2019 08:23"
   },
+  "CF6766361": {
+    "contest_id": 437,
+    "language": "GNU C++",
+    "path": "codeforces/437/A.cpp",
+    "problem_index": "A",
+    "problem_name": "The Child and Homework",
+    "problem_url": "https://codeforces.com/contest/437/problem/A",
+    "submission_id": "CF6766361",
+    "submission_url": "https://codeforces.com/contest/437/submission/6766361",
+    "tags": [
+      "implementation",
+      "*1300"
+    ],
+    "timestamp": "Jun/01/2014 16:11"
+  },
   "CF67880167": {
     "contest_id": 1270,
     "language": "GNU C++17",
