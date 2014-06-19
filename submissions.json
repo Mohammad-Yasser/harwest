@@ -13364,6 +13364,23 @@
     ],
     "timestamp": "Jan/20/2020 06:46"
   },
+  "CF6919449": {
+    "contest_id": 443,
+    "language": "GNU C++",
+    "path": "codeforces/443/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Kolya and Tandem Repeat",
+    "problem_url": "https://codeforces.com/contest/443/problem/B",
+    "submission_id": "CF6919449",
+    "submission_url": "https://codeforces.com/contest/443/submission/6919449",
+    "tags": [
+      "brute force",
+      "implementation",
+      "strings",
+      "*1500"
+    ],
+    "timestamp": "Jun/19/2014 19:46"
+  },
   "CF6921001": {
     "contest_id": 443,
     "language": "GNU C++",
