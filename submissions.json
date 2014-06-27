@@ -13443,6 +13443,22 @@
     ],
     "timestamp": "Jan/23/2020 10:07"
   },
+  "CF6967736": {
+    "contest_id": 254,
+    "language": "GNU C++",
+    "path": "codeforces/254/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Cards with Numbers",
+    "problem_url": "https://codeforces.com/contest/254/problem/A",
+    "submission_id": "CF6967736",
+    "submission_url": "https://codeforces.com/contest/254/submission/6967736",
+    "tags": [
+      "constructive algorithms",
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "Jun/27/2014 09:47"
+  },
   "CF6969343": {
     "contest_id": 204,
     "language": "GNU C++",
