@@ -13593,6 +13593,22 @@
     ],
     "timestamp": "Feb/02/2020 23:27"
   },
+  "CF7032413": {
+    "contest_id": 445,
+    "language": "GNU C++",
+    "path": "codeforces/445/A.cpp",
+    "problem_index": "A",
+    "problem_name": "DZY Loves Chessboard",
+    "problem_url": "https://codeforces.com/contest/445/problem/A",
+    "submission_id": "CF7032413",
+    "submission_url": "https://codeforces.com/contest/445/submission/7032413",
+    "tags": [
+      "dfs and similar",
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "Jul/06/2014 17:14"
+  },
   "CF70584798": {
     "contest_id": 74,
     "language": "GNU C++17",
