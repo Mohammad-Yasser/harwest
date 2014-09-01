@@ -40,8 +40,7 @@ void print(int idx, int diff, int lst) {
 int main() {
     ios_base::sync_with_stdio(0), cin.tie(NULL), cout.tie(NULL);
     cin >> s >> m;
-    memset(memo,-1,sizeof memo) ;
-    DP_rec(0, 0, 0);
+    iter();
     if (memo[0][0][0])
         cout << "YES\n", print(0, 0, 0);
     else
