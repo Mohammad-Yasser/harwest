@@ -14836,6 +14836,21 @@
     ],
     "timestamp": "Apr/24/2020 05:20"
   },
+  "CF7803452": {
+    "contest_id": 336,
+    "language": "GNU C++",
+    "path": "codeforces/336/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Vasily the Bear and Fly",
+    "problem_url": "https://codeforces.com/contest/336/problem/B",
+    "submission_id": "CF7803452",
+    "submission_url": "https://codeforces.com/contest/336/submission/7803452",
+    "tags": [
+      "math",
+      "*1900"
+    ],
+    "timestamp": "Sep/15/2014 20:32"
+  },
   "CF78036789": {
     "contest_id": 475,
     "language": "GNU C++17 (64)",
