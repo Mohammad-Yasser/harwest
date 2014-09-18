@@ -14887,6 +14887,22 @@
     ],
     "timestamp": "Apr/25/2020 17:31"
   },
+  "CF7824376": {
+    "contest_id": 120,
+    "language": "GNU C++",
+    "path": "codeforces/120/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Winnie-the-Pooh and honey",
+    "problem_url": "https://codeforces.com/contest/120/problem/C",
+    "submission_id": "CF7824376",
+    "submission_url": "https://codeforces.com/contest/120/submission/7824376",
+    "tags": [
+      "implementation",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Sep/18/2014 12:18"
+  },
   "CF7824426": {
     "contest_id": 120,
     "language": "GNU C++",
