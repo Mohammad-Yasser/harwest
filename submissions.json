@@ -15418,6 +15418,21 @@
     ],
     "timestamp": "May/09/2020 17:26"
   },
+  "CF7975864": {
+    "contest_id": 471,
+    "language": "GNU C++",
+    "path": "codeforces/471/A.cpp",
+    "problem_index": "A",
+    "problem_name": "MUH and Sticks",
+    "problem_url": "https://codeforces.com/contest/471/problem/A",
+    "submission_id": "CF7975864",
+    "submission_url": "https://codeforces.com/contest/471/submission/7975864",
+    "tags": [
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Sep/26/2014 21:18"
+  },
   "CF7976729": {
     "contest_id": 471,
     "language": "GNU C++",
