@@ -16654,6 +16654,25 @@
     ],
     "timestamp": "Jun/08/2020 06:39"
   },
+  "CF8308179": {
+    "contest_id": 479,
+    "language": "GNU C++",
+    "path": "codeforces/479/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Towers",
+    "problem_url": "https://codeforces.com/contest/479/problem/B",
+    "submission_id": "CF8308179",
+    "submission_url": "https://codeforces.com/contest/479/submission/8308179",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Oct/19/2014 11:40"
+  },
   "CF8310732": {
     "contest_id": 479,
     "language": "GNU C++",
