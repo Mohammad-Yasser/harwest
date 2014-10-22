@@ -16824,6 +16824,21 @@
     ],
     "timestamp": "Jun/11/2020 18:24"
   },
+  "CF8351412": {
+    "contest_id": 81,
+    "language": "GNU C++",
+    "path": "codeforces/81/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Plug-in",
+    "problem_url": "https://codeforces.com/contest/81/problem/A",
+    "submission_id": "CF8351412",
+    "submission_url": "https://codeforces.com/contest/81/submission/8351412",
+    "tags": [
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Oct/22/2014 14:08"
+  },
   "CF8351919": {
     "contest_id": 454,
     "language": "GNU C++",
