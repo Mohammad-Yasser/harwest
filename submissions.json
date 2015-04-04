@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF10594239": {
+    "contest_id": 526,
+    "language": "GNU C++11",
+    "path": "codeforces/526/A.cpp",
+    "problem_index": "A",
+    "problem_name": "King of Thieves",
+    "problem_url": "https://codeforces.com/contest/526/problem/A",
+    "submission_id": "CF10594239",
+    "submission_url": "https://codeforces.com/contest/526/submission/10594239",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1300"
+    ],
+    "timestamp": "Apr/04/2015 22:24"
+  },
   "CF10611163": {
     "contest_id": 358,
     "language": "GNU C++11",
