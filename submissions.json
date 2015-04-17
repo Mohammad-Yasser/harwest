@@ -1170,6 +1170,24 @@
     ],
     "timestamp": "Apr/17/2015 16:09"
   },
+  "CF10754014": {
+    "contest_id": 533,
+    "language": "GNU C++11",
+    "path": "codeforces/533/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Board Game",
+    "problem_url": "https://codeforces.com/contest/533/problem/C",
+    "submission_id": "CF10754014",
+    "submission_url": "https://codeforces.com/contest/533/submission/10754014",
+    "tags": [
+      "games",
+      "greedy",
+      "implementation",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Apr/17/2015 18:32"
+  },
   "CF10853032": {
     "contest_id": 339,
     "language": "GNU C++11",
