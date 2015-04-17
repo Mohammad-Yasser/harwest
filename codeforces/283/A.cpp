@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int vec[200001], vecpls[200001];
+vector<int> vec(200001), vecpls(200001);
 
 int main() {
     ios_base::sync_with_stdio(0);
@@ -15,7 +15,7 @@ int main() {
     while (cin >> n) {
         if (n == 3)
             sm -= vec[siz] + vecpls[siz], vecpls[siz - 1] += vecpls[siz], vecpls[siz] =
-              0, --siz;
+                    0, --siz;
         else if (n & 1)
             cin >> tmp >> tmp2, sm += tmp * tmp2, vecpls[tmp] += tmp2;
         else
