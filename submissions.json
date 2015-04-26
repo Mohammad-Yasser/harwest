@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF10882485": {
+    "contest_id": 538,
+    "language": "GNU C++11",
+    "path": "codeforces/538/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Cutting Banner",
+    "problem_url": "https://codeforces.com/contest/538/problem/A",
+    "submission_id": "CF10882485",
+    "submission_url": "https://codeforces.com/contest/538/submission/10882485",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Apr/26/2015 18:37"
+  },
   "CF10886841": {
     "contest_id": 538,
     "language": "GNU C++11",
