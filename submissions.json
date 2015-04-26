@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF10895877": {
+    "contest_id": 538,
+    "language": "GNU C++11",
+    "path": "codeforces/538/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Weird Chess",
+    "problem_url": "https://codeforces.com/contest/538/problem/D",
+    "submission_id": "CF10895877",
+    "submission_url": "https://codeforces.com/contest/538/submission/10895877",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "implementation",
+      "*1800"
+    ],
+    "timestamp": "Apr/26/2015 20:23"
+  },
   "CF10908549": {
     "contest_id": 493,
     "language": "GNU C++11",
