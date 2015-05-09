@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF11052927": {
+    "contest_id": 542,
+    "language": "GNU C++11",
+    "path": "codeforces/542/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Quest",
+    "problem_url": "https://codeforces.com/contest/542/problem/F",
+    "submission_id": "CF11052927",
+    "submission_url": "https://codeforces.com/contest/542/submission/11052927",
+    "tags": [
+      "dp",
+      "greedy",
+      "*2100"
+    ],
+    "timestamp": "May/09/2015 10:29"
+  },
   "CF11078988": {
     "contest_id": 543,
     "language": "GNU C++11",
