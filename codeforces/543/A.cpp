@@ -17,14 +17,20 @@ int main() {
     cin >> n >> M >> B >> md;
     FOR (i , 0 , n)
             cin >> a[i];
-    for (int b = B; b >= 0; --b)
-        memo[1][b][M] = memo[0][b][M] = 1;
-    for (int i = n - 1; i >= 0; --i)
-        for (int b = B; b >= 0; --b)
-            for (int m = M - 1; m >= 0; --m)
-                memo[i % 2][b][m] = (memo[(i + 1) % 2][b][m]
-                  + ((b + a[i] > B) ? 0 : memo[i % 2][b + a[i]][m + 1])) % md;
-
+    for (int i = n - 1; i >= 0; --i) {
+        for (int b = B; b >= 0; --b) {
+            for (int m = M; m >= 0; --m) {
+                int &res = memo[i % 2][b][m];
+                if (m == M) {
+                    res = 1;
+                    continue;
+                }
+                res = memo[(i + 1) % 2][b][m];
+                if (b + a[i] <= B)
+                  (res += memo[i % 2][b + a[i]][m + 1]) %= md;
+            }
+        }
+    }
     cout << memo[0][0][0];
 
 }
