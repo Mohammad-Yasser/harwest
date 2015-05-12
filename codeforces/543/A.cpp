@@ -18,9 +18,9 @@ int main() {
     for (int b = B; b >= 0; --b)
         memo[b][M][1] = memo[b][M][0] = 1;
     for (int i = n - 1; i >= 0; --i)
-        for (int m = M - 1; m >= 0; --m)
-            for (int b = B; b >= 0; --b)
-                memo[b][m][i % 2] = (memo[b][m][!(i % 2)]
+        for (int b = B; b >= 0; --b)
+            for (int m = M - 1; m >= 0; --m)
+                memo[b][m][i % 2] = (memo[b][m][(i + 1) % 2]
                   + ((b + a[i] > B) ? 0 : memo[b + a[i]][m + 1][i % 2])) % md;
 
     cout << memo[0][0][0];
