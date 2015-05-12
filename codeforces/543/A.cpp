@@ -59,9 +59,13 @@ int bt() {
           res = 1;
           continue;
         }
-        res =  memo[(i + 1) % 2][b][m];
+        if (i == n)
+          continue;
+        res = 0;
         if (b + a[i] <= B)
-          (res += memo[i % 2][b + a[i]][m + 1]) %= md;
+          res += memo[i % 2][b + a[i]][m + 1] % md;
+        res += memo[(i + 1) % 2][b][m] % md;
+        res %= md;
       }
     }
   }
@@ -71,7 +75,7 @@ int bt() {
 int main() {
 #ifndef ONLINE_JUDGE
   freopen("test.in", "rt", stdin);
-//  freopen("o.txt", "wt", stdout);
+//	freopen("o.txt", "wt", stdout);
 #endif
   ios::sync_with_stdio(false);
   cin >> n >> M >> B >> md;
