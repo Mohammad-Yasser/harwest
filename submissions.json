@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF11138909": {
+    "contest_id": 507,
+    "language": "GNU C++11",
+    "path": "codeforces/507/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Breaking Good",
+    "problem_url": "https://codeforces.com/contest/507/problem/E",
+    "submission_id": "CF11138909",
+    "submission_url": "https://codeforces.com/contest/507/submission/11138909",
+    "tags": [
+      "dfs and similar",
+      "dp",
+      "graphs",
+      "shortest paths",
+      "*2100"
+    ],
+    "timestamp": "May/18/2015 23:10"
+  },
   "CF11149821": {
     "contest_id": 545,
     "language": "GNU C++11",
