@@ -1,88 +1,90 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//struct Edge {
-//	int u, v, idx;
-//	long long w;
-//	Edge(int u, int v, long long w, int i) :
-//		u(u), v(v), w(w), idx(i) {
-//	}
-//	Edge() {
-//	}
-//	bool operator <(Edge other) const {
-//		return w < other.w;
-//	}
-//};
-//
-//Edge edges[300005];
+long long dist[300005];
 
-int weight[300005];
-
-struct adjListElem {
-	int v, w, idx;
-	adjListElem(int v, int w, int idx) :
-		v(v), w(w), idx(idx) {
-	}
-};
-vector<adjListElem> adjList[300005];
-
-struct PQElem {
-	int v;
-	long long w;
-	int lastEdge;
-	PQElem(int v, long long w, int lastEdge) :
-		v(v), w(w), lastEdge(lastEdge) {
-		this->w = w;
-	}
-	bool operator <(PQElem other) const {
-		if (w == other.w) return weight[lastEdge] > weight[other.lastEdge];
-		return w > other.w;
-	}
+struct Edge {
+    int u, v, idx;
+    long long w ;
+    Edge(int u, int v, long long w, int i) :
+        u(u), v(v), w(w), idx(i) {
+    }
+    Edge() {
+    }
+    bool operator <(Edge other) const {
+        return w < other.w;
+    }
 };
 
-int lastEdge[300005];
+struct Elem {
+    int v ;
+    long long  w;
+    Elem(int v, long long w) :
+        v(v), w(w) {
+    }
+    bool operator <(Elem other) const {
+        return w > other.w;
+    }
+};
+
+vector<Elem> adjList[300005];
+Edge edges[300005];
 
 void dijkstra(int u) {
-	priority_queue<PQElem> Q;
-	Q.push(PQElem(u, 0, -1));
+    priority_queue<Elem> Q;
+    Q.push(Elem(u, 0));
 
-	while (!Q.empty()) {
+    while (!Q.empty()) {
 
-		PQElem curr = Q.top();
-		Q.pop();
+        Elem curr = Q.top();
+        Q.pop();
 
-		if (lastEdge[curr.v]) continue;
-		lastEdge[curr.v] = curr.lastEdge;
+        if (dist[curr.v]) continue;
+        dist[curr.v] = curr.w;
 
-		for (int i = 0; i < adjList[curr.v].size(); ++i)
-			if (!lastEdge[adjList[curr.v][i].v])
-			  Q.push(
-			    PQElem(adjList[curr.v][i].v, curr.w + adjList[curr.v][i].w, adjList[curr.v][i].idx));
-	}
+        for (int i = 0; i < adjList[curr.v].size(); ++i)
+            if (!dist[adjList[curr.v][i].v] && adjList[curr.v][i].v != u)
+              Q.push(Elem(adjList[curr.v][i].v, curr.w + adjList[curr.v][i].w));
+    }
 }
 
 int main() {
-	int n, m;
-	cin >> n >> m;
-	for (int i = 1; i <= m; ++i) {
-		int ui, vi, wi;
-		cin >> ui >> vi >> wi;
-		adjList[ui].push_back(adjListElem(vi, wi, i));
-		adjList[vi].push_back(adjListElem(ui, wi, i));
-		weight[i] = wi;
-	}
+    int n, m;
+    cin >> n >> m;
+    for (int i = 0; i < m; ++i) {
+        int ui, vi, wi;
+        cin >> ui >> vi >> wi;
+        edges[i] = Edge(ui, vi, wi, i + 1);
+        adjList[ui].push_back(Elem(vi, wi));
+        adjList[vi].push_back(Elem(ui, wi));
+    }
 
-	int u;
-	cin >> u;
-	dijkstra(u);
+    int u;
+    cin >> u;
+    dijkstra(u);
 
-	long long ans = 0;
+    long long ans = 0;
+    bool done[300005];
+    fill(done, done + n + 1, 0);
+    done[u] = 1;
 
-	for (int i = 1; i <= n; ++i)
-		if (i != u)
-		  ans += weight[lastEdge[i]];
+    sort(edges, edges + m);
 
-	cout << ans << endl;
-	for (int i = 1; i <= n; ++i)
-		if (i != u) cout << lastEdge[i] << ' ';
+    for (int i = 0; i < m; ++i) {
+
+        if ((done[edges[i].v] or dist[edges[i].u] + edges[i].w > dist[edges[i].v])
+          && (done[edges[i].u] or dist[edges[i].v] + edges[i].w > dist[edges[i].u]))
+            edges[i].u = -1;
+
+        else {
+
+            done[edges[i].v] |= (dist[edges[i].u] + edges[i].w == dist[edges[i].v]);
+            done[edges[i].u] |= (dist[edges[i].v] + edges[i].w == dist[edges[i].u]);
+            ans += edges[i].w;
+        }
+    }
+
+    cout << ans << endl;
+    for (int i = 0; i < m; ++i)
+        if (edges[i].u + 1) cout << edges[i].idx << ' ';
 }
