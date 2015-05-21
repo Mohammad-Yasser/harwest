@@ -1,6 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+inline int read() {
+    int x = 0, f = 1;
+    char ch = getchar();
+    while (ch < '0' || ch > '9') {
+        if (ch == '-') f = -1;
+        ch = getchar();
+    }
+    while (ch >= '0' && ch <= '9') {
+        x = 10 * x + ch - '0';
+        ch = getchar();
+    }
+    return x * f;
+}
+
 int weight[300005];
 
 struct adjListElem {
@@ -48,20 +62,19 @@ void dijkstra(int u) {
 
 int main() {
 
-    ios_base::sync_with_stdio(0) , cin.tie(0) , cout.tie(0) ;
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-    int n, m;
-    cin >> n >> m;
+    int n = read(), m = read();
+
     for (int i = 1; i <= m; ++i) {
-        int ui, vi, wi;
-        cin >> ui >> vi >> wi;
+        int ui = read(), vi = read(), wi = read();
         adjList[ui].push_back(adjListElem(vi, wi, i));
         adjList[vi].push_back(adjListElem(ui, wi, i));
         weight[i] = wi;
     }
 
-    int u;
-    cin >> u;
+    int u = read();
+
     dijkstra(u);
 
     long long ans = 0;
@@ -70,7 +83,7 @@ int main() {
         if (i != u)
           ans += weight[lastEdge[i]];
 
-    cout << ans << endl;
+    cout << ans << '\n';
     for (int i = 1; i <= n; ++i)
         if (i != u) cout << lastEdge[i] << ' ';
 }
