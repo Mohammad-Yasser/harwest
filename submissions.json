@@ -987,6 +987,21 @@
     ],
     "timestamp": "Aug/29/2015 18:02"
   },
+  "CF12889261": {
+    "contest_id": 465,
+    "language": "GNU C++11",
+    "path": "codeforces/465/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Inbox (100500)",
+    "problem_url": "https://codeforces.com/contest/465/problem/B",
+    "submission_id": "CF12889261",
+    "submission_url": "https://codeforces.com/contest/465/submission/12889261",
+    "tags": [
+      "implementation",
+      "*1000"
+    ],
+    "timestamp": "Sep/07/2015 21:15"
+  },
   "CF12889567": {
     "contest_id": 465,
     "language": "GNU C++11",
