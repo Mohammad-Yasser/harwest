@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF13633897": {
+    "contest_id": 588,
+    "language": "GNU C++11",
+    "path": "codeforces/588/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Duff and Meat",
+    "problem_url": "https://codeforces.com/contest/588/problem/A",
+    "submission_id": "CF13633897",
+    "submission_url": "https://codeforces.com/contest/588/submission/13633897",
+    "tags": [
+      "greedy",
+      "*900"
+    ],
+    "timestamp": "Oct/15/2015 19:00"
+  },
   "CF13636600": {
     "contest_id": 588,
     "language": "GNU C++11",
