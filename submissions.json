@@ -1258,6 +1258,22 @@
     ],
     "timestamp": "Oct/26/2015 21:14"
   },
+  "CF13880410": {
+    "contest_id": 591,
+    "language": "GNU C++11",
+    "path": "codeforces/591/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Median Smoothing",
+    "problem_url": "https://codeforces.com/contest/591/problem/C",
+    "submission_id": "CF13880410",
+    "submission_url": "https://codeforces.com/contest/591/submission/13880410",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*1700"
+    ],
+    "timestamp": "Oct/26/2015 22:11"
+  },
   "CF13885835": {
     "contest_id": 298,
     "language": "GNU C++11",

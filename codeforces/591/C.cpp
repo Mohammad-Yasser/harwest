@@ -17,12 +17,8 @@ int main() {
 	int length = 1, ans = 0;
 	for (int i = 1; i <= n; ++i) {
 		if (arr[i] == prev) {
-			if (length & 1)
-				for (int j = i - length; j < i; ++j)
-					arr[j] = prev;
-			else
-				for (int j = i - length; j < i; ++j)
-					arr[j] = (i - j <= length / 2) ^ !prev;
+			for (int j = i - length; j < i; ++j)
+				arr[j] = ((i - j <= length >> 1) ^ !prev) & ~length & 1 | length & 1 & prev;
 
 			ans = max(ans, (length + 1) / 2 - 1);
 			length = 0;
