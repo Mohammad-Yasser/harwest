@@ -1322,6 +1322,23 @@
     ],
     "timestamp": "Nov/13/2015 08:41"
   },
+  "CF14565460": {
+    "contest_id": 601,
+    "language": "GNU C++11",
+    "path": "codeforces/601/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Kleof\u00e1\u0161 and the n-thlon",
+    "problem_url": "https://codeforces.com/contest/601/problem/C",
+    "submission_id": "CF14565460",
+    "submission_url": "https://codeforces.com/contest/601/submission/14565460",
+    "tags": [
+      "dp",
+      "math",
+      "probabilities",
+      "*2300"
+    ],
+    "timestamp": "Nov/30/2015 07:10"
+  },
   "CF14589721": {
     "contest_id": 604,
     "language": "GNU C++11",
