@@ -1322,6 +1322,24 @@
     ],
     "timestamp": "Nov/13/2015 08:41"
   },
+  "CF14606190": {
+    "contest_id": 604,
+    "language": "GNU C++11",
+    "path": "codeforces/604/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Alternative Thinking",
+    "problem_url": "https://codeforces.com/contest/604/problem/C",
+    "submission_id": "CF14606190",
+    "submission_url": "https://codeforces.com/contest/604/submission/14606190",
+    "tags": [
+      "constructive algorithms",
+      "dp",
+      "greedy",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Dec/01/2015 20:56"
+  },
   "CF14633601": {
     "contest_id": 603,
     "language": "GNU C++11",
