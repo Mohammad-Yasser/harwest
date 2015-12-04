@@ -1322,6 +1322,20 @@
     ],
     "timestamp": "Nov/13/2015 08:41"
   },
+  "CF14644198": {
+    "contest_id": 604,
+    "language": "GNU C++11",
+    "path": "codeforces/604/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Lieges of Legendre",
+    "problem_url": "https://codeforces.com/contest/604/problem/E",
+    "submission_id": "CF14644198",
+    "submission_url": "https://codeforces.com/contest/604/submission/14644198",
+    "tags": [
+      "*2200"
+    ],
+    "timestamp": "Dec/04/2015 10:36"
+  },
   "CF14667122": {
     "contest_id": 594,
     "language": "GNU C++11",
