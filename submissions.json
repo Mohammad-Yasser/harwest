@@ -1322,6 +1322,21 @@
     ],
     "timestamp": "Nov/13/2015 08:41"
   },
+  "CF14667122": {
+    "contest_id": 594,
+    "language": "GNU C++11",
+    "path": "codeforces/594/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Warrior and Archer",
+    "problem_url": "https://codeforces.com/contest/594/problem/A",
+    "submission_id": "CF14667122",
+    "submission_url": "https://codeforces.com/contest/594/submission/14667122",
+    "tags": [
+      "games",
+      "*2300"
+    ],
+    "timestamp": "Dec/05/2015 20:02"
+  },
   "CF14716142": {
     "contest_id": 606,
     "language": "GNU C++11",
