@@ -971,6 +971,20 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF14728289": {
+    "contest_id": 606,
+    "language": "GNU C++11",
+    "path": "codeforces/606/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Sorting Railway Cars",
+    "problem_url": "https://codeforces.com/contest/606/problem/C",
+    "submission_id": "CF14728289",
+    "submission_url": "https://codeforces.com/contest/606/submission/14728289",
+    "tags": [
+      "*1600"
+    ],
+    "timestamp": "Dec/09/2015 19:31"
+  },
   "CF14945842": {
     "contest_id": 608,
     "language": "GNU C++11",
