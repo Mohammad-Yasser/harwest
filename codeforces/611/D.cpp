@@ -1,28 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int base = 10 + rand() % 123;
-
-long long hsh[5003][5003], n;
+int z[5003][5003], n;
 
 string s;
 
 int memo[5003][5003];
-
-bool ls(int a, int b, int c, int d) {
-    if (hsh[a][b] == hsh[c][d]) return 0;
-    int low = 0, high = b - a, mid, ans;
-    while (low <= high) {
-        mid = (low + high) / 2;
-        if (hsh[a][a + mid] == hsh[c][c + mid])
-            low = mid + 1;
-        else {
-            ans = mid;
-            high = mid - 1;
-        }
-    }
-    return s[a + ans] < s[c + ans];
-}
 
 const int MOD = 1000000007;
 
@@ -35,7 +18,9 @@ int dp(int curr, int last) {
 
     if (s[curr] == '0') return ret;
 
-    if (2 * curr - last <= n && ls(last, curr - 1, curr, 2 * curr - last - 1))
+    if (2 * curr - last <= n
+      && s[min(curr - 1, z[last][curr] + last)]
+        < s[min(2 * curr - last - 1, curr + z[last][curr])])
         ret = (ret + dp(2 * curr - last, curr)) % MOD;
     else if (2 * curr - last + 1 <= n)
       ret = (ret + dp(2 * curr - last + 1, curr)) % MOD;
@@ -51,15 +36,11 @@ int main() {
 
     cin >> n >> s;
 
-    for (int i = 0; i < n; ++i) {
-        hsh[i][i] = s[i] - '0' + 1;
-        for (int j = i + 1; j < n; ++j)
-            hsh[i][j] = (hsh[i][j - 1] * base + s[j] - '0' + 1) % MOD;
-    }
+    for (int i = n - 1; i >= 0; --i)
+        for (int j = n - 1; j >= i; --j)
+            z[i][j] = (s[i] == s[j]) * (1 + z[i + 1][j + 1]);
 
     cout << dp(1, 0);
-    ;
-
     return 0;
 
 }
