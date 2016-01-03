@@ -4,13 +4,15 @@ using namespace std;
 int n, heroes[3], pos[3], enemies[200005];
 multiset<int> st;
 
-inline bool kill(int strength) {
+bool kill(int strength) {
+    if (st.size()) {
         auto it = st.upper_bound(strength);
         if (it != st.begin()) {
             --it;
             st.erase(it);
             return 1;
         }
+    }
     return 0;
 }
 
@@ -51,7 +53,7 @@ int main() {
         }
         else
             for (int i = 2; i >= 0; --i)
-                if (sumHeroes - heroes[i] >= curr && kill(heroes[i]))
+                if (st.size() && sumHeroes - heroes[i] >= curr && kill(heroes[i]))
                   break;
 
         ++ans;
