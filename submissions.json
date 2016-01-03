@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF15166839": {
+    "contest_id": 611,
+    "language": "GNU C++11",
+    "path": "codeforces/611/E.cpp",
+    "problem_index": "E",
+    "problem_name": "New Year and Three Musketeers",
+    "problem_url": "https://codeforces.com/contest/611/problem/E",
+    "submission_id": "CF15166839",
+    "submission_url": "https://codeforces.com/contest/611/submission/15166839",
+    "tags": [
+      "data structures",
+      "greedy",
+      "sortings",
+      "*2400"
+    ],
+    "timestamp": "Jan/03/2016 11:59"
+  },
   "CF15166972": {
     "contest_id": 611,
     "language": "GNU C++11",
