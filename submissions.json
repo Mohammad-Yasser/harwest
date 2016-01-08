@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF15255674": {
+    "contest_id": 615,
+    "language": "GNU C++11",
+    "path": "codeforces/615/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Multipliers",
+    "problem_url": "https://codeforces.com/contest/615/problem/D",
+    "submission_id": "CF15255674",
+    "submission_url": "https://codeforces.com/contest/615/submission/15255674",
+    "tags": [
+      "math",
+      "number theory",
+      "*2000"
+    ],
+    "timestamp": "Jan/08/2016 18:42"
+  },
   "CF15332373": {
     "contest_id": 615,
     "language": "GNU C++11",
