@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF15383474": {
+    "contest_id": 614,
+    "language": "GNU C++11",
+    "path": "codeforces/614/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Skills",
+    "problem_url": "https://codeforces.com/contest/614/problem/D",
+    "submission_id": "CF15383474",
+    "submission_url": "https://codeforces.com/contest/614/submission/15383474",
+    "tags": [
+      "dp",
+      "greedy",
+      "sortings",
+      "*1900"
+    ],
+    "timestamp": "Jan/15/2016 08:47"
+  },
   "CF15485286": {
     "contest_id": 620,
     "language": "GNU C++11",
