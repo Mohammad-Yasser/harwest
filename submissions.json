@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF15653393": {
+    "contest_id": 618,
+    "language": "GNU C++11",
+    "path": "codeforces/618/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Slime Combining",
+    "problem_url": "https://codeforces.com/contest/618/problem/A",
+    "submission_id": "CF15653393",
+    "submission_url": "https://codeforces.com/contest/618/submission/15653393",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jan/29/2016 19:28"
+  },
   "CF15655099": {
     "contest_id": 618,
     "language": "GNU C++11",
