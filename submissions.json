@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF15999411": {
+    "contest_id": 626,
+    "language": "GNU C++11",
+    "path": "codeforces/626/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Jerry's Protest",
+    "problem_url": "https://codeforces.com/contest/626/problem/D",
+    "submission_id": "CF15999411",
+    "submission_url": "https://codeforces.com/contest/626/submission/15999411",
+    "tags": [
+      "brute force",
+      "combinatorics",
+      "dp",
+      "probabilities",
+      "*1800"
+    ],
+    "timestamp": "Feb/13/2016 20:35"
+  },
   "CF16059216": {
     "contest_id": 621,
     "language": "GNU C++11",
