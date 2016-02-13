@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF15994954": {
+    "contest_id": 626,
+    "language": "GNU C++11",
+    "path": "codeforces/626/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Cards",
+    "problem_url": "https://codeforces.com/contest/626/problem/B",
+    "submission_id": "CF15994954",
+    "submission_url": "https://codeforces.com/contest/626/submission/15994954",
+    "tags": [
+      "constructive algorithms",
+      "dp",
+      "math",
+      "*1300"
+    ],
+    "timestamp": "Feb/13/2016 20:02"
+  },
   "CF15996550": {
     "contest_id": 626,
     "language": "GNU C++11",
