@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF16080390": {
+    "contest_id": 617,
+    "language": "GNU C++11",
+    "path": "codeforces/617/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Watering Flowers",
+    "problem_url": "https://codeforces.com/contest/617/problem/C",
+    "submission_id": "CF16080390",
+    "submission_url": "https://codeforces.com/contest/617/submission/16080390",
+    "tags": [
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "Feb/17/2016 16:35"
+  },
   "CF16080680": {
     "contest_id": 617,
     "language": "GNU C++11",
