@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF16229473": {
+    "contest_id": 46,
+    "language": "GNU C++11",
+    "path": "codeforces/46/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Hamsters and Tigers",
+    "problem_url": "https://codeforces.com/contest/46/problem/C",
+    "submission_id": "CF16229473",
+    "submission_url": "https://codeforces.com/contest/46/submission/16229473",
+    "tags": [
+      "two pointers",
+      "*1600"
+    ],
+    "timestamp": "Feb/20/2016 15:20"
+  },
   "CF16232757": {
     "contest_id": 629,
     "language": "GNU C++11",
