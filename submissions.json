@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF16228981": {
+    "contest_id": 380,
+    "language": "GNU C++11",
+    "path": "codeforces/380/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Sereja and Prefixes",
+    "problem_url": "https://codeforces.com/contest/380/problem/A",
+    "submission_id": "CF16228981",
+    "submission_url": "https://codeforces.com/contest/380/submission/16228981",
+    "tags": [
+      "binary search",
+      "brute force",
+      "*1600"
+    ],
+    "timestamp": "Feb/20/2016 14:46"
+  },
   "CF16229473": {
     "contest_id": 46,
     "language": "GNU C++11",
