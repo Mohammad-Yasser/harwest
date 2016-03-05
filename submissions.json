@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF16533815": {
+    "contest_id": 599,
+    "language": "GNU C++11",
+    "path": "codeforces/599/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Day at the Beach",
+    "problem_url": "https://codeforces.com/contest/599/problem/C",
+    "submission_id": "CF16533815",
+    "submission_url": "https://codeforces.com/contest/599/submission/16533815",
+    "tags": [
+      "sortings",
+      "*1600"
+    ],
+    "timestamp": "Mar/05/2016 14:35"
+  },
   "CF16534685": {
     "contest_id": 599,
     "language": "GNU C++11",
