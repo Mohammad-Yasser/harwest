@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef unsigned long long ll;
-const int MX = 1e2;
+const int MX = 1e7;
 pair<ll, ll> ans[MX];
 int idx;
 
