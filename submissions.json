@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF16533109": {
+    "contest_id": 599,
+    "language": "GNU C++11",
+    "path": "codeforces/599/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Spongebob and Joke",
+    "problem_url": "https://codeforces.com/contest/599/problem/B",
+    "submission_id": "CF16533109",
+    "submission_url": "https://codeforces.com/contest/599/submission/16533109",
+    "tags": [
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Mar/05/2016 13:57"
+  },
   "CF16533815": {
     "contest_id": 599,
     "language": "GNU C++11",
