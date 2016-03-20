@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF16838832": {
+    "contest_id": 623,
+    "language": "GNU C++11",
+    "path": "codeforces/623/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Graph and String",
+    "problem_url": "https://codeforces.com/contest/623/problem/A",
+    "submission_id": "CF16838832",
+    "submission_url": "https://codeforces.com/contest/623/submission/16838832",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "*1800"
+    ],
+    "timestamp": "Mar/20/2016 15:02"
+  },
   "CF16943787": {
     "contest_id": 652,
     "language": "GNU C++11",
