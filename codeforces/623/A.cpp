@@ -14,6 +14,21 @@ inline bool neighbouring(char a, char b) {
 
 bool adj[N][N];
 
+bool bt(int u, int v) {
+	if (v == n) return 1;
+	if (!s[v]) {
+		for (char j = 'a'; j < 'd'; j += 2)
+			if (neighbouring(s[u], j) == adj[u][v]) {
+				s[v] = j;
+				if (bt(v, 0) && bt(u, v + 1))
+				  return 1;
+				s[v] = 0;
+			}
+		return 0;
+	}
+	return neighbouring(s[u], s[v]) == adj[u][v] && bt(u, v + 1);
+}
+
 int main() {
 	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 	cin >> n >> m;
@@ -28,29 +43,31 @@ int main() {
 		adj[u][v] = adj[v][u] = 1;
 	}
 
-	int nonB = -1;
+	for (int i = 0; i < n; ++i)
+		for (int j = i + 1; j < n; ++j)
+			if (!adj[i][j])
+			  for (int k = j + 1; k < n; ++k)
+				  if (!adj[i][k] && !adj[j][k]) {
+					  cout << "No";
+					  return 0;
+				  }
+
+	memset(s, 0, sizeof s);
 
 	for (int i = 0; i < n; ++i) {
 		bool all = 1;
 		for (int j = 0; j < n; ++j)
 			all &= adj[i][j];
-		if (all)
-			s[i] = 'b';
-		else
-			nonB = i;
+		if (all) s[i] = 'b';
 	}
 
-	if (nonB != -1) {
-		for (int i = 0; i < n; ++i)
-			if (!s[i])
-			  s[i] = 'a' + 2 * !adj[nonB][i];
-		for (int i = 0; i < n; ++i)
-			for (int j = 0; j < n; ++j)
-				if (neighbouring(s[i], s[j]) != adj[i][j]) {
-					cout << "No";
-					return 0;
-				}
+	for (char j = 0; j < 3; ++j) {
+		s[0] = j + 'a';
+		if (bt(0, 0)) {
+			cout << "Yes\n" << s;
+			return 0;
+		}
 	}
-	cout << "Yes\n" << s;
+	cout << "No";
 
 }
