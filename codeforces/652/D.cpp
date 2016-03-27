@@ -2,7 +2,7 @@
 using namespace std;
 typedef long long ll;
 
-const int N = 200005;
+const int N = 400005;
 
 tuple<int, int, int> segments[N];
 struct BIT {
@@ -51,6 +51,7 @@ int main() {
 		int f, s;
 		cin >> f >> s;
 		segments[i] = make_tuple(f, s, i);
+		comp[f];
 		comp[s];
 	}
 	int cmpId = 0;
