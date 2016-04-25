@@ -14,14 +14,12 @@ inline double solve(double b, double c) {
 int main() {
 	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-	scanf("%d", &n);
-
-	for (int i = 0; i < n; ++i) {
-		scanf("%lf", &mx[i]);
-		;
-	}
+	cout << fixed << setprecision(6);
+	cin >> n;
 	for (int i = 0; i < n; ++i)
-		scanf("%lf", &mn[i]);
+		cin >> mx[i];
+	for (int i = 0; i < n; ++i)
+		cin >> mn[i];
 
 	double sum1 = 0, sum2 = 0;
 
@@ -35,15 +33,10 @@ int main() {
 		sum2 += p2[i];
 	}
 
-	for (int i = 0; i < n; ++i) {
-		if (i) putchar(' ') ;
-		printf("%f ", p1[i]);
-	}
-	puts("") ;
+	for (int i = 0; i < n; ++i)
+		cout << p1[i] << " \n"[i + 1 == n];
 
-	for (int i = 0; i < n; ++i) {
-		if (i) putchar(' ') ;
-		printf("%f ", p2[i]);
-	}
+	for (int i = 0; i < n; ++i)
+		cout << p2[i] << " \n"[i + 1 == n];
 
 }
