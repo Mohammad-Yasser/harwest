@@ -37,13 +37,13 @@ int main() {
 
 	for (int i = 0; i < n; ++i) {
 		if (i) putchar(' ') ;
-		printf("%1.6f", p1[i]);
+		printf("%f ", p1[i]);
 	}
 	puts("") ;
 
 	for (int i = 0; i < n; ++i) {
 		if (i) putchar(' ') ;
-		printf("%1.6f", p2[i]);
+		printf("%f ", p2[i]);
 	}
 
 }

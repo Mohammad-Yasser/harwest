@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF17507643": {
+    "contest_id": 668,
+    "language": "GNU C++11",
+    "path": "codeforces/668/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Little Artem and Random Variable",
+    "problem_url": "https://codeforces.com/contest/668/problem/C",
+    "submission_id": "CF17507643",
+    "submission_url": "https://codeforces.com/contest/668/submission/17507643",
+    "tags": [
+      "math",
+      "probabilities",
+      "*2400"
+    ],
+    "timestamp": "Apr/25/2016 13:22"
+  },
   "CF17507849": {
     "contest_id": 668,
     "language": "GNU C++11",
