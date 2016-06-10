@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF18365476": {
+    "contest_id": 398,
+    "language": "GNU C++11",
+    "path": "codeforces/398/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Painting The Wall",
+    "problem_url": "https://codeforces.com/contest/398/problem/B",
+    "submission_id": "CF18365476",
+    "submission_url": "https://codeforces.com/contest/398/submission/18365476",
+    "tags": [
+      "dp",
+      "probabilities"
+    ],
+    "timestamp": "Jun/10/2016 23:26"
+  },
   "CF18374182": {
     "contest_id": 229,
     "language": "GNU C++11",
