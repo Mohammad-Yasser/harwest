@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF18579639": {
+    "contest_id": 679,
+    "language": "GNU C++11",
+    "path": "codeforces/679/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Bear and Tower of Cubes",
+    "problem_url": "https://codeforces.com/contest/679/problem/B",
+    "submission_id": "CF18579639",
+    "submission_url": "https://codeforces.com/contest/679/submission/18579639",
+    "tags": [
+      "binary search",
+      "dp",
+      "greedy",
+      "*2200"
+    ],
+    "timestamp": "Jun/18/2016 15:03"
+  },
   "CF18582959": {
     "contest_id": 681,
     "language": "GNU C++11",
