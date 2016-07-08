@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF18974379": {
+    "contest_id": 689,
+    "language": "GNU C++11",
+    "path": "codeforces/689/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Mike and Chocolate Thieves",
+    "problem_url": "https://codeforces.com/contest/689/problem/C",
+    "submission_id": "CF18974379",
+    "submission_url": "https://codeforces.com/contest/689/submission/18974379",
+    "tags": [
+      "binary search",
+      "combinatorics",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Jul/08/2016 20:31"
+  },
   "CF18975850": {
     "contest_id": 689,
     "language": "GNU C++11",
