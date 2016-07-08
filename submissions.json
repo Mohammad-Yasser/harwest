@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF18975850": {
+    "contest_id": 689,
+    "language": "GNU C++11",
+    "path": "codeforces/689/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Friends and Subsequences",
+    "problem_url": "https://codeforces.com/contest/689/problem/D",
+    "submission_id": "CF18975850",
+    "submission_url": "https://codeforces.com/contest/689/submission/18975850",
+    "tags": [
+      "binary search",
+      "data structures",
+      "*2100"
+    ],
+    "timestamp": "Jul/08/2016 23:06"
+  },
   "CF18986283": {
     "contest_id": 689,
     "language": "GNU C++11",
