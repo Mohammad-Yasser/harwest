@@ -1188,6 +1188,22 @@
     ],
     "timestamp": "Aug/04/2016 17:18"
   },
+  "CF19622239": {
+    "contest_id": 703,
+    "language": "GNU C++11",
+    "path": "codeforces/703/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Mishka and trip",
+    "problem_url": "https://codeforces.com/contest/703/problem/B",
+    "submission_id": "CF19622239",
+    "submission_url": "https://codeforces.com/contest/703/submission/19622239",
+    "tags": [
+      "implementation",
+      "math",
+      "*1400"
+    ],
+    "timestamp": "Aug/04/2016 17:32"
+  },
   "CF19625060": {
     "contest_id": 703,
     "language": "GNU C++11",
