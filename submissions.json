@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF19794829": {
+    "contest_id": 706,
+    "language": "GNU C++11",
+    "path": "codeforces/706/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Hard problem",
+    "problem_url": "https://codeforces.com/contest/706/problem/C",
+    "submission_id": "CF19794829",
+    "submission_url": "https://codeforces.com/contest/706/submission/19794829",
+    "tags": [
+      "dp",
+      "strings",
+      "*1600"
+    ],
+    "timestamp": "Aug/11/2016 18:59"
+  },
   "CF19988324": {
     "contest_id": 707,
     "language": "GNU C++11",
