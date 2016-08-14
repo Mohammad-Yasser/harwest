@@ -1204,6 +1204,23 @@
     ],
     "timestamp": "Aug/11/2016 18:59"
   },
+  "CF19871282": {
+    "contest_id": 354,
+    "language": "GNU C++11",
+    "path": "codeforces/354/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Lucky Number Representation",
+    "problem_url": "https://codeforces.com/contest/354/problem/E",
+    "submission_id": "CF19871282",
+    "submission_url": "https://codeforces.com/contest/354/submission/19871282",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "dp",
+      "*2200"
+    ],
+    "timestamp": "Aug/14/2016 17:30"
+  },
   "CF19891463": {
     "contest_id": 670,
     "language": "GNU C++11",
