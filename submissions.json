@@ -1204,6 +1204,23 @@
     ],
     "timestamp": "Aug/11/2016 18:59"
   },
+  "CF19891463": {
+    "contest_id": 670,
+    "language": "GNU C++11",
+    "path": "codeforces/670/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Restore a Number",
+    "problem_url": "https://codeforces.com/contest/670/problem/F",
+    "submission_id": "CF19891463",
+    "submission_url": "https://codeforces.com/contest/670/submission/19891463",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "strings",
+      "*2300"
+    ],
+    "timestamp": "Aug/15/2016 17:54"
+  },
   "CF19900230": {
     "contest_id": 600,
     "language": "GNU C++11",
