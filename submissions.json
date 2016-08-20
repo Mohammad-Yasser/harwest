@@ -1219,6 +1219,24 @@
     ],
     "timestamp": "Aug/20/2016 15:24"
   },
+  "CF20006483": {
+    "contest_id": 707,
+    "language": "GNU C++11",
+    "path": "codeforces/707/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Persistent Bookcase ",
+    "problem_url": "https://codeforces.com/contest/707/problem/D",
+    "submission_id": "CF20006483",
+    "submission_url": "https://codeforces.com/contest/707/submission/20006483",
+    "tags": [
+      "bitmasks",
+      "data structures",
+      "dfs and similar",
+      "implementation",
+      "*2200"
+    ],
+    "timestamp": "Aug/20/2016 19:06"
+  },
   "CF20009254": {
     "contest_id": 707,
     "language": "GNU C++11",
