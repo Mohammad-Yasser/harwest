@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF20120974": {
+    "contest_id": 709,
+    "language": "GNU C++11",
+    "path": "codeforces/709/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Letters Cyclic Shift",
+    "problem_url": "https://codeforces.com/contest/709/problem/C",
+    "submission_id": "CF20120974",
+    "submission_url": "https://codeforces.com/contest/709/submission/20120974",
+    "tags": [
+      "greedy",
+      "strings",
+      "*1200"
+    ],
+    "timestamp": "Aug/24/2016 19:18"
+  },
   "CF20135314": {
     "contest_id": 709,
     "language": "GNU C++11",
