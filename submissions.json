@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF20710911": {
+    "contest_id": 716,
+    "language": "GNU C++11",
+    "path": "codeforces/716/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Complete The Graph",
+    "problem_url": "https://codeforces.com/contest/716/problem/D",
+    "submission_id": "CF20710911",
+    "submission_url": "https://codeforces.com/contest/716/submission/20710911",
+    "tags": [
+      "graphs",
+      "shortest paths",
+      "*2300"
+    ],
+    "timestamp": "Sep/17/2016 17:41"
+  },
   "CF20840313": {
     "contest_id": 719,
     "language": "GNU C++11",
