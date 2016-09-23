@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF20840313": {
+    "contest_id": 719,
+    "language": "GNU C++11",
+    "path": "codeforces/719/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Vitya in the Countryside",
+    "problem_url": "https://codeforces.com/contest/719/problem/A",
+    "submission_id": "CF20840313",
+    "submission_url": "https://codeforces.com/contest/719/submission/20840313",
+    "tags": [
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Sep/23/2016 15:14"
+  },
   "CF20844218": {
     "contest_id": 719,
     "language": "GNU C++11",
