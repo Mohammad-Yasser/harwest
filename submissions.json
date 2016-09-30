@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF21044986": {
+    "contest_id": 721,
+    "language": "GNU C++11",
+    "path": "codeforces/721/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Maxim and Array",
+    "problem_url": "https://codeforces.com/contest/721/problem/D",
+    "submission_id": "CF21044986",
+    "submission_url": "https://codeforces.com/contest/721/submission/21044986",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "greedy",
+      "math",
+      "*2000"
+    ],
+    "timestamp": "Sep/30/2016 19:20"
+  },
   "CF21136170": {
     "contest_id": 723,
     "language": "GNU C++11",
