@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF21016910": {
+    "contest_id": 721,
+    "language": "GNU C++11",
+    "path": "codeforces/721/A.cpp",
+    "problem_index": "A",
+    "problem_name": "One-dimensional Japanese Crossword",
+    "problem_url": "https://codeforces.com/contest/721/problem/A",
+    "submission_id": "CF21016910",
+    "submission_url": "https://codeforces.com/contest/721/submission/21016910",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Sep/30/2016 16:09"
+  },
   "CF21019617": {
     "contest_id": 721,
     "language": "GNU C++11",
