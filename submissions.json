@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF21483624": {
+    "contest_id": 731,
+    "language": "GNU C++11",
+    "path": "codeforces/731/D.cpp",
+    "problem_index": "D",
+    "problem_name": "80-th Level Archeology",
+    "problem_url": "https://codeforces.com/contest/731/problem/D",
+    "submission_id": "CF21483624",
+    "submission_url": "https://codeforces.com/contest/731/submission/21483624",
+    "tags": [
+      "brute force",
+      "data structures",
+      "greedy",
+      "sortings",
+      "*2200"
+    ],
+    "timestamp": "Oct/16/2016 12:28"
+  },
   "CF21488416": {
     "contest_id": 731,
     "language": "GNU C++11",
