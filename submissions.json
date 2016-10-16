@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF21488416": {
+    "contest_id": 731,
+    "language": "GNU C++11",
+    "path": "codeforces/731/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Funny Game",
+    "problem_url": "https://codeforces.com/contest/731/problem/E",
+    "submission_id": "CF21488416",
+    "submission_url": "https://codeforces.com/contest/731/submission/21488416",
+    "tags": [
+      "dp",
+      "games",
+      "*2200"
+    ],
+    "timestamp": "Oct/16/2016 13:09"
+  },
   "CF21498312": {
     "contest_id": 731,
     "language": "GNU C++11",
