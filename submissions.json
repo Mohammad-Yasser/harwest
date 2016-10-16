@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF21498312": {
+    "contest_id": 731,
+    "language": "GNU C++11",
+    "path": "codeforces/731/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Video Cards",
+    "problem_url": "https://codeforces.com/contest/731/problem/F",
+    "submission_id": "CF21498312",
+    "submission_url": "https://codeforces.com/contest/731/submission/21498312",
+    "tags": [
+      "brute force",
+      "data structures",
+      "implementation",
+      "math",
+      "number theory",
+      "*1900"
+    ],
+    "timestamp": "Oct/16/2016 16:08"
+  },
   "CF21530195": {
     "contest_id": 732,
     "language": "GNU C++11",
