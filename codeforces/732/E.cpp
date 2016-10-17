@@ -13,16 +13,18 @@ pair<int, int> assi[N];
 int adapt[N];
 
 int main() {
+
+	ios::sync_with_stdio(0), cin.tie(NULL), cout.tie(NULL);
 	int n, m;
-	scanf("%d%d", &n, &m);
+	cin >> n >> m;
 
 	for (int i = 1; i <= n; ++i) {
-		scanf("%d", &comp[i]);
+		cin >> comp[i];
 		want[comp[i]].push(i);
 	}
 
 	for (int i = 1; i <= m; ++i) {
-		scanf("%d", &sock[i].first);
+		cin >> sock[i].first;
 		sock[i].second = i;
 	}
 
@@ -56,16 +58,15 @@ int main() {
 			adapt[assi[i].second] = assi[i].first;
 		}
 
-	printf("%d %d\n", c, u);
+	cout << c << ' ' << u << '\n';
 
 	for (int i = 1; i <= m; ++i) {
-		printf("%d ", adapt[i]);
+		cout << adapt[i] << ' ';
 	}
-
-	puts("");
+	cout << '\n';
 
 	for (int i = 1; i <= n; ++i) {
-		printf("%d ", assi[i].second);
+		cout << assi[i].second << ' ';
 	}
 
 }
