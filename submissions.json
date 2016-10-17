@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF21549592": {
+    "contest_id": 732,
+    "language": "GNU C++11",
+    "path": "codeforces/732/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Sockets",
+    "problem_url": "https://codeforces.com/contest/732/problem/E",
+    "submission_id": "CF21549592",
+    "submission_url": "https://codeforces.com/contest/732/submission/21549592",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*2100"
+    ],
+    "timestamp": "Oct/17/2016 21:13"
+  },
   "CF21549615": {
     "contest_id": 732,
     "language": "GNU C++11",
