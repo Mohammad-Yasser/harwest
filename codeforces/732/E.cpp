@@ -34,7 +34,7 @@ int main() {
 		while (true) {
 			auto want_it = want.find(curr);
 			if (want_it != want.end()) {
-				auto &curr_want = want_it->second;
+				auto &curr_want = want[curr];
 				if (!curr_want.empty()) {
 					assi[curr_want.front()] = {cost , sock[i].second};
 					curr_want.pop();
