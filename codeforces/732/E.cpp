@@ -7,7 +7,7 @@ const int N = 200005;
 int comp[N];
 pair<int, int> sock[N];
 
-unordered_map<int, queue<int>> want;
+unordered_map<int, vector<int>> want;
 
 pair<int, int> assi[N];
 int adapt[N];
@@ -20,7 +20,7 @@ int main() {
 
 	for (int i = 1; i <= n; ++i) {
 		cin >> comp[i];
-		want[comp[i]].push(i);
+		want[comp[i]].push_back(i);
 	}
 
 	for (int i = 1; i <= m; ++i) {
@@ -38,8 +38,8 @@ int main() {
 			if (want_it != want.end()) {
 				auto &curr_want = want[curr];
 				if (!curr_want.empty()) {
-					assi[curr_want.front()] = {cost , sock[i].second};
-					curr_want.pop();
+					assi[curr_want.back()] = {cost , sock[i].second};
+					curr_want.pop_back();
 					break;
 				}
 			}
