@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF21670296": {
+    "contest_id": 725,
+    "language": "GNU C++11",
+    "path": "codeforces/725/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Jumping Ball",
+    "problem_url": "https://codeforces.com/contest/725/problem/A",
+    "submission_id": "CF21670296",
+    "submission_url": "https://codeforces.com/contest/725/submission/21670296",
+    "tags": [
+      "implementation",
+      "*1000"
+    ],
+    "timestamp": "Oct/22/2016 17:08"
+  },
   "CF21674388": {
     "contest_id": 725,
     "language": "GNU C++11",
