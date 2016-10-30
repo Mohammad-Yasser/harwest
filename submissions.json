@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF21892331": {
+    "contest_id": 622,
+    "language": "GNU C++11",
+    "path": "codeforces/622/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Ants in Leaves",
+    "problem_url": "https://codeforces.com/contest/622/problem/E",
+    "submission_id": "CF21892331",
+    "submission_url": "https://codeforces.com/contest/622/submission/21892331",
+    "tags": [
+      "dfs and similar",
+      "greedy",
+      "sortings",
+      "trees",
+      "*2200"
+    ],
+    "timestamp": "Oct/30/2016 14:38"
+  },
   "CF21892475": {
     "contest_id": 622,
     "language": "GNU C++11",
