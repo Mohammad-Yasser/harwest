@@ -41,12 +41,12 @@ int main() {
 	}
 
 	vector<int> res;
-//
-//	for (int i = n - 1; i >= 0; --i)
-//		for (int j = 0; j < N; ++j)
-//			for (int k = j + 1; k < N; ++k) {
-//				dp(i, j, k);
-//			}
+
+	for (int i = n - 1; i >= 0; --i)
+		for (int j = 0; j < N; ++j)
+			for (int k = 0; k < N; ++k) {
+				dp(i, j, k);
+			}
 
 	for (int i = 0; i < N; ++i) {
 		if (dp(0, i, k)) {
