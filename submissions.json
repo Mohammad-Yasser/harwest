@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF21938898": {
+    "contest_id": 733,
+    "language": "GNU C++11",
+    "path": "codeforces/733/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Kostya the Sculptor",
+    "problem_url": "https://codeforces.com/contest/733/problem/D",
+    "submission_id": "CF21938898",
+    "submission_url": "https://codeforces.com/contest/733/submission/21938898",
+    "tags": [
+      "data structures",
+      "hashing",
+      "*1600"
+    ],
+    "timestamp": "Oct/31/2016 17:39"
+  },
   "CF22283832": {
     "contest_id": 734,
     "language": "GNU C++11",
