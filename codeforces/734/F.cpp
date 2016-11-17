@@ -14,16 +14,21 @@ ll sum_a;
 int cnt[32];
 
 int main() {
-//	ios_base::sync_with_stdio(0) , cin.tie(0) , cout.tie(0) ;
+	ios_base::sync_with_stdio(0) , cin.tie(0) , cout.tie(0) ;
 
 	int n;
 	cin >> n;
 	for (int i = 0; i < n; ++i) {
-		scanf("%d", &b[i]);
+		cin >> b[i];
 	}
 	for (int i = 0; i < n; ++i) {
-		scanf("%d", &c[i]);
+		cin >> c[i];
 		sum_bc += b[i] + c[i];
+	}
+
+	if (sum_bc % (2 * n)) {
+		cout << -1;
+		return 0;
 	}
 
 	sum_a = sum_bc / (2 * n);
@@ -31,7 +36,7 @@ int main() {
 	for (int i = 0; i < n; ++i) {
 		a[i] = (c[i] + b[i] - sum_a) / n;
 		if (a[i] < 0) {
-			puts("-1");
+			cout << -1;
 			return 0;
 		}
 		for (int j = 0; j < 32; ++j) {
@@ -47,13 +52,13 @@ int main() {
 			}
 		}
 		if (res_b != b[i]) {
-			puts("-1");
+			cout << -1;
 			return 0;
 		}
 	}
 
 	for (int i = 0; i < n; ++i) {
-		printf("%d ",a[i]);
+		cout << a[i] << ' ';
 	}
 
 	return 0;
