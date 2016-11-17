@@ -4,7 +4,7 @@ using namespace std;
 typedef long long ll;
 
 const int N = 200005;
-int a[N];
+ll a[N];
 int b[N];
 int c[N];
 
