@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF22351154": {
+    "contest_id": 737,
+    "language": "GNU C++11",
+    "path": "codeforces/737/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Road to Cinema",
+    "problem_url": "https://codeforces.com/contest/737/problem/A",
+    "submission_id": "CF22351154",
+    "submission_url": "https://codeforces.com/contest/737/submission/22351154",
+    "tags": [
+      "binary search",
+      "*1700"
+    ],
+    "timestamp": "Nov/20/2016 11:54"
+  },
   "CF22354165": {
     "contest_id": 737,
     "language": "GNU C++11",
