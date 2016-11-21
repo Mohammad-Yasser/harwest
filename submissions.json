@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF22392766": {
+    "contest_id": 645,
+    "language": "GNU C++11",
+    "path": "codeforces/645/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Intellectual Inquiry",
+    "problem_url": "https://codeforces.com/contest/645/problem/E",
+    "submission_id": "CF22392766",
+    "submission_url": "https://codeforces.com/contest/645/submission/22392766",
+    "tags": [
+      "dp",
+      "greedy",
+      "strings",
+      "*2200"
+    ],
+    "timestamp": "Nov/21/2016 23:41"
+  },
   "CF22454007": {
     "contest_id": 739,
     "language": "GNU C++11",
