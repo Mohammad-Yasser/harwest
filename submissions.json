@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF22679522": {
+    "contest_id": 529,
+    "language": "GNU C++14",
+    "path": "codeforces/529/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Group Photo 2 (online mirror version)",
+    "problem_url": "https://codeforces.com/contest/529/problem/B",
+    "submission_id": "CF22679522",
+    "submission_url": "https://codeforces.com/contest/529/submission/22679522",
+    "tags": [
+      "brute force",
+      "greedy",
+      "sortings",
+      "*1900"
+    ],
+    "timestamp": "Dec/03/2016 16:53"
+  },
   "CF22680277": {
     "contest_id": 529,
     "language": "GNU C++14",
