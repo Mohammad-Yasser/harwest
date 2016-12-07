@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF22796450": {
+    "contest_id": 733,
+    "language": "GNU C++14",
+    "path": "codeforces/733/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Sleep in Class",
+    "problem_url": "https://codeforces.com/contest/733/problem/E",
+    "submission_id": "CF22796450",
+    "submission_url": "https://codeforces.com/contest/733/submission/22796450",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "math",
+      "two pointers",
+      "*2400"
+    ],
+    "timestamp": "Dec/07/2016 21:49"
+  },
   "CF22864763": {
     "contest_id": 677,
     "language": "GNU C++14",
