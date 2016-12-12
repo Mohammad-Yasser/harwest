@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF22899099": {
+    "contest_id": 737,
+    "language": "GNU C++14",
+    "path": "codeforces/737/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Financiers Game",
+    "problem_url": "https://codeforces.com/contest/737/problem/D",
+    "submission_id": "CF22899099",
+    "submission_url": "https://codeforces.com/contest/737/submission/22899099",
+    "tags": [
+      "dp",
+      "games",
+      "*2500"
+    ],
+    "timestamp": "Dec/12/2016 09:07"
+  },
   "CF22899665": {
     "contest_id": 632,
     "language": "GNU C++14",
