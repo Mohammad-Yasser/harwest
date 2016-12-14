@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF22967993": {
+    "contest_id": 743,
+    "language": "GNU C++14",
+    "path": "codeforces/743/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Vladik and fractions",
+    "problem_url": "https://codeforces.com/contest/743/problem/C",
+    "submission_id": "CF22967993",
+    "submission_url": "https://codeforces.com/contest/743/submission/22967993",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "math",
+      "number theory",
+      "*1500"
+    ],
+    "timestamp": "Dec/14/2016 17:48"
+  },
   "CF22968509": {
     "contest_id": 743,
     "language": "GNU C++14",
