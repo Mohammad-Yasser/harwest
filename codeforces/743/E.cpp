@@ -6,17 +6,16 @@ const int N = 1003;
 const int K = 8;
 const int OO = N;
 
-int memo[N][1 << K];
-bool vis[N][1 << K];
+int memo[N][N / 8 + 1][1 << K];
+bool vis[N][N / 8 + 1][1 << K];
 
 vector<int> occurrences[K];
 int pos[N];
 int arr[N];
 
 int n;
-int k;
 
-int Solve(int ind, int mask) {
+int Solve(int ind, int k, int mask) {
   if (mask == (1 << K) - 1) {
     return 0;
   }
@@ -24,22 +23,23 @@ int Solve(int ind, int mask) {
     return -OO;
   }
 
-  int &ret = memo[ind][mask];
-  if (vis[ind][mask]) {
+  int &ret = memo[ind][k][mask];
+  if (vis[ind][k][mask]) {
     return ret;
   }
-  vis[ind][mask] = true;
+  vis[ind][k][mask] = true;
 
-  ret = Solve(ind + 1, mask);
+  ret = Solve(ind + 1, k, mask);
 
   for (int j = k; j < k + 2 && ((mask >> arr[ind]) & 1) == 0; ++j) {
     if (occurrences[arr[ind]].size() > pos[ind] + j - 1) {
       ret = max(ret,
         j
-          + Solve(occurrences[arr[ind]][pos[ind] + j - 1] + 1,
+          + Solve(occurrences[arr[ind]][pos[ind] + j - 1] + 1, k,
             mask | (1 << arr[ind])));
     }
   }
+
 
   return ret;
 }
@@ -61,19 +61,8 @@ int main() {
   }
 
   int res = st.size();
-
-  int low = 1, high = N / 8, mid;
-  while (low <= high) {
-    mid = (low + high) / 2;
-    memset(vis, false, sizeof vis);
-    k = mid;
-    int tmp = max(0, Solve(0, 0));
-    if (tmp != 0) {
-      res = max(res, tmp);
-      low = mid + 1;
-    } else {
-      high = mid - 1;
-    }
+  for (int k = 1; k <= N / 8 + 1; ++k) {
+    res = max(res, Solve(0, k, 0));
   }
 
   cout << res;
