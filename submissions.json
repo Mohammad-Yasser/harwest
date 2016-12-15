@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23011703": {
+    "contest_id": 364,
+    "language": "GNU C++14",
+    "path": "codeforces/364/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Free Market",
+    "problem_url": "https://codeforces.com/contest/364/problem/B",
+    "submission_id": "CF23011703",
+    "submission_url": "https://codeforces.com/contest/364/submission/23011703",
+    "tags": [
+      "dp",
+      "greedy",
+      "*2200"
+    ],
+    "timestamp": "Dec/15/2016 18:08"
+  },
   "CF23033544": {
     "contest_id": 348,
     "language": "GNU C++14",
