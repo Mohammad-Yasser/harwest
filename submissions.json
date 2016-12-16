@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23033544": {
+    "contest_id": 348,
+    "language": "GNU C++14",
+    "path": "codeforces/348/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Mafia",
+    "problem_url": "https://codeforces.com/contest/348/problem/A",
+    "submission_id": "CF23033544",
+    "submission_url": "https://codeforces.com/contest/348/submission/23033544",
+    "tags": [
+      "binary search",
+      "math",
+      "sortings",
+      "*1600"
+    ],
+    "timestamp": "Dec/16/2016 18:12"
+  },
   "CF23035127": {
     "contest_id": 135,
     "language": "GNU C++14",
