@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23156899": {
+    "contest_id": 749,
+    "language": "GNU C++14",
+    "path": "codeforces/749/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Leaving Auction",
+    "problem_url": "https://codeforces.com/contest/749/problem/D",
+    "submission_id": "CF23156899",
+    "submission_url": "https://codeforces.com/contest/749/submission/23156899",
+    "tags": [
+      "binary search",
+      "data structures",
+      "*2000"
+    ],
+    "timestamp": "Dec/19/2016 19:55"
+  },
   "CF23158993": {
     "contest_id": 749,
     "language": "GNU C++14",
