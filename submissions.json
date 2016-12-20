@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23170638": {
+    "contest_id": 374,
+    "language": "GNU C++14",
+    "path": "codeforces/374/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Inna and Sequence ",
+    "problem_url": "https://codeforces.com/contest/374/problem/D",
+    "submission_id": "CF23170638",
+    "submission_url": "https://codeforces.com/contest/374/submission/23170638",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dp",
+      "trees",
+      "*2000"
+    ],
+    "timestamp": "Dec/20/2016 08:10"
+  },
   "CF23276821": {
     "contest_id": 223,
     "language": "GNU C++14",
