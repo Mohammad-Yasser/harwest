@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23277315": {
+    "contest_id": 223,
+    "language": "GNU C++14",
+    "path": "codeforces/223/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Two Strings",
+    "problem_url": "https://codeforces.com/contest/223/problem/B",
+    "submission_id": "CF23277315",
+    "submission_url": "https://codeforces.com/contest/223/submission/23277315",
+    "tags": [
+      "data structures",
+      "dp",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Dec/24/2016 20:11"
+  },
   "CF23315664": {
     "contest_id": 752,
     "language": "GNU C++14",
