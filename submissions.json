@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23276821": {
+    "contest_id": 223,
+    "language": "GNU C++14",
+    "path": "codeforces/223/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Bracket Sequence",
+    "problem_url": "https://codeforces.com/contest/223/problem/A",
+    "submission_id": "CF23276821",
+    "submission_url": "https://codeforces.com/contest/223/submission/23276821",
+    "tags": [
+      "data structures",
+      "expression parsing",
+      "implementation",
+      "*1700"
+    ],
+    "timestamp": "Dec/24/2016 19:40"
+  },
   "CF23277315": {
     "contest_id": 223,
     "language": "GNU C++14",
