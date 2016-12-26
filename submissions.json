@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23333746": {
+    "contest_id": 749,
+    "language": "GNU C++14",
+    "path": "codeforces/749/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Inversions After Shuffle",
+    "problem_url": "https://codeforces.com/contest/749/problem/E",
+    "submission_id": "CF23333746",
+    "submission_url": "https://codeforces.com/contest/749/submission/23333746",
+    "tags": [
+      "data structures",
+      "probabilities",
+      "*2400"
+    ],
+    "timestamp": "Dec/26/2016 08:13"
+  },
   "CF23438526": {
     "contest_id": 750,
     "language": "GNU C++14",
