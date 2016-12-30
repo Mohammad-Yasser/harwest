@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23438526": {
+    "contest_id": 750,
+    "language": "GNU C++14",
+    "path": "codeforces/750/D.cpp",
+    "problem_index": "D",
+    "problem_name": "New Year and Fireworks",
+    "problem_url": "https://codeforces.com/contest/750/problem/D",
+    "submission_id": "CF23438526",
+    "submission_url": "https://codeforces.com/contest/750/submission/23438526",
+    "tags": [
+      "brute force",
+      "data structures",
+      "dfs and similar",
+      "dp",
+      "implementation",
+      "*1900"
+    ],
+    "timestamp": "Dec/30/2016 17:08"
+  },
   "CF23439650": {
     "contest_id": 750,
     "language": "GNU C++14",
