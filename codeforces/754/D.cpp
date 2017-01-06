@@ -4,8 +4,60 @@ typedef long long ll;
 
 const int N = 300005;
 const int kMax = 1e9;
+template<class T>
+struct BIT {
+  vector<T> v;
+  BIT(int s) {
+    Resize(s);
+  }
+  BIT() {
+  }
+  void Resize(int s) {
+    s = 1 << (int) ceil(log(1.0 * s) / log(2.) + 1e-9);
+    v.resize(s);
+  }
+  T Get(int i) {
+    i++;
+    T r = 0;
+    while (i) {
+      r += v[i - 1];
+      i -= i & -i;
+    }
+    return r;
+  }
+  void Add(int i, T val = 1) {
+    i++;
+    while (i <= (int) v.size()) {
+      v[i - 1] += val;
+      i += i & -i;
+    }
+  }
+  int Find(T val) {
+    // Find element at index val.
+    int s = 0;
+    int m = v.size() >> 1;
+    while (m) {
+      if (v[s + m - 1] < val) val -= v[(s += m) - 1];
+      m >>= 1;
+    }
+    return s;
+  }
+};
 
-tuple<int, int, int> coupons[N];
+map<int, int> compressed;
+map<int, int> uncompressed;
+
+pair<int, int> coupons[N];
+multiset<pair<int, int>> sorted_coupons;
+
+void Compress() {
+  int ind = 0;
+  for (auto& x : compressed) {
+    x.second = ind;
+    uncompressed[ind] = x.first;
+    ++ind;
+  }
+}
 
 int main() {
   ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
@@ -18,25 +70,28 @@ int main() {
   cin >> n >> k;
 
   for (int i = 0; i < n; ++i) {
-    cin >> get<0>(coupons[i]) >> get<1>(coupons[i]);
-    get<2>(coupons[i]) = i + 1;
+    cin >> coupons[i].first >> coupons[i].second;
+    compressed[coupons[i].second];
+    sorted_coupons.emplace(coupons[i].first, coupons[i].second);
   }
 
-  sort(coupons, coupons + n);
+  Compress();
+
+  BIT<int> bit(N);
 
   pair<int, int> max_range = { -kMax - 1, -kMax - 2 };
 
-  multiset<int> ends;
+  int size = 0;
 
-  for (int i = 0; i < n; ++i) {
-    auto& coupon = coupons[i];
-    ends.insert(get<1>(coupon));
-    if (ends.size() > k) {
-      ends.erase(ends.begin());
+  for (auto& coupon : sorted_coupons) {
+    ++size;
+    bit.Add(compressed[coupon.second]);
+    if (size < k) {
+      continue;
     }
-    if (ends.size() == k
-      && *ends.begin() - get<0>(coupon) > max_range.second - max_range.first) {
-      max_range = {get<0>(coupon),*ends.begin()};
+    int max_end = uncompressed[bit.Find(size - k + 1)];
+    if (max_end - coupon.first > max_range.second - max_range.first) {
+      max_range = {coupon.first , max_end};
     }
   }
 
@@ -49,10 +104,12 @@ int main() {
     return 0;
   }
 
+
+
   for (int i = 0; i < n && k > 0; ++i) {
-    if (get<0>(coupons[i]) <= max_range.first
-      && max_range.second <= get<1>(coupons[i])) {
-      cout << get<2>(coupons[i]) << ' ';
+    if (coupons[i].first <= max_range.first
+      && max_range.second <= coupons[i].second) {
+      cout << i + 1 << ' ';
       --k;
     }
   }
