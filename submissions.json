@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23757604": {
+    "contest_id": 757,
+    "language": "GNU C++14",
+    "path": "codeforces/757/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Felicity is Coming!",
+    "problem_url": "https://codeforces.com/contest/757/problem/C",
+    "submission_id": "CF23757604",
+    "submission_url": "https://codeforces.com/contest/757/submission/23757604",
+    "tags": [
+      "data structures",
+      "hashing",
+      "sortings",
+      "strings",
+      "*1900"
+    ],
+    "timestamp": "Jan/12/2017 18:50"
+  },
   "CF23769252": {
     "contest_id": 757,
     "language": "GNU C++14",
