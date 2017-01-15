@@ -971,6 +971,26 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF23852139": {
+    "contest_id": 755,
+    "language": "GNU C++14",
+    "path": "codeforces/755/B.cpp",
+    "problem_index": "B",
+    "problem_name": "PolandBall and Game",
+    "problem_url": "https://codeforces.com/contest/755/problem/B",
+    "submission_id": "CF23852139",
+    "submission_url": "https://codeforces.com/contest/755/submission/23852139",
+    "tags": [
+      "binary search",
+      "data structures",
+      "games",
+      "greedy",
+      "sortings",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "Jan/15/2017 19:26"
+  },
   "CF23990976": {
     "contest_id": 758,
     "language": "GNU C++14",
