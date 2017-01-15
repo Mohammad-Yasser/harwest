@@ -2596,6 +2596,21 @@
     ],
     "timestamp": "Jan/15/2017 19:26"
   },
+  "CF23862446": {
+    "contest_id": 755,
+    "language": "GNU C++14",
+    "path": "codeforces/755/D.cpp",
+    "problem_index": "D",
+    "problem_name": "PolandBall and Polygon",
+    "problem_url": "https://codeforces.com/contest/755/problem/D",
+    "submission_id": "CF23862446",
+    "submission_url": "https://codeforces.com/contest/755/submission/23862446",
+    "tags": [
+      "data structures",
+      "*2000"
+    ],
+    "timestamp": "Jan/15/2017 20:37"
+  },
   "CF23972642": {
     "contest_id": 758,
     "language": "GNU C++14",
