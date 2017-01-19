@@ -2596,6 +2596,25 @@
     ],
     "timestamp": "Jan/15/2017 19:26"
   },
+  "CF23972642": {
+    "contest_id": 758,
+    "language": "GNU C++14",
+    "path": "codeforces/758/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Ability To Convert",
+    "problem_url": "https://codeforces.com/contest/758/problem/D",
+    "submission_id": "CF23972642",
+    "submission_url": "https://codeforces.com/contest/758/submission/23972642",
+    "tags": [
+      "constructive algorithms",
+      "dp",
+      "greedy",
+      "math",
+      "strings",
+      "*2000"
+    ],
+    "timestamp": "Jan/19/2017 21:42"
+  },
   "CF23990976": {
     "contest_id": 758,
     "language": "GNU C++14",
