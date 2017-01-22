@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF24041539": {
+    "contest_id": 759,
+    "language": "GNU C++14",
+    "path": "codeforces/759/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Travel Card",
+    "problem_url": "https://codeforces.com/contest/759/problem/B",
+    "submission_id": "CF24041539",
+    "submission_url": "https://codeforces.com/contest/759/submission/24041539",
+    "tags": [
+      "binary search",
+      "dp",
+      "greedy",
+      "two pointers",
+      "*1600"
+    ],
+    "timestamp": "Jan/22/2017 20:45"
+  },
   "CF24097336": {
     "contest_id": 756,
     "language": "GNU C++14",
