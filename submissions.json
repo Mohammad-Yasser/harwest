@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF24425454": {
+    "contest_id": 351,
+    "language": "GNU C++14",
+    "path": "codeforces/351/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Jeff and Rounding",
+    "problem_url": "https://codeforces.com/contest/351/problem/A",
+    "submission_id": "CF24425454",
+    "submission_url": "https://codeforces.com/contest/351/submission/24425454",
+    "tags": [
+      "dp",
+      "greedy",
+      "implementation",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Feb/04/2017 07:42"
+  },
   "CF24425979": {
     "contest_id": 763,
     "language": "GNU C++14",
