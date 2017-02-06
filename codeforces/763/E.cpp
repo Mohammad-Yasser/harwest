@@ -6,6 +6,7 @@ const int N = 100005;
 
 struct DSU {
   vector<int> parent[3];
+  vector<int> size[3];
   int start[3];
 
   int cnt_sets;
@@ -15,10 +16,13 @@ struct DSU {
   DSU() {
   }
 
-  int& GetParentOrSize(int x) {
+  int& GetParentOrSize(int x, bool is_parent = true) {
     for (int i = 0; i < 3; ++i) {
       if (x - start[i] < parent[i].size()) {
+        if (is_parent)
           return parent[i][x - start[i]];
+        else
+          return size[i][x - start[i]];
       }
     }
   }
@@ -34,6 +38,7 @@ struct DSU {
       }
 
       GetParentOrSize(i) = p;
+      GetParentOrSize(i, false) = dsu.GetParentOrSize(i, false);
     }
 
     for (int i = max(dsu.right - 4, dsu.left); i <= dsu.right; ++i) {
@@ -46,6 +51,7 @@ struct DSU {
       }
 
       GetParentOrSize(i) = p;
+      GetParentOrSize(i, false) = dsu.GetParentOrSize(i, false);
     }
   }
 
@@ -57,12 +63,15 @@ struct DSU {
 
     start[0] = left;
     parent[0].resize(5);
+    size[0].resize(5);
 
     start[1] = dsu_left.right - 4;
     parent[1].resize(10);
+    size[1].resize(10);
 
     start[2] = right - 4;
     parent[2].resize(5);
+    size[2].resize(5);
 
     AssignParent(dsu_left);
     AssignParent(dsu_right);
@@ -75,6 +84,9 @@ struct DSU {
 
     parent[0].resize(1);
     parent[0][0] = x;
+
+    size[0].resize(1);
+    size[0][0] = 1;
 
     cnt_sets = 1;
   }
@@ -98,6 +110,7 @@ struct DSU {
     }
 
     GetParentOrSize(x) = y;
+    GetParentOrSize(y, false) += GetParentOrSize(x, false);
   }
 };
 
