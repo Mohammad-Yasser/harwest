@@ -105,6 +105,9 @@ struct DSU {
     if (x == y) return;
     --cnt_sets;
 
+    if (GetParentOrSize(x, false) > GetParentOrSize(y, false)) {
+      swap(x, y);
+    }
     GetParentOrSize(x) = y;
     GetParentOrSize(y, false) += GetParentOrSize(x, false);
   }
