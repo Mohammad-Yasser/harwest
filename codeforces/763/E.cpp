@@ -6,7 +6,6 @@ const int N = 100005;
 
 struct DSU {
   vector<int> parent[3];
-  vector<int> size[3];
   int start[3];
 
   int cnt_sets;
@@ -16,13 +15,10 @@ struct DSU {
   DSU() {
   }
 
-  int& GetParentOrSize(int x, bool is_parent = true) {
+  int& GetParent(int x) {
     for (int i = 0; i < 3; ++i) {
       if (x - start[i] < parent[i].size()) {
-        if (is_parent)
-          return parent[i][x - start[i]];
-        else
-          return size[i][x - start[i]];
+        return parent[i][x - start[i]];
       }
     }
   }
@@ -32,26 +28,24 @@ struct DSU {
       int p = dsu.GetRoot(i);
 
       if (p >= dsu.left + 5 && p <= dsu.right - 5) {
-        dsu.GetParentOrSize(p) = i;
-        dsu.GetParentOrSize(i) = i;
+        dsu.GetParent(p) = i;
+        dsu.GetParent(i) = i;
         p = i;
       }
 
-      GetParentOrSize(i) = p;
-      GetParentOrSize(i, false) = dsu.GetParentOrSize(i, false);
+      GetParent(i) = p;
     }
 
     for (int i = max(dsu.right - 4, dsu.left); i <= dsu.right; ++i) {
       int p = dsu.GetRoot(i);
 
       if (p >= dsu.left + 5 && p <= dsu.right - 5) {
-        dsu.GetParentOrSize(p) = i;
-        dsu.GetParentOrSize(i) = i;
+        dsu.GetParent(p) = i;
+        dsu.GetParent(i) = i;
         p = i;
       }
 
-      GetParentOrSize(i) = p;
-      GetParentOrSize(i, false) = dsu.GetParentOrSize(i, false);
+      GetParent(i) = p;
     }
   }
 
@@ -63,15 +57,10 @@ struct DSU {
 
     start[0] = left;
     parent[0].resize(5);
-    size[0].resize(5);
-
     start[1] = dsu_left.right - 4;
     parent[1].resize(10);
-    size[1].resize(10);
-
     start[2] = right - 4;
     parent[2].resize(5);
-    size[2].resize(5);
 
     AssignParent(dsu_left);
     AssignParent(dsu_right);
@@ -81,21 +70,17 @@ struct DSU {
     left(x), right(x) {
 
     start[0] = x;
-
     parent[0].resize(1);
     parent[0][0] = x;
-
-    size[0].resize(1);
-    size[0][0] = 1;
 
     cnt_sets = 1;
   }
 
   int GetRoot(int node) {
-    if (GetParentOrSize(node) == node) {
+    if (GetParent(node) == node) {
       return node;
     }
-    return GetParentOrSize(node) = GetRoot(GetParentOrSize(node));
+    return GetParent(node) = GetRoot(GetParent(node));
   }
 
   void Join(int x, int y) {
@@ -105,11 +90,7 @@ struct DSU {
     if (x == y) return;
     --cnt_sets;
 
-    if (GetParentOrSize(x, false) > GetParentOrSize(y, false)) {
-      swap(x, y);
-    }
-    GetParentOrSize(x) = y;
-    GetParentOrSize(y, false) += GetParentOrSize(x, false);
+    GetParent(x) = y;
   }
 };
 
