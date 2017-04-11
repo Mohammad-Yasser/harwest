@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF26289510": {
+    "contest_id": 796,
+    "language": "GNU C++14",
+    "path": "codeforces/796/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Exam Cheating",
+    "problem_url": "https://codeforces.com/contest/796/problem/E",
+    "submission_id": "CF26289510",
+    "submission_url": "https://codeforces.com/contest/796/submission/26289510",
+    "tags": [
+      "binary search",
+      "dp",
+      "*2400"
+    ],
+    "timestamp": "Apr/11/2017 06:24"
+  },
   "CF26298351": {
     "contest_id": 796,
     "language": "GNU C++14",

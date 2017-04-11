@@ -64,8 +64,6 @@ int main() {
   int n, p;
 
   cin >> n >> p >> k;
-  
-  p = min(p , 2 * (n + k - 1) / k);
 
   for (int i = 0; i < 2; ++i) {
     int tmp;
