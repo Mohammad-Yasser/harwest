@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF26356524": {
+    "contest_id": 767,
+    "language": "GNU C++14",
+    "path": "codeforces/767/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Change-free",
+    "problem_url": "https://codeforces.com/contest/767/problem/E",
+    "submission_id": "CF26356524",
+    "submission_url": "https://codeforces.com/contest/767/submission/26356524",
+    "tags": [
+      "greedy",
+      "*2400"
+    ],
+    "timestamp": "Apr/14/2017 14:33"
+  },
   "CF26367026": {
     "contest_id": 406,
     "language": "GNU C++14",
