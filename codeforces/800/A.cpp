@@ -4,7 +4,7 @@ using namespace std;
 typedef long long Long;
 
 const int N = 1e5 + 5;
-const long double OO = 1e10 + 1;
+const long double OO = 1e20;
 
 int a[N];
 int b[N];
@@ -16,10 +16,10 @@ bool Check(long double t) {
   long double needed = 0;
 
   for (int i = 0; i < n; ++i) {
-    needed += max((long double) 0.0, t * a[i] - b[i]);
+    needed += max((long double) 0.0, t * a[i] - b[i]) / p;
   }
 
-  return needed <= (t * p + 1e-8);
+  return needed <= t;
 }
 
 long double Solve() {
@@ -52,7 +52,7 @@ int main() {
 
   auto res = Solve();
 
-  if (res >= OO - 1e-9) {
+  if (res >= 2 * OO / 3) {
     cout << -1;
     return 0;
   }
