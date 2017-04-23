@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF26627190": {
+    "contest_id": 793,
+    "language": "GNU C++14",
+    "path": "codeforces/793/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Presents in Bankopolis",
+    "problem_url": "https://codeforces.com/contest/793/problem/D",
+    "submission_id": "CF26627190",
+    "submission_url": "https://codeforces.com/contest/793/submission/26627190",
+    "tags": [
+      "dp",
+      "graphs",
+      "shortest paths",
+      "*2100"
+    ],
+    "timestamp": "Apr/23/2017 22:19"
+  },
   "CF26627345": {
     "contest_id": 793,
     "language": "GNU C++14",
