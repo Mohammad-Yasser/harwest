@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF26726099": {
+    "contest_id": 803,
+    "language": "GNU C++14",
+    "path": "codeforces/803/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Magazine Ad",
+    "problem_url": "https://codeforces.com/contest/803/problem/D",
+    "submission_id": "CF26726099",
+    "submission_url": "https://codeforces.com/contest/803/submission/26726099",
+    "tags": [
+      "binary search",
+      "greedy",
+      "*1900"
+    ],
+    "timestamp": "Apr/28/2017 17:52"
+  },
   "CF26728414": {
     "contest_id": 803,
     "language": "GNU C++14",
