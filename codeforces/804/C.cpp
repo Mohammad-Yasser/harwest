@@ -71,7 +71,7 @@ int main() {
     adj[v].push_back(u);
   }
 
-  Dfs(1, -1);
+  Dfs(mx_node, -1);
 
   cout << max(1, (int) types[mx_node].size()) << '\n';
 
@@ -80,3 +80,4 @@ int main() {
   }
 
 }
+
