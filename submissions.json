@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF26880151": {
+    "contest_id": 804,
+    "language": "GNU C++14",
+    "path": "codeforces/804/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Ice cream coloring",
+    "problem_url": "https://codeforces.com/contest/804/problem/C",
+    "submission_id": "CF26880151",
+    "submission_url": "https://codeforces.com/contest/804/submission/26880151",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "greedy",
+      "*2200"
+    ],
+    "timestamp": "May/05/2017 14:22"
+  },
   "CF26910741": {
     "contest_id": 804,
     "language": "GNU C++14",
