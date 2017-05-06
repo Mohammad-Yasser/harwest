@@ -971,6 +971,26 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF26910741": {
+    "contest_id": 804,
+    "language": "GNU C++14",
+    "path": "codeforces/804/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Expected diameter of a tree",
+    "problem_url": "https://codeforces.com/contest/804/problem/D",
+    "submission_id": "CF26910741",
+    "submission_url": "https://codeforces.com/contest/804/submission/26910741",
+    "tags": [
+      "binary search",
+      "brute force",
+      "dfs and similar",
+      "dp",
+      "sortings",
+      "trees",
+      "*2500"
+    ],
+    "timestamp": "May/06/2017 23:52"
+  },
   "CF26926820": {
     "contest_id": 807,
     "language": "GNU C++14",
