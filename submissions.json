@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF26941117": {
+    "contest_id": 807,
+    "language": "GNU C++14",
+    "path": "codeforces/807/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Dynamic Problem Scoring",
+    "problem_url": "https://codeforces.com/contest/807/problem/D",
+    "submission_id": "CF26941117",
+    "submission_url": "https://codeforces.com/contest/807/submission/26941117",
+    "tags": [
+      "brute force",
+      "greedy",
+      "*2000"
+    ],
+    "timestamp": "May/07/2017 20:09"
+  },
   "CF26949884": {
     "contest_id": 807,
     "language": "GNU C++14",
