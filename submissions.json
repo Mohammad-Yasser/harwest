@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF26951652": {
+    "contest_id": 806,
+    "language": "GNU C++14",
+    "path": "codeforces/806/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Prairie Partition",
+    "problem_url": "https://codeforces.com/contest/806/problem/C",
+    "submission_id": "CF26951652",
+    "submission_url": "https://codeforces.com/contest/806/submission/26951652",
+    "tags": [
+      "binary search",
+      "greedy",
+      "*2200"
+    ],
+    "timestamp": "May/08/2017 08:45"
+  },
   "CF26973079": {
     "contest_id": 806,
     "language": "GNU C++14",
