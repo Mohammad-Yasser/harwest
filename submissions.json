@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF26973079": {
+    "contest_id": 806,
+    "language": "GNU C++14",
+    "path": "codeforces/806/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Perishable Roads",
+    "problem_url": "https://codeforces.com/contest/806/problem/D",
+    "submission_id": "CF26973079",
+    "submission_url": "https://codeforces.com/contest/806/submission/26973079",
+    "tags": [
+      "graphs",
+      "shortest paths",
+      "*2700"
+    ],
+    "timestamp": "May/09/2017 13:58"
+  },
   "CF27016952": {
     "contest_id": 799,
     "language": "GNU C++14",
