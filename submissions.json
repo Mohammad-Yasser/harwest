@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF27019107": {
+    "contest_id": 799,
+    "language": "GNU C++14",
+    "path": "codeforces/799/B.cpp",
+    "problem_index": "B",
+    "problem_name": "T-shirt buying",
+    "problem_url": "https://codeforces.com/contest/799/problem/B",
+    "submission_id": "CF27019107",
+    "submission_url": "https://codeforces.com/contest/799/submission/27019107",
+    "tags": [
+      "data structures",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "May/11/2017 17:52"
+  },
   "CF27025374": {
     "contest_id": 799,
     "language": "GNU C++14",
