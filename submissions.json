@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF27157675": {
+    "contest_id": 808,
+    "language": "GNU C++14",
+    "path": "codeforces/808/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Tea Party",
+    "problem_url": "https://codeforces.com/contest/808/problem/C",
+    "submission_id": "CF27157675",
+    "submission_url": "https://codeforces.com/contest/808/submission/27157675",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "May/16/2017 13:18"
+  },
   "CF27158167": {
     "contest_id": 808,
     "language": "GNU C++14",
