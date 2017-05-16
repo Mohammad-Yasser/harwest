@@ -28,11 +28,11 @@ int main() {
   cin >> n;
 
   unordered_multiset<Long> left, right;
-//  left.reserve(2 * n);
-//  right.reserve(2 * n);
+  left.reserve(2 * n);
+  right.reserve(2 * n);
 
-  left.max_load_factor(0.25);
-  right.max_load_factor(0.25);
+//  left.max_load_factor(0.25);
+//  right.max_load_factor(0.25);
 
   Long sum_left = 0, sum_right = 0;
 
