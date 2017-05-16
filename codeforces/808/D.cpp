@@ -31,8 +31,8 @@ int main() {
   left.reserve(2 * n);
   right.reserve(2 * n);
 
-//  left.max_load_factor(0.25);
-//  right.max_load_factor(0.25);
+  left.max_load_factor(0.25);
+  right.max_load_factor(0.25);
 
   Long sum_left = 0, sum_right = 0;
 
