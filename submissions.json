@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF27502175": {
+    "contest_id": 812,
+    "language": "GNU C++14",
+    "path": "codeforces/812/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Sagheer and Kindergarten",
+    "problem_url": "https://codeforces.com/contest/812/problem/D",
+    "submission_id": "CF27502175",
+    "submission_url": "https://codeforces.com/contest/812/submission/27502175",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "implementation",
+      "trees",
+      "*2700"
+    ],
+    "timestamp": "Jun/01/2017 18:02"
+  },
   "CF27504793": {
     "contest_id": 812,
     "language": "GNU C++14",
