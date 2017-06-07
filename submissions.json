@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF27636303": {
+    "contest_id": 814,
+    "language": "GNU C++14",
+    "path": "codeforces/814/C.cpp",
+    "problem_index": "C",
+    "problem_name": "An impassioned circulation of affection",
+    "problem_url": "https://codeforces.com/contest/814/problem/C",
+    "submission_id": "CF27636303",
+    "submission_url": "https://codeforces.com/contest/814/submission/27636303",
+    "tags": [
+      "brute force",
+      "dp",
+      "strings",
+      "two pointers",
+      "*1600"
+    ],
+    "timestamp": "Jun/07/2017 14:36"
+  },
   "CF27642372": {
     "contest_id": 814,
     "language": "GNU C++14",
