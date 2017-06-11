@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF27723183": {
+    "contest_id": 802,
+    "language": "GNU C++14",
+    "path": "codeforces/802/H.cpp",
+    "problem_index": "H",
+    "problem_name": "Fake News (medium)",
+    "problem_url": "https://codeforces.com/contest/802/problem/H",
+    "submission_id": "CF27723183",
+    "submission_url": "https://codeforces.com/contest/802/submission/27723183",
+    "tags": [
+      "constructive algorithms",
+      "strings",
+      "*2200"
+    ],
+    "timestamp": "Jun/11/2017 17:18"
+  },
   "CF27799060": {
     "contest_id": 817,
     "language": "GNU C++14",
