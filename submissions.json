@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF27804421": {
+    "contest_id": 817,
+    "language": "GNU C++14",
+    "path": "codeforces/817/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Choosing The Commander",
+    "problem_url": "https://codeforces.com/contest/817/problem/E",
+    "submission_id": "CF27804421",
+    "submission_url": "https://codeforces.com/contest/817/submission/27804421",
+    "tags": [
+      "bitmasks",
+      "data structures",
+      "trees",
+      "*2000"
+    ],
+    "timestamp": "Jun/15/2017 18:34"
+  },
   "CF27851812": {
     "contest_id": 815,
     "language": "GNU C++14",
