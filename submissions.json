@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF28043760": {
+    "contest_id": 821,
+    "language": "GNU C++14",
+    "path": "codeforces/821/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Okabe and Boxes",
+    "problem_url": "https://codeforces.com/contest/821/problem/C",
+    "submission_id": "CF28043760",
+    "submission_url": "https://codeforces.com/contest/821/submission/28043760",
+    "tags": [
+      "data structures",
+      "greedy",
+      "trees",
+      "*1500"
+    ],
+    "timestamp": "Jun/25/2017 22:19"
+  },
   "CF28044738": {
     "contest_id": 821,
     "language": "GNU C++14",
