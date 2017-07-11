@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF28437458": {
+    "contest_id": 827,
+    "language": "GNU C++14",
+    "path": "codeforces/827/B.cpp",
+    "problem_index": "B",
+    "problem_name": "High Load",
+    "problem_url": "https://codeforces.com/contest/827/problem/B",
+    "submission_id": "CF28437458",
+    "submission_url": "https://codeforces.com/contest/827/submission/28437458",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "Jul/11/2017 19:15"
+  },
   "CF28443853": {
     "contest_id": 827,
     "language": "GNU C++14",
