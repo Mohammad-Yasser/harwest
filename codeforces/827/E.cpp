@@ -138,15 +138,17 @@ int main() {
     }
 
     Polynomial v_rev_k = fft_solver.multiply(v, rev_k);
+    Polynomial k_rev_v = fft_solver.multiply(k, rev_v);
 
     vector<bool> invalid(n + 1, false);
 
     for (int i = 0; i < v_rev_k.size(); ++i) {
       int d = i - n + 1;
       if (d > n) break;
-      if (v_rev_k[i] == 0) continue;
+      if (d < 1) continue;
+      if (v_rev_k[i] == 0 && k_rev_v[i] == 0) continue;
 
-      invalid[abs(d)] = true;
+      invalid[d] = true;
     }
 
     auto valid = getValid(invalid);
