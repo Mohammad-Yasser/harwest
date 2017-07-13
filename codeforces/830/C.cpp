@@ -15,7 +15,7 @@ Long res = 1;
 
 Long get(Long d) {
   Long res = 0;
-  for (int i = 0; i < n && res <= k; ++i) {
+  for (int i = 0; i < n; ++i) {
     res += (d - heights[i] % d) % d;
   }
   return res;
@@ -68,8 +68,6 @@ int main() {
 
   critical_points.push_back(1e13);
   sort(critical_points.begin(), critical_points.end());
-  critical_points.erase(unique(critical_points.begin(), critical_points.end()),
-    critical_points.end());
 
   for (Long i = 1; i <= SqrtMX; ++i) {
     maximize(i);
@@ -79,7 +77,7 @@ int main() {
 
   while (!critical_points.empty()) {
     Long curr = critical_points.back();
-    for (Long j = curr; j <= curr + 1; ++j) {
+    for (Long j = max(1LL, curr - 1); j <= curr + 1; ++j) {
       maximize(j);
     }
 
