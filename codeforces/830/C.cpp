@@ -5,7 +5,7 @@ typedef long long Long;
 
 const int N = 103;
 const int MX = 1e9 + 5;
-const int SqrtMX = 1e5;
+const int SqrtMX = 4e5;
 
 int heights[N];
 int n;
