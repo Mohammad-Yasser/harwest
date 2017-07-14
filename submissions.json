@@ -971,6 +971,27 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF28536669": {
+    "contest_id": 830,
+    "language": "GNU C++14",
+    "path": "codeforces/830/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Bamboo Partition",
+    "problem_url": "https://codeforces.com/contest/830/problem/C",
+    "submission_id": "CF28536669",
+    "submission_url": "https://codeforces.com/contest/830/submission/28536669",
+    "tags": [
+      "brute force",
+      "data structures",
+      "implementation",
+      "math",
+      "number theory",
+      "sortings",
+      "two pointers",
+      "*2300"
+    ],
+    "timestamp": "Jul/14/2017 05:59"
+  },
   "CF28536672": {
     "contest_id": 830,
     "language": "GNU C++14",
