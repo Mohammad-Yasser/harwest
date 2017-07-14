@@ -5,7 +5,7 @@ typedef long long Long;
 
 const int N = 103;
 const int MX = 1e9 + 5;
-const int SqrtMX = 1e5;
+const int SqrtMX = sqrt(MX) + 3;
 
 int heights[N];
 int n;
@@ -76,9 +76,8 @@ int main() {
   }
 
   Long nxt = critical_points.back();
-  int cnt = 0;
+
   while (!critical_points.empty()) {
-      ++cnt;
     Long curr = critical_points.back();
 
     for (Long j = curr; j <= curr + 1; ++j) {
@@ -92,7 +91,7 @@ int main() {
     nxt = curr;
     critical_points.pop_back();
   }
-  assert(cnt<1e5);
+
   cout << res;
 
 }
