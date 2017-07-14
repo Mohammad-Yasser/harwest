@@ -5,7 +5,7 @@ typedef long long Long;
 
 const int N = 103;
 const int MX = 1e9 + 5;
-const int SqrtMX = 4e5;
+const int SqrtMX = 6e5;
 
 int heights[N];
 int n;
@@ -79,7 +79,6 @@ int main() {
 
   while (!critical_points.empty()) {
     Long curr = critical_points.back();
-
     for (Long j = curr; j <= curr + 1; ++j) {
       maximize(j);
     }
