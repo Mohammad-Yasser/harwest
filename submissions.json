@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF28857668": {
+    "contest_id": 832,
+    "language": "GNU C++14",
+    "path": "codeforces/832/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Petya and Exam",
+    "problem_url": "https://codeforces.com/contest/832/problem/B",
+    "submission_id": "CF28857668",
+    "submission_url": "https://codeforces.com/contest/832/submission/28857668",
+    "tags": [
+      "implementation",
+      "strings",
+      "*1600"
+    ],
+    "timestamp": "Jul/24/2017 22:29"
+  },
   "CF29028256": {
     "contest_id": 833,
     "language": "GNU C++14",
