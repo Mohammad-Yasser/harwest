@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF29028256": {
+    "contest_id": 833,
+    "language": "GNU C++14",
+    "path": "codeforces/833/A.cpp",
+    "problem_index": "A",
+    "problem_name": "The Meaningless Game",
+    "problem_url": "https://codeforces.com/contest/833/problem/A",
+    "submission_id": "CF29028256",
+    "submission_url": "https://codeforces.com/contest/833/submission/29028256",
+    "tags": [
+      "math",
+      "number theory",
+      "*1700"
+    ],
+    "timestamp": "Jul/30/2017 23:45"
+  },
   "CF29177558": {
     "contest_id": 837,
     "language": "GNU C++14",
