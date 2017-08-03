@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF29177558": {
+    "contest_id": 837,
+    "language": "GNU C++14",
+    "path": "codeforces/837/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Vasya's Function",
+    "problem_url": "https://codeforces.com/contest/837/problem/E",
+    "submission_id": "CF29177558",
+    "submission_url": "https://codeforces.com/contest/837/submission/29177558",
+    "tags": [
+      "binary search",
+      "implementation",
+      "math",
+      "*2100"
+    ],
+    "timestamp": "Aug/03/2017 22:37"
+  },
   "CF29260794": {
     "contest_id": 837,
     "language": "GNU C++14",
