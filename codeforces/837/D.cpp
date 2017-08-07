@@ -6,7 +6,7 @@ typedef long long Long;
 const short N = 201;
 const Long MX = 1e18 + 1;
 const short LogMX = log(MX) / log(5) + 3;
-const short M = N * LogMX;
+const short M = 2 * N * LogMX + 5;
 
 short dp[2][N][M];
 
@@ -36,32 +36,33 @@ int main() {
     }
   }
 
-  memset(dp, numeric_limits<char>::min(), sizeof dp);
-
-  short ans = 0;
   for (int i = 0; i < n; ++i) {
     bool curr = i & 1;
-    dp[!curr][0][0] = 0;
-
     for (int rem = 1; rem < N; ++rem) {
       for (int c = 0; c < M; ++c) {
         short leave = dp[!curr][rem][c];
 
-        short take = dp[!curr][rem - 1][max(short(0), short(c - cnt5[i]))]
-          + cnt2[i];
+        short new_cnt5 = max((short)0, short(c - M / 2)) + cnt5[i];
+        short new_cnt2 = max((short)0, short(M / 2 - c)) + cnt2[i];
+
+        short new_c = M / 2 + new_cnt5 - new_cnt2;
+        new_c = max(new_c , short(0));
+        new_c = min(new_c , short(M - 1));
+        
+        short take = min(new_cnt5, new_cnt2) + dp[!curr][rem - 1][new_c];
 
         dp[curr][rem][c] = max(leave, take);
       }
     }
 
-    for (short rem = 0; rem < N; ++rem) {
-      for (short c = 0; c < M; ++c) {
+    for (int rem = 1; rem < N; ++rem) {
+      for (int c = 0; c < M; ++c) {
         dp[!curr][rem][c] = dp[curr][rem][c];
-        ans = max(ans, min(c, dp[curr][k][c]));
       }
+
     }
   }
 
-  cout << ans;
+  cout << dp[~n & 1][k][M / 2];
 
 }
