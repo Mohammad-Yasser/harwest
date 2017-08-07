@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF29260794": {
+    "contest_id": 837,
+    "language": "GNU C++14",
+    "path": "codeforces/837/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Round Subset",
+    "problem_url": "https://codeforces.com/contest/837/problem/D",
+    "submission_id": "CF29260794",
+    "submission_url": "https://codeforces.com/contest/837/submission/29260794",
+    "tags": [
+      "dp",
+      "math",
+      "*2100"
+    ],
+    "timestamp": "Aug/07/2017 11:09"
+  },
   "CF29260939": {
     "contest_id": 837,
     "language": "GNU C++14",
