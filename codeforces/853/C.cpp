@@ -31,7 +31,7 @@ struct BIT {
     }
 };
 
-BIT<int> bit;
+BIT<Long> bit;
 
 
 const int N = 2e5 + 5;
