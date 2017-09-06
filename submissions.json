@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF30144450": {
+    "contest_id": 853,
+    "language": "GNU C++14",
+    "path": "codeforces/853/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Jury Meeting",
+    "problem_url": "https://codeforces.com/contest/853/problem/B",
+    "submission_id": "CF30144450",
+    "submission_url": "https://codeforces.com/contest/853/submission/30144450",
+    "tags": [
+      "greedy",
+      "sortings",
+      "two pointers",
+      "*1800"
+    ],
+    "timestamp": "Sep/06/2017 15:36"
+  },
   "CF30152796": {
     "contest_id": 853,
     "language": "GNU C++14",
