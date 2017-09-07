@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF30175466": {
+    "contest_id": 853,
+    "language": "GNU C++14",
+    "path": "codeforces/853/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Boredom",
+    "problem_url": "https://codeforces.com/contest/853/problem/C",
+    "submission_id": "CF30175466",
+    "submission_url": "https://codeforces.com/contest/853/submission/30175466",
+    "tags": [
+      "data structures",
+      "*2100"
+    ],
+    "timestamp": "Sep/07/2017 10:02"
+  },
   "CF30179205": {
     "contest_id": 853,
     "language": "GNU C++14",
