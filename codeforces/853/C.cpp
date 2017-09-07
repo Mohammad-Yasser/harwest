@@ -9,7 +9,7 @@ struct BIT {
     vector<T> v;
 
     BIT() {
-        v.resize(1 << 19, 0);
+        v.resize(1 << 20, 0);
     }
 
     T Get(int i) {
