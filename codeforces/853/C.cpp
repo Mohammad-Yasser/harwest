@@ -34,28 +34,13 @@ struct BIT {
 BIT<int> bit;
 
 
-template<class T> inline void hash_combine(std::size_t & seed, const T & v) {
-    std::hash<T> hasher;
-    seed ^= hasher(v) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
-}
-namespace std {
-    template<typename S, typename T> struct hash<pair<S, T>> {
-        inline size_t operator()(const pair<S, T> & v) const {
-            size_t seed = 0;
-            ::hash_combine(seed, v.first);
-            ::hash_combine(seed, v.second);
-            return seed;
-        }
-    };
-}
-
 const int N = 2e5 + 5;
 
 struct Query {
     int l, d, r, u;
 } queries[N];
 
-unordered_map<pair<int, int>, int> mp;
+map<pair<int, int>, int> mp;
 vector<int> bit_queries[N];
 
 
@@ -114,9 +99,7 @@ int main() {
 #endif
 
     ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
-    mp.reserve(2 * 5 * N);
-    mp.max_load_factor(0.25);
-    
+
     int q;
     cin >> n >> q;
 
