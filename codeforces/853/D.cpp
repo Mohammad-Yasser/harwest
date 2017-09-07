@@ -4,7 +4,7 @@ using namespace std;
 typedef long long Long;
 
 const int N = 3e5 + 5;
-const int MX = 5e8;
+const int MX = 1e8;
 const int M = MX / N;
 
 int a[N];
