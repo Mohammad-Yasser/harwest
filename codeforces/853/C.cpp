@@ -114,8 +114,8 @@ int main() {
 #endif
 
     ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
-//    mp.reserve(2 * 5 * N);
-//    mp.max_load_factor(0.25);
+    mp.reserve(2 * 5 * N);
+    mp.max_load_factor(0.25);
     
     int q;
     cin >> n >> q;
