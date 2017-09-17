@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF30420406": {
+    "contest_id": 859,
+    "language": "GNU C++14",
+    "path": "codeforces/859/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Desk Disorder",
+    "problem_url": "https://codeforces.com/contest/859/problem/E",
+    "submission_id": "CF30420406",
+    "submission_url": "https://codeforces.com/contest/859/submission/30420406",
+    "tags": [
+      "combinatorics",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "trees",
+      "*2100"
+    ],
+    "timestamp": "Sep/17/2017 14:06"
+  },
   "CF30422798": {
     "contest_id": 860,
     "language": "GNU C++14",
