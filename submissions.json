@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF30427212": {
+    "contest_id": 860,
+    "language": "GNU C++14",
+    "path": "codeforces/860/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Polycarp's phone book",
+    "problem_url": "https://codeforces.com/contest/860/problem/B",
+    "submission_id": "CF30427212",
+    "submission_url": "https://codeforces.com/contest/860/submission/30427212",
+    "tags": [
+      "brute force",
+      "data structures",
+      "hashing",
+      "implementation",
+      "strings",
+      "*1600"
+    ],
+    "timestamp": "Sep/17/2017 15:30"
+  },
   "CF30461553": {
     "contest_id": 860,
     "language": "GNU C++14",
