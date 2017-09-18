@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF30461553": {
+    "contest_id": 860,
+    "language": "GNU C++14",
+    "path": "codeforces/860/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Tests Renumeration",
+    "problem_url": "https://codeforces.com/contest/860/problem/C",
+    "submission_id": "CF30461553",
+    "submission_url": "https://codeforces.com/contest/860/submission/30461553",
+    "tags": [
+      "greedy",
+      "*2200"
+    ],
+    "timestamp": "Sep/18/2017 13:06"
+  },
   "CF30529866": {
     "contest_id": 862,
     "language": "GNU C++14",
