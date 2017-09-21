@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF30596561": {
+    "contest_id": 847,
+    "language": "GNU C++14",
+    "path": "codeforces/847/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Dog Show",
+    "problem_url": "https://codeforces.com/contest/847/problem/D",
+    "submission_id": "CF30596561",
+    "submission_url": "https://codeforces.com/contest/847/submission/30596561",
+    "tags": [
+      "data structures",
+      "greedy",
+      "*2200"
+    ],
+    "timestamp": "Sep/21/2017 20:17"
+  },
   "CF30668440": {
     "contest_id": 855,
     "language": "GNU C++14",
