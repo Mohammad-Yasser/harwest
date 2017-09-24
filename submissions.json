@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF30684610": {
+    "contest_id": 855,
+    "language": "GNU C++14",
+    "path": "codeforces/855/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Salazar Slytherin's Locket",
+    "problem_url": "https://codeforces.com/contest/855/problem/E",
+    "submission_id": "CF30684610",
+    "submission_url": "https://codeforces.com/contest/855/submission/30684610",
+    "tags": [
+      "bitmasks",
+      "dp",
+      "*2200"
+    ],
+    "timestamp": "Sep/24/2017 18:42"
+  },
   "CF30874072": {
     "contest_id": 866,
     "language": "GNU C++14",
