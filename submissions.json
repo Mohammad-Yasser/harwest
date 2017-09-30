@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF30883686": {
+    "contest_id": 866,
+    "language": "GNU C++14",
+    "path": "codeforces/866/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Gotta Go Fast",
+    "problem_url": "https://codeforces.com/contest/866/problem/C",
+    "submission_id": "CF30883686",
+    "submission_url": "https://codeforces.com/contest/866/submission/30883686",
+    "tags": [
+      "binary search",
+      "dp",
+      "probabilities",
+      "*2400"
+    ],
+    "timestamp": "Sep/30/2017 21:37"
+  },
   "CF30884941": {
     "contest_id": 866,
     "language": "GNU C++14",
