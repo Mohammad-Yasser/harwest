@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF30884941": {
+    "contest_id": 866,
+    "language": "GNU C++14",
+    "path": "codeforces/866/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Ordering Pizza",
+    "problem_url": "https://codeforces.com/contest/866/problem/B",
+    "submission_id": "CF30884941",
+    "submission_url": "https://codeforces.com/contest/866/submission/30884941",
+    "tags": [
+      "greedy",
+      "implementation",
+      "sortings",
+      "*1900"
+    ],
+    "timestamp": "Sep/30/2017 22:00"
+  },
   "CF30914367": {
     "contest_id": 866,
     "language": "GNU C++14",
