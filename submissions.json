@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF31407326": {
+    "contest_id": 875,
+    "language": "GNU C++14",
+    "path": "codeforces/875/D.cpp",
+    "problem_index": "D",
+    "problem_name": "High Cry",
+    "problem_url": "https://codeforces.com/contest/875/problem/D",
+    "submission_id": "CF31407326",
+    "submission_url": "https://codeforces.com/contest/875/submission/31407326",
+    "tags": [
+      "binary search",
+      "bitmasks",
+      "combinatorics",
+      "data structures",
+      "divide and conquer",
+      "*2200"
+    ],
+    "timestamp": "Oct/16/2017 14:31"
+  },
   "CF31645985": {
     "contest_id": 877,
     "language": "GNU C++14",
