@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF31645985": {
+    "contest_id": 877,
+    "language": "GNU C++14",
+    "path": "codeforces/877/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Slava and tanks",
+    "problem_url": "https://codeforces.com/contest/877/problem/C",
+    "submission_id": "CF31645985",
+    "submission_url": "https://codeforces.com/contest/877/submission/31645985",
+    "tags": [
+      "constructive algorithms",
+      "*1600"
+    ],
+    "timestamp": "Oct/23/2017 18:34"
+  },
   "CF31659840": {
     "contest_id": 877,
     "language": "GNU C++14",
