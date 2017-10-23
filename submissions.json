@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF31659840": {
+    "contest_id": 877,
+    "language": "GNU C++14",
+    "path": "codeforces/877/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Olya and Energy Drinks",
+    "problem_url": "https://codeforces.com/contest/877/problem/D",
+    "submission_id": "CF31659840",
+    "submission_url": "https://codeforces.com/contest/877/submission/31659840",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "graphs",
+      "shortest paths",
+      "*2100"
+    ],
+    "timestamp": "Oct/23/2017 21:12"
+  },
   "CF31747064": {
     "contest_id": 878,
     "language": "GNU C++14",
