@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF31747064": {
+    "contest_id": 878,
+    "language": "GNU C++14",
+    "path": "codeforces/878/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Short Program",
+    "problem_url": "https://codeforces.com/contest/878/problem/A",
+    "submission_id": "CF31747064",
+    "submission_url": "https://codeforces.com/contest/878/submission/31747064",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "*1600"
+    ],
+    "timestamp": "Oct/26/2017 17:05"
+  },
   "CF31784098": {
     "contest_id": 878,
     "language": "GNU C++14",
