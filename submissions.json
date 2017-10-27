@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF31784098": {
+    "contest_id": 878,
+    "language": "GNU C++14",
+    "path": "codeforces/878/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Teams Formation",
+    "problem_url": "https://codeforces.com/contest/878/problem/B",
+    "submission_id": "CF31784098",
+    "submission_url": "https://codeforces.com/contest/878/submission/31784098",
+    "tags": [
+      "data structures",
+      "implementation",
+      "*2300"
+    ],
+    "timestamp": "Oct/27/2017 07:42"
+  },
   "CF31798279": {
     "contest_id": 884,
     "language": "GNU C++14",
