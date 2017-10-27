@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF31799017": {
+    "contest_id": 884,
+    "language": "GNU C++14",
+    "path": "codeforces/884/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Japanese Crosswords Strike Back",
+    "problem_url": "https://codeforces.com/contest/884/problem/B",
+    "submission_id": "CF31799017",
+    "submission_url": "https://codeforces.com/contest/884/submission/31799017",
+    "tags": [
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Oct/27/2017 16:09"
+  },
   "CF31800985": {
     "contest_id": 884,
     "language": "GNU C++14",
