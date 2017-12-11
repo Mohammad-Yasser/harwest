@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF33113215": {
+    "contest_id": 900,
+    "language": "GNU C++14",
+    "path": "codeforces/900/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Find Extra One",
+    "problem_url": "https://codeforces.com/contest/900/problem/A",
+    "submission_id": "CF33113215",
+    "submission_url": "https://codeforces.com/contest/900/submission/33113215",
+    "tags": [
+      "geometry",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Dec/11/2017 18:11"
+  },
   "CF33117008": {
     "contest_id": 900,
     "language": "GNU C++14",
