@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF33125443": {
+    "contest_id": 900,
+    "language": "GNU C++14",
+    "path": "codeforces/900/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Unusual Sequences",
+    "problem_url": "https://codeforces.com/contest/900/problem/D",
+    "submission_id": "CF33125443",
+    "submission_url": "https://codeforces.com/contest/900/submission/33125443",
+    "tags": [
+      "bitmasks",
+      "combinatorics",
+      "dp",
+      "math",
+      "number theory",
+      "*2000"
+    ],
+    "timestamp": "Dec/11/2017 19:04"
+  },
   "CF35227555": {
     "contest_id": 922,
     "language": "GNU C++14",
