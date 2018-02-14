@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF35227555": {
+    "contest_id": 922,
+    "language": "GNU C++14",
+    "path": "codeforces/922/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Robot Vacuum Cleaner",
+    "problem_url": "https://codeforces.com/contest/922/problem/D",
+    "submission_id": "CF35227555",
+    "submission_url": "https://codeforces.com/contest/922/submission/35227555",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1800"
+    ],
+    "timestamp": "Feb/14/2018 11:59"
+  },
   "CF35243503": {
     "contest_id": 933,
     "language": "GNU C++14",
