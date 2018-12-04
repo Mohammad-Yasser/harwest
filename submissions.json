@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46577018": {
+    "contest_id": 1089,
+    "language": "GNU C++14",
+    "path": "codeforces/1089/K.cpp",
+    "problem_index": "K",
+    "problem_name": "King Kog's Reception",
+    "problem_url": "https://codeforces.com/contest/1089/problem/K",
+    "submission_id": "CF46577018",
+    "submission_url": "https://codeforces.com/contest/1089/submission/46577018",
+    "tags": [
+      "data structures",
+      "*2400"
+    ],
+    "timestamp": "Dec/04/2018 11:15"
+  },
   "CF46589234": {
     "contest_id": 1088,
     "language": "GNU C++14",
