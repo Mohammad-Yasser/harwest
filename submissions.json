@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46636089": {
+    "contest_id": 1088,
+    "language": "GNU C++14",
+    "path": "codeforces/1088/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Ehab and a weird weight formula",
+    "problem_url": "https://codeforces.com/contest/1088/problem/F",
+    "submission_id": "CF46636089",
+    "submission_url": "https://codeforces.com/contest/1088/submission/46636089",
+    "tags": [
+      "data structures",
+      "trees",
+      "*2800"
+    ],
+    "timestamp": "Dec/05/2018 08:47"
+  },
   "CF46695440": {
     "contest_id": 1037,
     "language": "GNU C++14",
