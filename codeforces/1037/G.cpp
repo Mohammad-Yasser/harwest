@@ -12,6 +12,9 @@ int occ_id[N];
 vector<int> pos[A];
 vector<int> acc_grundy[A];
 int memo[N][A][2];
+int cnt_iter;
+
+set<pair<int, int>> vis;
 
 int solve(int l, int r) {
   if (r < l) return 0;
@@ -25,6 +28,7 @@ int solve(int l, int r) {
     return memo[r][s[l - 1] - 'a'][1];
   }
 
+  ++cnt_iter;
   int mex = 0;
   for (int ch = 0; ch < A; ++ch) {
     if (pos[ch].empty()) continue;
@@ -35,6 +39,7 @@ int solve(int l, int r) {
     if (acc_grundy[ch].size() != pos[ch].size()) {
       for (int i = occ_id[first_occ_from_left];
         i < occ_id[first_occ_from_right]; ++i) {
+        ++cnt_iter;
         res ^= solve(pos[ch][i] + 1, pos[ch][i + 1] - 1);
       }
     } else {
