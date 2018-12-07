@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46730304": {
+    "contest_id": 1037,
+    "language": "GNU C++14",
+    "path": "codeforces/1037/G.cpp",
+    "problem_index": "G",
+    "problem_name": "A Game on Strings",
+    "problem_url": "https://codeforces.com/contest/1037/problem/G",
+    "submission_id": "CF46730304",
+    "submission_url": "https://codeforces.com/contest/1037/submission/46730304",
+    "tags": [
+      "games",
+      "*3200"
+    ],
+    "timestamp": "Dec/07/2018 19:08"
+  },
   "CF46788880": {
     "contest_id": 1090,
     "language": "GNU C++14",
