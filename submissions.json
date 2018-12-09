@@ -971,6 +971,18 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46813637": {
+    "contest_id": 1090,
+    "language": "GNU C++14",
+    "path": "codeforces/1090/F.cpp",
+    "problem_index": "F",
+    "problem_name": "How to Learn You Score",
+    "problem_url": "https://codeforces.com/contest/1090/problem/F",
+    "submission_id": "CF46813637",
+    "submission_url": "https://codeforces.com/contest/1090/submission/46813637",
+    "tags": [],
+    "timestamp": "Dec/09/2018 13:44"
+  },
   "CF46815674": {
     "contest_id": 1090,
     "language": "GNU C++14",
