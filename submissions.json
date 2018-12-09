@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46794117": {
+    "contest_id": 1090,
+    "language": "GNU C++14",
+    "path": "codeforces/1090/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Similar Arrays",
+    "problem_url": "https://codeforces.com/contest/1090/problem/D",
+    "submission_id": "CF46794117",
+    "submission_url": "https://codeforces.com/contest/1090/submission/46794117",
+    "tags": [
+      "constructive algorithms",
+      "*1800"
+    ],
+    "timestamp": "Dec/09/2018 11:12"
+  },
   "CF46797996": {
     "contest_id": 1090,
     "language": "GNU C++14",
