@@ -971,6 +971,18 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46797996": {
+    "contest_id": 1090,
+    "language": "GNU C++14",
+    "path": "codeforces/1090/I.cpp",
+    "problem_index": "I",
+    "problem_name": "Minimal Product",
+    "problem_url": "https://codeforces.com/contest/1090/problem/I",
+    "submission_id": "CF46797996",
+    "submission_url": "https://codeforces.com/contest/1090/submission/46797996",
+    "tags": [],
+    "timestamp": "Dec/09/2018 11:45"
+  },
   "CF46798646": {
     "contest_id": 1090,
     "language": "GNU C++14",
