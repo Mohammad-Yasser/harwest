@@ -971,6 +971,18 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46807351": {
+    "contest_id": 1090,
+    "language": "GNU C++14",
+    "path": "codeforces/1090/L.cpp",
+    "problem_index": "L",
+    "problem_name": "Berland University",
+    "problem_url": "https://codeforces.com/contest/1090/problem/L",
+    "submission_id": "CF46807351",
+    "submission_url": "https://codeforces.com/contest/1090/submission/46807351",
+    "tags": [],
+    "timestamp": "Dec/09/2018 12:53"
+  },
   "CF46813637": {
     "contest_id": 1090,
     "language": "GNU C++14",
