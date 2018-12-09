@@ -971,6 +971,18 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46803307": {
+    "contest_id": 1090,
+    "language": "GNU C++14",
+    "path": "codeforces/1090/B.cpp",
+    "problem_index": "B",
+    "problem_name": "LaTeX Expert",
+    "problem_url": "https://codeforces.com/contest/1090/problem/B",
+    "submission_id": "CF46803307",
+    "submission_url": "https://codeforces.com/contest/1090/submission/46803307",
+    "tags": [],
+    "timestamp": "Dec/09/2018 12:40"
+  },
   "CF46807351": {
     "contest_id": 1090,
     "language": "GNU C++14",
