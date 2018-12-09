@@ -971,6 +971,18 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46798646": {
+    "contest_id": 1090,
+    "language": "GNU C++14",
+    "path": "codeforces/1090/K.cpp",
+    "problem_index": "K",
+    "problem_name": "Right Expansion Of The Mind",
+    "problem_url": "https://codeforces.com/contest/1090/problem/K",
+    "submission_id": "CF46798646",
+    "submission_url": "https://codeforces.com/contest/1090/submission/46798646",
+    "tags": [],
+    "timestamp": "Dec/09/2018 11:58"
+  },
   "CF46803307": {
     "contest_id": 1090,
     "language": "GNU C++14",
