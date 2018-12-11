@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF46908993": {
+    "contest_id": 1083,
+    "language": "GNU C++14",
+    "path": "codeforces/1083/B.cpp",
+    "problem_index": "B",
+    "problem_name": "The Fair Nut and Strings",
+    "problem_url": "https://codeforces.com/contest/1083/problem/B",
+    "submission_id": "CF46908993",
+    "submission_url": "https://codeforces.com/contest/1083/submission/46908993",
+    "tags": [
+      "greedy",
+      "strings",
+      "*2000"
+    ],
+    "timestamp": "Dec/11/2018 17:49"
+  },
   "CF47040874": {
     "contest_id": 1093,
     "language": "GNU C++14",
