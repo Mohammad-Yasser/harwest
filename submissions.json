@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF47094383": {
+    "contest_id": 936,
+    "language": "GNU C++14",
+    "path": "codeforces/936/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Save Energy!",
+    "problem_url": "https://codeforces.com/contest/936/problem/A",
+    "submission_id": "CF47094383",
+    "submission_url": "https://codeforces.com/contest/936/submission/47094383",
+    "tags": [
+      "binary search",
+      "implementation",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Dec/16/2018 09:43"
+  },
   "CF47095783": {
     "contest_id": 936,
     "language": "GNU C++14",
