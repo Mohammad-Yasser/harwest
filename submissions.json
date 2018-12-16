@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF47129914": {
+    "contest_id": 1081,
+    "language": "GNU C++14",
+    "path": "codeforces/1081/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Maximum Distance",
+    "problem_url": "https://codeforces.com/contest/1081/problem/D",
+    "submission_id": "CF47129914",
+    "submission_url": "https://codeforces.com/contest/1081/submission/47129914",
+    "tags": [
+      "dsu",
+      "graphs",
+      "shortest paths",
+      "sortings",
+      "*1800"
+    ],
+    "timestamp": "Dec/16/2018 18:12"
+  },
   "CF47409862": {
     "contest_id": 1086,
     "language": "GNU C++14",
