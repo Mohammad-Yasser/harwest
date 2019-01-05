@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF48000089": {
+    "contest_id": 1098,
+    "language": "GNU C++14",
+    "path": "codeforces/1098/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Nice table",
+    "problem_url": "https://codeforces.com/contest/1098/problem/B",
+    "submission_id": "CF48000089",
+    "submission_url": "https://codeforces.com/contest/1098/submission/48000089",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "*2100"
+    ],
+    "timestamp": "Jan/05/2019 20:00"
+  },
   "CF48013551": {
     "contest_id": 1099,
     "language": "GNU C++14",
