@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF47972916": {
+    "contest_id": 1083,
+    "language": "GNU C++14",
+    "path": "codeforces/1083/E.cpp",
+    "problem_index": "E",
+    "problem_name": "The Fair Nut and Rectangles",
+    "problem_url": "https://codeforces.com/contest/1083/problem/E",
+    "submission_id": "CF47972916",
+    "submission_url": "https://codeforces.com/contest/1083/submission/47972916",
+    "tags": [
+      "data structures",
+      "dp",
+      "geometry",
+      "*2400"
+    ],
+    "timestamp": "Jan/05/2019 17:57"
+  },
   "CF47982012": {
     "contest_id": 1098,
     "language": "GNU C++14",
