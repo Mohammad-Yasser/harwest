@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF48095266": {
+    "contest_id": 1098,
+    "language": "GNU C++14",
+    "path": "codeforces/1098/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Eels",
+    "problem_url": "https://codeforces.com/contest/1098/problem/D",
+    "submission_id": "CF48095266",
+    "submission_url": "https://codeforces.com/contest/1098/submission/48095266",
+    "tags": [
+      "data structures",
+      "*2800"
+    ],
+    "timestamp": "Jan/08/2019 18:24"
+  },
   "CF48216282": {
     "contest_id": 1101,
     "language": "GNU C++14",
