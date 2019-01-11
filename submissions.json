@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF48267582": {
+    "contest_id": 1101,
+    "language": "GNU C++14",
+    "path": "codeforces/1101/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Trucks and Cities",
+    "problem_url": "https://codeforces.com/contest/1101/problem/F",
+    "submission_id": "CF48267582",
+    "submission_url": "https://codeforces.com/contest/1101/submission/48267582",
+    "tags": [
+      "binary search",
+      "dp",
+      "*2400"
+    ],
+    "timestamp": "Jan/11/2019 23:31"
+  },
   "CF48362838": {
     "contest_id": 1100,
     "language": "GNU C++14",
