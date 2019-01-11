@@ -4,51 +4,44 @@ using namespace std;
 typedef long long Long;
 typedef unsigned long long ULong;
 
-bool isSet(Long n, int b) {
-  return (n >> b) & 1LL;
-}
+const int N = 2e5 + 5;
+int arr[N];
+int n;
 
-void printRow(int x) {
-  cout << bitset<5>(x).to_string() << endl;
-}
-
-void printMat(const vector<Long>& mat) {
-  for (auto& x : mat) {
-    printRow(x);
+bool can(int x) {
+  if (n == 0) return false;
+  vector<int> piles(x, 0);
+  for (int i = 0; i < n; ++i) {
+    piles[i % x] ^= arr[i];
   }
-}
 
-vector<Long> getRREF(const vector<Long>& mat) {
-  vector<Long> res = mat;
-  int rank = 0;
-  for (int row = 0, col = 63; row < res.size() && col >= 0; --col) {
-    for (int i = row; i < res.size(); ++i) {
-      if (isSet(res[i], col)) {
-        swap(res[row], res[i]);
-        break;
+  unordered_set<int> st;
+  int sz1 = x / 2;
+  int sz2 = x - sz1;
+  for (int mask = 1; mask < (1 << sz1); ++mask) {
+    int xr = 0;
+    for (int i = 0; i < sz1; ++i) {
+      if ((mask >> i) & 1) {
+        xr ^= piles[i];
       }
     }
-    if (!isSet(res[row], col)) continue;
-    ++rank;
-    for (int i = 0; i < res.size(); ++i) {
-      if (i == row) continue;
-      if (isSet(res[i], col)) {
-        res[i] ^= res[row];
+    if (xr == 0) return false;
+    st.insert(xr);
+  }
+
+  for (int mask = 1; mask < (1 << sz2); ++mask) {
+    int xr = 0;
+    for (int i = 0; i < sz2; ++i) {
+      if ((mask >> i) & 1) {
+        xr ^= piles[sz1 + i];
       }
     }
-
-    ++row;
+    if (xr == 0) return 0;
+    if (st.count(xr)) return false;
   }
 
-  return res;
-}
+  return true;
 
-int getRank(const vector<Long>& mat) {
-  int res = 0;
-  for (auto& x : mat) {
-    res += (x != 0);
-  }
-  return res;
 }
 
 int main() {
@@ -58,24 +51,33 @@ int main() {
 #else
 #define endl '\n'
 #endif
-
-  int n;
+  srand(time(0));
   cin >> n;
 
-  vector<Long> mat;
-  int acc_xor = 0;
-  while (n--) {
-    int x;
-    cin >> x;
-    acc_xor ^= x;
-    mat.push_back(acc_xor);
+  for (int i = 0; i < n; ++i) {
+    cin >> arr[i];
+    if (arr[i] == 0) {
+      --i, --n;
+    }
   }
 
-  if (acc_xor == 0) {
-    cout << -1;
-    return 0;
+  sort(arr, arr + n);
+
+  for (int i = 32; i >= 1; --i) {
+    sort(arr, arr + n);
+    if (can(i)) {
+      cout << i << endl;
+      return 0;
+    }
+    for (int j = 0; j < 7; ++j) {
+      random_shuffle(arr, arr + n);
+      if (can(i)) {
+        cout << i << endl;
+        return 0;
+      }
+    }
   }
 
-  cout << getRank(getRREF(mat)) << endl;
+  cout << -1;
 
 }
