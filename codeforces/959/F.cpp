@@ -35,7 +35,7 @@ int getRank(const vector<int>& mat) {
     }
     if (!isSet(res[row], col)) continue;
     ++rank;
-    for (int i = row + 1; i < res.size(); ++i) {
+    for (int i = 0; i < res.size(); ++i) {
       if (i == row) continue;
       if (isSet(res[i], col)) {
         res[i] ^= res[row];
