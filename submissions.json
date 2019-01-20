@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF48641529": {
+    "contest_id": 1105,
+    "language": "GNU C++11",
+    "path": "codeforces/1105/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Helping Hiasat ",
+    "problem_url": "https://codeforces.com/contest/1105/problem/E",
+    "submission_id": "CF48641529",
+    "submission_url": "https://codeforces.com/contest/1105/submission/48641529",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "dp",
+      "meet-in-the-middle",
+      "*2200"
+    ],
+    "timestamp": "Jan/20/2019 17:35"
+  },
   "CF48729814": {
     "contest_id": 1103,
     "language": "GNU C++11",
