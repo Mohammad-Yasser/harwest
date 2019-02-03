@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF49385122": {
+    "contest_id": 1106,
+    "language": "GNU C++11",
+    "path": "codeforces/1106/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Lunar New Year and a Recursive Sequence",
+    "problem_url": "https://codeforces.com/contest/1106/problem/F",
+    "submission_id": "CF49385122",
+    "submission_url": "https://codeforces.com/contest/1106/submission/49385122",
+    "tags": [
+      "math",
+      "matrices",
+      "number theory",
+      "*2400"
+    ],
+    "timestamp": "Feb/03/2019 08:14"
+  },
   "CF49628027": {
     "contest_id": 39,
     "language": "GNU C++11",
