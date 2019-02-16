@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF50025847": {
+    "contest_id": 1109,
+    "language": "GNU C++11",
+    "path": "codeforces/1109/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Sasha and One More Name",
+    "problem_url": "https://codeforces.com/contest/1109/problem/B",
+    "submission_id": "CF50025847",
+    "submission_url": "https://codeforces.com/contest/1109/submission/50025847",
+    "tags": [
+      "constructive algorithms",
+      "hashing",
+      "strings",
+      "*1800"
+    ],
+    "timestamp": "Feb/16/2019 20:15"
+  },
   "CF50366428": {
     "contest_id": 1131,
     "language": "GNU C++11",
