@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF50761979": {
+    "contest_id": 1120,
+    "language": "GNU C++17",
+    "path": "codeforces/1120/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Diana and Liana",
+    "problem_url": "https://codeforces.com/contest/1120/problem/A",
+    "submission_id": "CF50761979",
+    "submission_url": "https://codeforces.com/contest/1120/submission/50761979",
+    "tags": [
+      "greedy",
+      "implementation",
+      "two pointers",
+      "*1900"
+    ],
+    "timestamp": "Mar/03/2019 22:02"
+  },
   "CF50763306": {
     "contest_id": 1120,
     "language": "GNU C++17",
