@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF51399476": {
+    "contest_id": 800,
+    "language": "GNU C++17",
+    "path": "codeforces/800/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Vulnerable Kerbals",
+    "problem_url": "https://codeforces.com/contest/800/problem/C",
+    "submission_id": "CF51399476",
+    "submission_url": "https://codeforces.com/contest/800/submission/51399476",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "number theory",
+      "*2300"
+    ],
+    "timestamp": "Mar/17/2019 08:32"
+  },
   "CF51468373": {
     "contest_id": 809,
     "language": "GNU C++17",
