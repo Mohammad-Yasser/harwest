@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF52394563": {
+    "contest_id": 1119,
+    "language": "GNU C++17",
+    "path": "codeforces/1119/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Alyona and a Narrow Fridge",
+    "problem_url": "https://codeforces.com/contest/1119/problem/B",
+    "submission_id": "CF52394563",
+    "submission_url": "https://codeforces.com/contest/1119/submission/52394563",
+    "tags": [
+      "binary search",
+      "flows",
+      "greedy",
+      "sortings",
+      "*1300"
+    ],
+    "timestamp": "Apr/06/2019 14:04"
+  },
   "CF52396877": {
     "contest_id": 1119,
     "language": "GNU C++17",
