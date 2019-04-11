@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF52589654": {
+    "contest_id": 89,
+    "language": "GNU C++17",
+    "path": "codeforces/89/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Robbery",
+    "problem_url": "https://codeforces.com/contest/89/problem/A",
+    "submission_id": "CF52589654",
+    "submission_url": "https://codeforces.com/contest/89/submission/52589654",
+    "tags": [
+      "greedy",
+      "*1800"
+    ],
+    "timestamp": "Apr/11/2019 06:24"
+  },
   "CF52620543": {
     "contest_id": 89,
     "language": "GNU C++17",
