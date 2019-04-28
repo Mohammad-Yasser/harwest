@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF53458945": {
+    "contest_id": 976,
+    "language": "GNU C++17",
+    "path": "codeforces/976/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Degree Set",
+    "problem_url": "https://codeforces.com/contest/976/problem/D",
+    "submission_id": "CF53458945",
+    "submission_url": "https://codeforces.com/contest/976/submission/53458945",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "implementation",
+      "*2500"
+    ],
+    "timestamp": "Apr/28/2019 07:50"
+  },
   "CF53486262": {
     "contest_id": 995,
     "language": "GNU C++17",
