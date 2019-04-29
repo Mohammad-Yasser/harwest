@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF53487766": {
+    "contest_id": 995,
+    "language": "GNU C++17",
+    "path": "codeforces/995/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Tesla",
+    "problem_url": "https://codeforces.com/contest/995/problem/A",
+    "submission_id": "CF53487766",
+    "submission_url": "https://codeforces.com/contest/995/submission/53487766",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "*2100"
+    ],
+    "timestamp": "Apr/29/2019 07:56"
+  },
   "CF53503892": {
     "contest_id": 1149,
     "language": "GNU C++17",
