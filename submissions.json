@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF53486262": {
+    "contest_id": 995,
+    "language": "GNU C++17",
+    "path": "codeforces/995/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Suit and Tie",
+    "problem_url": "https://codeforces.com/contest/995/problem/B",
+    "submission_id": "CF53486262",
+    "submission_url": "https://codeforces.com/contest/995/submission/53486262",
+    "tags": [
+      "greedy",
+      "implementation",
+      "math",
+      "*1400"
+    ],
+    "timestamp": "Apr/29/2019 06:04"
+  },
   "CF53487766": {
     "contest_id": 995,
     "language": "GNU C++17",
