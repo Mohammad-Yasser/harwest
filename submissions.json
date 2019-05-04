@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF53748160": {
+    "contest_id": 1161,
+    "language": "GNU C++17",
+    "path": "codeforces/1161/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Hide and Seek",
+    "problem_url": "https://codeforces.com/contest/1161/problem/A",
+    "submission_id": "CF53748160",
+    "submission_url": "https://codeforces.com/contest/1161/submission/53748160",
+    "tags": [
+      "brute force",
+      "data structures",
+      "graphs",
+      "*1500"
+    ],
+    "timestamp": "May/04/2019 19:14"
+  },
   "CF53752339": {
     "contest_id": 1161,
     "language": "GNU C++17",
