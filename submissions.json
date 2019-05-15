@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF54153779": {
+    "contest_id": 1158,
+    "language": "GNU C++17",
+    "path": "codeforces/1158/B.cpp",
+    "problem_index": "B",
+    "problem_name": "The minimal unique substring",
+    "problem_url": "https://codeforces.com/contest/1158/problem/B",
+    "submission_id": "CF54153779",
+    "submission_url": "https://codeforces.com/contest/1158/submission/54153779",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "strings",
+      "*2200"
+    ],
+    "timestamp": "May/15/2019 04:44"
+  },
   "CF54252279": {
     "contest_id": 1158,
     "language": "GNU C++17",
