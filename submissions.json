@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF54702083": {
+    "contest_id": 906,
+    "language": "GNU C++17",
+    "path": "codeforces/906/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Party",
+    "problem_url": "https://codeforces.com/contest/906/problem/C",
+    "submission_id": "CF54702083",
+    "submission_url": "https://codeforces.com/contest/906/submission/54702083",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "dp",
+      "graphs",
+      "*2400"
+    ],
+    "timestamp": "May/27/2019 03:08"
+  },
   "CF55110208": {
     "contest_id": 1174,
     "language": "GNU C++17",
