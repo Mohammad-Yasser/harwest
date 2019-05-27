@@ -47,10 +47,14 @@ int getMask(int cnt) {
 int bs() {
   int low = 1, high = n, ans = (1 << n) - 1;
 
-  for (int mid = n - 1; mid >= 1; --mid) {
+  while (low <= high) {
+    int mid = (low + high) / 2;
     int tmp = getMask(mid);
     if (tmp != -1) {
       ans = tmp;
+      high = mid - 1;
+    } else {
+      low = mid + 1;
     }
   }
   return ans;
