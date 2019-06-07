@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF55263387": {
+    "contest_id": 1172,
+    "language": "GNU C++17",
+    "path": "codeforces/1172/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Nauuo and Circle",
+    "problem_url": "https://codeforces.com/contest/1172/problem/B",
+    "submission_id": "CF55263387",
+    "submission_url": "https://codeforces.com/contest/1172/submission/55263387",
+    "tags": [
+      "combinatorics",
+      "dfs and similar",
+      "dp",
+      "trees",
+      "*1900"
+    ],
+    "timestamp": "Jun/07/2019 15:42"
+  },
   "CF55880586": {
     "contest_id": 1179,
     "language": "GNU C++17",
