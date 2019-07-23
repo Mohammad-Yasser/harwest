@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF57586991": {
+    "contest_id": 1178,
+    "language": "GNU C++17",
+    "path": "codeforces/1178/F1.cpp",
+    "problem_index": "F1",
+    "problem_name": "Short Colorful Strip",
+    "problem_url": "https://codeforces.com/contest/1178/problem/F1",
+    "submission_id": "CF57586991",
+    "submission_url": "https://codeforces.com/contest/1178/submission/57586991",
+    "tags": [
+      "combinatorics",
+      "dfs and similar",
+      "dp",
+      "*2200"
+    ],
+    "timestamp": "Jul/23/2019 13:01"
+  },
   "CF58270513": {
     "contest_id": 1201,
     "language": "GNU C++17",
