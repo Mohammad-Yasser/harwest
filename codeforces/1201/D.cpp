@@ -1,108 +1,100 @@
-// Not my code
-#include<bits/stdc++.h>
+#ifndef Local
+#pragma GCC optimize ("O3")
+#pragma GCC optimize ("unroll-loops")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+#pragma comment(linker, "/STACK:1024000000,1024000000")
+#endif
+
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+using namespace __gnu_pbds;
 using namespace std;
+#define popCnt(x) (__builtin_popcountll(x))
+typedef long long Long;
+
 const int N = 2e5 + 5;
-long long dp[N][3];
-int arr[N][5];
-int nxt[N],bef[N];
-vector<int>good;
-int n,m,k,q;
-long long solve(int r , int f);
-long long calls(int r, int c, int sum)
-{
-    long long ret = 1e15;
-    if(c > arr[r][0] && c < arr[r][1])
-    {
-        ret = min(ret , solve(r+1, 1) + arr[r][1] - c + arr[r][2] - 1+sum);
-        ret = min(ret , solve(r+1, 0) + c - arr[r][0] + arr[r][2] - 1+sum);
+
+map<int, Long> memo[N];
+
+vector<int> safe;
+int n, m;
+
+int first[N], last[N];
+
+Long solve(int i, int j) {
+  if (i == n + 1) return 0;
+  if (last[i] == 0) {
+    if (i == 1) {
+      return solve(i + 1, safe[0]) + safe[0] - j + 1;
     }
-    else if(c <= arr[r][0])
-    {
-        ret = min(ret , solve(r+1, 1) + arr[r][1] - c+arr[r][2]-1+sum);
-        ret = min(ret , solve(r+1, 0) + arr[r][1] - c+sum);
-    }
-    else {
-        ret = min(ret , solve(r+1, 1) + c - arr[r][0]+sum);
-        ret = min(ret , solve(r+1, 0) + c - arr[r][0]+sum+arr[r][2]-1);
-    }
-    return ret;
+    return solve(i + 1, j) + 1;
+  }
+
+  if (memo[i].count(j)) return memo[i][j];
+
+  Long res = LLONG_MAX;
+
+  // First then last
+  Long cost = abs(j - first[i]) + last[i] - first[i] + 1;
+  if (i == n) {
+    res = min(res, cost - 1);
+  }
+  auto after = upper_bound(safe.begin(), safe.end(), last[i]);
+  auto before = after - 1;
+  if (after != safe.end()) {
+    res = min(res, cost + solve(i + 1, *after) + abs(*after - last[i]));
+  }
+  if (after != safe.begin()) {
+    res = min(res, cost + solve(i + 1, *before) + abs(*before - last[i]));
+  }
+
+  // Last then first
+  cost = abs(j - last[i]) + last[i] - first[i] + 1;
+  if (i == n) {
+    res = min(res, cost - 1);
+  }
+  after = upper_bound(safe.begin(), safe.end(), first[i]);
+  before = after - 1;
+  if (after != safe.end()) {
+    res = min(res, cost + solve(i + 1, *after) + abs(*after - first[i]));
+  }
+  if (after != safe.begin()) {
+    res = min(res, cost + solve(i + 1, *before) + abs(*before - first[i]));
+  }
+
+  return memo[i][j] = res;
 }
-long long solve(int r , int f)
-{
-    if(r == n) return 0;
-    long long & ret = dp[r][f];
-    if(~ret) return ret;
-    if(arr[r][2] == 0) return ret = solve(r+1 , f);
-    ret = 1e15;
-    if(f == 1)
-    {
-        int cur = arr[r-1][0];
-        if(nxt[cur] != -1)
-        {
-            int c = nxt[cur];
-            int sum = c - arr[r-1][0];
-            ret = min(ret, calls( r,  c,  sum));
-        }
-        if(bef[cur] != -1)
-        {
-            int c = bef[cur];
-            int sum = arr[r-1][0] - c;
-            ret = min(ret, calls( r,  c,  sum));
-        }
-    }
-    else {
-        int cur = arr[r-1][1];
-        if(nxt[cur] != -1)
-        {
-            int c = nxt[cur];
-            int sum = c - arr[r-1][1];
-            ret = min(ret, calls( r,  c,  sum));
-        }
-        if(bef[cur] != -1)
-        {
-            int c = bef[cur];
-            int sum = arr[r-1][1] - c;
-            ret = min(ret, calls( r,  c,  sum));
-        }
-    }
-    return ret;
-}
+
 int main() {
-    cin>>n>>m>>k>>q;
-    for(int i = 0 ; i<n ; ++i) arr[i][0] = 1e9;
-    for(int i = 0 ; i<k ; ++i)
-    {
-        int x,y;
-        scanf("%d %d" , &x , &y);
-        x--,y--;
-        arr[x][0] = min(arr[x][0] , y);
-        arr[x][1] = max(arr[x][1] , y);
-    }
-    for(int i = 0 ; i<q ; ++i)
-    {
-        int x;
-        scanf("%d" , &x);
-        x--;
-        good.push_back(x);
-    }
-    sort(good.begin() , good.end());
-    for(int i = 0 ; i<m ; ++i)
-    {
-        int idx = upper_bound(good.begin(), good.end(), i) - good.begin();
-        if(idx == good.size()) bef[i] = good[idx - 1], nxt[i] = -1;
-        else if(idx == 0) bef[i] = -1, nxt[i] = good[idx];
-        else bef[i] = good[idx-1],nxt[i] = good[idx];
-    }
-    int xx;
-    int mm = 0 , mmm = 0;
-    for(int i = 0 ; i<n ; ++i) 
-    {
-        if(arr[i][0] != 1e9) xx = i, arr[i][2] = arr[i][1] - arr[i][0] + 1 , mm = arr[i][0] , mmm = arr[i][1];
-        else arr[i][0] = mm, arr[i][1] = mmm;
-    }
-    n = xx+1;
-    memset(dp , -1 , sizeof dp);
-    if(arr[0][2] == 0) cout<<solve(1,1)+xx<<endl;
-    else cout<<solve(1,0) + arr[0][1]+xx<<endl;
-    return 0;
+  ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+#ifdef Local
+  freopen("test.in", "r", stdin);
+#else
+#define endl '\n'
+#endif
+
+  fill(first, first + N, 1e7);
+  int k, q;
+  cin >> n >> m >> k >> q;
+
+  safe.resize(q);
+
+  while (k--) {
+    int i, j;
+    cin >> i >> j;
+    first[i] = min(first[i], j);
+    last[i] = max(last[i], j);
+  }
+
+  for (int& x : safe) {
+    cin >> x;
+  }
+
+  while (last[n] == 0) {
+    --n;
+  }
+
+  sort(safe.begin(), safe.end());
+
+  cout << solve(1, 1) << endl;
 }
