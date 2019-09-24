@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF61196096": {
+    "contest_id": 1198,
+    "language": "GNU C++17",
+    "path": "codeforces/1198/A.cpp",
+    "problem_index": "A",
+    "problem_name": "MP3",
+    "problem_url": "https://codeforces.com/contest/1198/problem/A",
+    "submission_id": "CF61196096",
+    "submission_url": "https://codeforces.com/contest/1198/submission/61196096",
+    "tags": [
+      "sortings",
+      "two pointers",
+      "*1600"
+    ],
+    "timestamp": "Sep/24/2019 07:40"
+  },
   "CF61196410": {
     "contest_id": 1198,
     "language": "GNU C++17",
