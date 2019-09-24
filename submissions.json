@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF61196410": {
+    "contest_id": 1198,
+    "language": "GNU C++17",
+    "path": "codeforces/1198/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Welfare State",
+    "problem_url": "https://codeforces.com/contest/1198/problem/B",
+    "submission_id": "CF61196410",
+    "submission_url": "https://codeforces.com/contest/1198/submission/61196410",
+    "tags": [
+      "binary search",
+      "brute force",
+      "data structures",
+      "sortings",
+      "*1600"
+    ],
+    "timestamp": "Sep/24/2019 07:48"
+  },
   "CF62002067": {
     "contest_id": 1240,
     "language": "GNU C++17",
