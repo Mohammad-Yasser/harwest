@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF62014353": {
+    "contest_id": 1240,
+    "language": "GNU C++17",
+    "path": "codeforces/1240/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Paint the Tree",
+    "problem_url": "https://codeforces.com/contest/1240/problem/C",
+    "submission_id": "CF62014353",
+    "submission_url": "https://codeforces.com/contest/1240/submission/62014353",
+    "tags": [
+      "dp",
+      "sortings",
+      "trees",
+      "*2100"
+    ],
+    "timestamp": "Oct/06/2019 17:59"
+  },
   "CF63996910": {
     "contest_id": 1245,
     "language": "GNU C++17",
