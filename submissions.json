@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF64023835": {
+    "contest_id": 1245,
+    "language": "GNU C++17",
+    "path": "codeforces/1245/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Daniel and Spring Cleaning",
+    "problem_url": "https://codeforces.com/contest/1245/problem/F",
+    "submission_id": "CF64023835",
+    "submission_url": "https://codeforces.com/contest/1245/submission/64023835",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "combinatorics",
+      "dp",
+      "*2300"
+    ],
+    "timestamp": "Nov/01/2019 17:47"
+  },
   "CF64033908": {
     "contest_id": 1245,
     "language": "GNU C++17",
