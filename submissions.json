@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF64016781": {
+    "contest_id": 1245,
+    "language": "GNU C++17",
+    "path": "codeforces/1245/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Shichikuji and Power Grid",
+    "problem_url": "https://codeforces.com/contest/1245/problem/D",
+    "submission_id": "CF64016781",
+    "submission_url": "https://codeforces.com/contest/1245/submission/64016781",
+    "tags": [
+      "dsu",
+      "graphs",
+      "greedy",
+      "shortest paths",
+      "trees",
+      "*1900"
+    ],
+    "timestamp": "Nov/01/2019 17:26"
+  },
   "CF64023835": {
     "contest_id": 1245,
     "language": "GNU C++17",
