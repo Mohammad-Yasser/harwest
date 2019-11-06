@@ -15,7 +15,6 @@ typedef long long Long;
 // gp_hash_table<int, int> table;
 
 const int N = 1e5 + 5;
-const int MAGIC = 100;
 struct DSU {
   int parent[N];
   void init(int n) {
@@ -71,14 +70,14 @@ int main() {
     for (int x : adj[i]) {
       vis[x] = true;
     }
-    if (adj[i].size() >= n / MAGIC) {
+    if (adj[i].size() >= n / 170) {
       for (int j = 1; j <= n; ++j) {
         if (!vis[j]) {
           dsu.join(i, j);
         }
       }
     } else {
-      for (int j = 1; j <= MAGIC; ++j) {
+      for (int j = 1; j <= 170; ++j) {
         int x = Random(n) + 1;
         if (!vis[x]) {
           dsu.join(i, x);
