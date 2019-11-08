@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF64519426": {
+    "contest_id": 1242,
+    "language": "GNU C++17",
+    "path": "codeforces/1242/B.cpp",
+    "problem_index": "B",
+    "problem_name": "0-1 MST",
+    "problem_url": "https://codeforces.com/contest/1242/problem/B",
+    "submission_id": "CF64519426",
+    "submission_url": "https://codeforces.com/contest/1242/submission/64519426",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "sortings",
+      "*1900"
+    ],
+    "timestamp": "Nov/08/2019 13:50"
+  },
   "CF65055741": {
     "contest_id": 1242,
     "language": "GNU C++17",
