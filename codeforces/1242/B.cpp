@@ -15,7 +15,7 @@ typedef long long Long;
 // gp_hash_table<int, int> table;
 
 const int N = 1e5 + 5;
-const int MAGIC = 5;
+const int MAGIC = 10;
 struct DSU {
   int parent[N];
   void init(int n) {
@@ -29,6 +29,7 @@ struct DSU {
   }
 
   void join(int x, int y) {
+    if (rand() & 1) swap(x, y);
     x = getRoot(x), y = getRoot(y);
     parent[x] = y;
   }
