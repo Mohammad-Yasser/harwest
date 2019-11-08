@@ -15,7 +15,7 @@ typedef long long Long;
 // gp_hash_table<int, int> table;
 
 const int N = 1e5 + 5;
-const int MAGIC = 10;
+const int MAGIC = 50;
 struct DSU {
   int parent[N];
   void init(int n) {
