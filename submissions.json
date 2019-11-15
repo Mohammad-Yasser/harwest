@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF65055741": {
+    "contest_id": 1242,
+    "language": "GNU C++17",
+    "path": "codeforces/1242/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Sum Balance",
+    "problem_url": "https://codeforces.com/contest/1242/problem/C",
+    "submission_id": "CF65055741",
+    "submission_url": "https://codeforces.com/contest/1242/submission/65055741",
+    "tags": [
+      "bitmasks",
+      "dfs and similar",
+      "dp",
+      "graphs",
+      "*2400"
+    ],
+    "timestamp": "Nov/15/2019 17:02"
+  },
   "CF65170294": {
     "contest_id": 1253,
     "language": "GNU C++17",
