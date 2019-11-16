@@ -48,25 +48,29 @@ int main() {
     adj[v].push_back(u);
   }
 
-  vector<pair<int, int>> v;
+  set<pair<int, int>> st;
   memset(comp_id, -1, sizeof comp_id);
   for (int i = 1; i <= n; ++i) {
     if (comp_id[i] == -1) {
       comp_id[i] = mx[i] = i;
       dfs(i, i);
-      v.emplace_back(i, mx[i]);
+      st.emplace(i, mx[i]);
     }
   }
-  sort(v.begin(), v.end());
+
   int res = 0;
-  int mx = 0;
-  for (auto& p : v) {
-    if (mx > p.first) {
+  while (st.size() > 1) {
+    auto x = *st.begin();
+    st.erase(st.begin());
+    auto y = *st.begin();
+    if (x.second > y.first) {
+      st.erase(st.begin());
+      st.emplace(x.first, max(x.second, y.second));
       ++res;
     }
-    mx = max(mx, p.second);
   }
 
   cout << res << endl;
+
 
 }
