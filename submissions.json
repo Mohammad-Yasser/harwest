@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF66361614": {
+    "contest_id": 1264,
+    "language": "GNU C++17",
+    "path": "codeforces/1264/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Beautiful Mirrors with queries",
+    "problem_url": "https://codeforces.com/contest/1264/problem/C",
+    "submission_id": "CF66361614",
+    "submission_url": "https://codeforces.com/contest/1264/submission/66361614",
+    "tags": [
+      "data structures",
+      "probabilities",
+      "*2400"
+    ],
+    "timestamp": "Dec/05/2019 20:10"
+  },
   "CF66388869": {
     "contest_id": 1264,
     "language": "GNU C++17",
