@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF66847032": {
+    "contest_id": 1276,
+    "language": "GNU C++17",
+    "path": "codeforces/1276/A.cpp",
+    "problem_index": "A",
+    "problem_name": "As Simple as One and Two",
+    "problem_url": "https://codeforces.com/contest/1276/problem/A",
+    "submission_id": "CF66847032",
+    "submission_url": "https://codeforces.com/contest/1276/submission/66847032",
+    "tags": [
+      "dp",
+      "greedy",
+      "*1400"
+    ],
+    "timestamp": "Dec/14/2019 13:46"
+  },
   "CF66858274": {
     "contest_id": 1276,
     "language": "GNU C++17",
