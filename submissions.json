@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF67266428": {
+    "contest_id": 1280,
+    "language": "GNU C++17",
+    "path": "codeforces/1280/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Beingawesomeism",
+    "problem_url": "https://codeforces.com/contest/1280/problem/B",
+    "submission_id": "CF67266428",
+    "submission_url": "https://codeforces.com/contest/1280/submission/67266428",
+    "tags": [
+      "implementation",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Dec/20/2019 08:23"
+  },
   "CF67880167": {
     "contest_id": 1270,
     "language": "GNU C++17",
