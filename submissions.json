@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF68990888": {
+    "contest_id": 837,
+    "language": "GNU C++17",
+    "path": "codeforces/837/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Prefix Sums",
+    "problem_url": "https://codeforces.com/contest/837/problem/F",
+    "submission_id": "CF68990888",
+    "submission_url": "https://codeforces.com/contest/837/submission/68990888",
+    "tags": [
+      "binary search",
+      "brute force",
+      "combinatorics",
+      "math",
+      "matrices",
+      "*2400"
+    ],
+    "timestamp": "Jan/17/2020 17:05"
+  },
   "CF69110065": {
     "contest_id": 1292,
     "language": "GNU C++17",
