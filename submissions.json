@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF69360518": {
+    "contest_id": 1019,
+    "language": "GNU C++17",
+    "path": "codeforces/1019/B.cpp",
+    "problem_index": "B",
+    "problem_name": "The hat",
+    "problem_url": "https://codeforces.com/contest/1019/problem/B",
+    "submission_id": "CF69360518",
+    "submission_url": "https://codeforces.com/contest/1019/submission/69360518",
+    "tags": [
+      "binary search",
+      "interactive",
+      "*2000"
+    ],
+    "timestamp": "Jan/22/2020 18:24"
+  },
   "CF69395758": {
     "contest_id": 949,
     "language": "GNU C++17",
