@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF69399874": {
+    "contest_id": 949,
+    "language": "GNU C++17",
+    "path": "codeforces/949/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Data Center Maintenance",
+    "problem_url": "https://codeforces.com/contest/949/problem/C",
+    "submission_id": "CF69399874",
+    "submission_url": "https://codeforces.com/contest/949/submission/69399874",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "*1900"
+    ],
+    "timestamp": "Jan/23/2020 10:07"
+  },
   "CF69738403": {
     "contest_id": 1295,
     "language": "GNU C++17",
