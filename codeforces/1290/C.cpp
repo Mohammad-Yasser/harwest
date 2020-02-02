@@ -22,8 +22,8 @@ const int OO = 1e6;
 
 struct DSU {
   int parent[N];
-  int cost[N];
-  int total_cost = 0;
+  Long cost[N];
+  Long total_cost = 0;
 
   void init() {
     for (int i = 0; i < N; ++i) {
