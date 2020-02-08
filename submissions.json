@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF70584798": {
+    "contest_id": 74,
+    "language": "GNU C++17",
+    "path": "codeforces/74/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Room Leader",
+    "problem_url": "https://codeforces.com/contest/74/problem/A",
+    "submission_id": "CF70584798",
+    "submission_url": "https://codeforces.com/contest/74/submission/70584798",
+    "tags": [
+      "implementation",
+      "*1000"
+    ],
+    "timestamp": "Feb/08/2020 20:18"
+  },
   "CF70586116": {
     "contest_id": 74,
     "language": "GNU C++17",
