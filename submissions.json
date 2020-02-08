@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF70586116": {
+    "contest_id": 74,
+    "language": "GNU C++17",
+    "path": "codeforces/74/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Train",
+    "problem_url": "https://codeforces.com/contest/74/problem/B",
+    "submission_id": "CF70586116",
+    "submission_url": "https://codeforces.com/contest/74/submission/70586116",
+    "tags": [
+      "dp",
+      "games",
+      "greedy",
+      "*1500"
+    ],
+    "timestamp": "Feb/08/2020 20:40"
+  },
   "CF70589994": {
     "contest_id": 74,
     "language": "GNU C++17",
