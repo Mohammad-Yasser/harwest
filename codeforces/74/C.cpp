@@ -20,42 +20,49 @@ const int N = 1e6 + 3;
 int left_border = 0, right_border = 1;
 int up_border = 2, down_border = 3;
 
-vector<pair<int, int>> adj[N][4];
+struct DSU {
+  int parent[4 * N];
 
-bool vis[N][4];
-vector<pair<int, int>> st;
-
-void dfs(int ind, int border) {
-  st.emplace_back(ind, border);
-  while (!st.empty()) {
-    auto curr = st.back();
-    st.pop_back();
-    if (vis[curr.first][curr.second]) continue;
-    vis[curr.first][curr.second] = true;
-    for (auto& v : adj[curr.first][curr.second]) {
-      st.emplace_back(v);
+  void init() {
+    for (int i = 1; i < 4 * N; ++i) {
+      parent[i] = i;
     }
   }
-}
+
+  int getRoot(int x) {
+    if (parent[x] == x) return x;
+    return parent[x] = getRoot(parent[x]);
+  }
+
+  void join(int x, int y) {
+    x = getRoot(x), y = getRoot(y);
+    parent[x] = y;
+  }
+
+  int getNode(int ind, int border) {
+    return border * N + ind;
+  }
+
+} dsu;
 
 int n, m;
 
 void connect_corners() {
-  adj[1][left_border].emplace_back(1, up_border);
-  adj[n][left_border].emplace_back(1, down_border);
+  for (int q = 0; q < 2; ++q) {
+    dsu.join(dsu.getNode(1, left_border), dsu.getNode(1, up_border));
+    dsu.join(dsu.getNode(n, left_border), dsu.getNode(1, down_border));
 
-  adj[1][right_border].emplace_back(m, up_border);
-  adj[n][right_border].emplace_back(m, down_border);
+    dsu.join(dsu.getNode(1, right_border), dsu.getNode(m, up_border));
+    dsu.join(dsu.getNode(n, right_border), dsu.getNode(m, down_border));
 
-  adj[1][up_border].emplace_back(1, left_border);
-  adj[m][up_border].emplace_back(1, right_border);
-
-  adj[1][down_border].emplace_back(n, left_border);
-  adj[m][down_border].emplace_back(n, right_border);
+    swap(n, m);
+    swap(left_border, up_border);
+    swap(right_border, down_border);
+  }
 }
 
 int solve() {
-
+  dsu.init();
   connect_corners();
 
   for (int q = 0; q < 2; ++q) {
@@ -64,24 +71,30 @@ int solve() {
       // Go up
       if (x <= m) {
         // Hit the upper border
-        adj[i][left_border].emplace_back(x, up_border);
-        adj[i][right_border].emplace_back(m - x + 1, up_border);
+        dsu.join(dsu.getNode(i, left_border), dsu.getNode(x, up_border));
+        dsu.join(dsu.getNode(i, right_border),
+          dsu.getNode(m - x + 1, up_border));
       } else {
         // Hit the opposite border
-        adj[i][left_border].emplace_back(x - m + 1, right_border);
-        adj[i][right_border].emplace_back(x - m + 1, left_border);
+        dsu.join(dsu.getNode(i, left_border),
+          dsu.getNode(x - m + 1, right_border));
+        dsu.join(dsu.getNode(i, right_border),
+          dsu.getNode(x - m + 1, left_border));
       }
 
       x = n - i + 1;
       // Go down
       if (x <= m) {
         // Hit the lower border
-        adj[i][left_border].emplace_back(x, down_border);
-        adj[i][right_border].emplace_back(m - x + 1, down_border);
+        dsu.join(dsu.getNode(i, left_border), dsu.getNode(x, down_border));
+        dsu.join(dsu.getNode(i, right_border),
+          dsu.getNode(m - x + 1, down_border));
       } else {
         // Hit the opposite border
-        adj[i][left_border].emplace_back(i + m - 1, right_border);
-        adj[i][right_border].emplace_back(i + m - 1, left_border);
+        dsu.join(dsu.getNode(i, left_border),
+          dsu.getNode(i + m - 1, right_border));
+        dsu.join(dsu.getNode(i, right_border),
+          dsu.getNode(i + m - 1, left_border));
       }
     }
     swap(n, m);
@@ -93,14 +106,10 @@ int solve() {
 
   for (int q = 0; q < 2; ++q) {
     for (int i = 1; i <= n; ++i) {
-      if (!vis[i][left_border]) {
-        ++res;
-        dfs(i, left_border);
-      }
-      if (!vis[i][right_border]) {
-        ++res;
-        dfs(i, right_border);
-      }
+      res += dsu.parent[dsu.getNode(i, left_border)]
+        == dsu.getNode(i, left_border);
+      res += dsu.parent[dsu.getNode(i, right_border)]
+        == dsu.getNode(i, right_border);
     }
     swap(n, m);
     swap(left_border, up_border);
@@ -117,8 +126,6 @@ int main() {
 #else
 #define endl '\n'
 #endif
-
-  st.reserve(4 * N);
 
   cin >> n >> m;
   cout << solve() << endl;
