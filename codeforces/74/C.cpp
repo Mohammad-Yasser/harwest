@@ -119,11 +119,6 @@ int main() {
 #endif
 
   st.reserve(4 * N);
-  for (int i = 0; i < N; ++i) {
-    for (int j = 0; j < 4; ++j) {
-      adj[i][j].reserve(4);
-    }
-  }
 
   cin >> n >> m;
   cout << solve() << endl;
