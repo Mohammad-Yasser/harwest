@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF70620068": {
+    "contest_id": 74,
+    "language": "GNU C++17",
+    "path": "codeforces/74/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Chessboard Billiard",
+    "problem_url": "https://codeforces.com/contest/74/problem/C",
+    "submission_id": "CF70620068",
+    "submission_url": "https://codeforces.com/contest/74/submission/70620068",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "number theory",
+      "*2100"
+    ],
+    "timestamp": "Feb/09/2020 13:15"
+  },
   "CF70633557": {
     "contest_id": 1299,
     "language": "GNU C++17",
