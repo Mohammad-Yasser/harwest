@@ -20,18 +20,10 @@ const int N = 1e6 + 3;
 int left_border = 0, right_border = 1;
 int up_border = 2, down_border = 3;
 
-pair<int, int> adj[N][4][2];
+vector<pair<int, int>> adj[N][4];
 
 bool vis[N][4];
 vector<pair<int, int>> st;
-
-void emplaceAdj(int a, int b, int c, int d) {
-  if (adj[a][b][0].first == -1) {
-    adj[a][b][0] = make_pair(c, d);
-  } else {
-    adj[a][b][1] = make_pair(c, d);
-  }
-}
 
 void dfs(int ind, int border) {
   st.emplace_back(ind, border);
@@ -41,9 +33,7 @@ void dfs(int ind, int border) {
     if (vis[curr.first][curr.second]) continue;
     vis[curr.first][curr.second] = true;
     for (auto& v : adj[curr.first][curr.second]) {
-      if (v.first != -1) {
-        st.emplace_back(v);
-      }
+      st.emplace_back(v);
     }
   }
 }
@@ -51,17 +41,17 @@ void dfs(int ind, int border) {
 int n, m;
 
 void connect_corners() {
-  for (int q = 0; q < 2; ++q) {
-    emplaceAdj(1, left_border, 1, up_border);
-    emplaceAdj(n, left_border, 1, down_border);
+  adj[1][left_border].emplace_back(1, up_border);
+  adj[n][left_border].emplace_back(1, down_border);
 
-    emplaceAdj(1, right_border, m, up_border);
-    emplaceAdj(n, right_border, m, down_border);
+  adj[1][right_border].emplace_back(m, up_border);
+  adj[n][right_border].emplace_back(m, down_border);
 
-    swap(n, m);
-    swap(left_border, up_border);
-    swap(right_border, down_border);
-  }
+  adj[1][up_border].emplace_back(1, left_border);
+  adj[m][up_border].emplace_back(1, right_border);
+
+  adj[1][down_border].emplace_back(n, left_border);
+  adj[m][down_border].emplace_back(n, right_border);
 }
 
 int solve() {
@@ -74,24 +64,24 @@ int solve() {
       // Go up
       if (x <= m) {
         // Hit the upper border
-        emplaceAdj(i, left_border, x, up_border);
-        emplaceAdj(i, right_border, m - x + 1, up_border);
+        adj[i][left_border].emplace_back(x, up_border);
+        adj[i][right_border].emplace_back(m - x + 1, up_border);
       } else {
         // Hit the opposite border
-        emplaceAdj(i, left_border, x - m + 1, right_border);
-        emplaceAdj(i, right_border, x - m + 1, left_border);
+        adj[i][left_border].emplace_back(x - m + 1, right_border);
+        adj[i][right_border].emplace_back(x - m + 1, left_border);
       }
 
       x = n - i + 1;
       // Go down
       if (x <= m) {
         // Hit the lower border
-        emplaceAdj(i, left_border, x, down_border);
-        emplaceAdj(i, right_border, m - x + 1, down_border);
+        adj[i][left_border].emplace_back(x, down_border);
+        adj[i][right_border].emplace_back(m - x + 1, down_border);
       } else {
         // Hit the opposite border
-        emplaceAdj(i, left_border, i + m - 1, right_border);
-        emplaceAdj(i, right_border, i + m - 1, left_border);
+        adj[i][left_border].emplace_back(i + m - 1, right_border);
+        adj[i][right_border].emplace_back(i + m - 1, left_border);
       }
     }
     swap(n, m);
@@ -129,7 +119,11 @@ int main() {
 #endif
 
   st.reserve(4 * N);
-  memset(adj, -1, sizeof adj);
+  for (int i = 0; i < N; ++i) {
+    for (int j = 0; j < 4; ++j) {
+      adj[i][j].reserve(2);
+    }
+  }
 
   cin >> n >> m;
   cout << solve() << endl;
