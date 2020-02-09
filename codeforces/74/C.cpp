@@ -121,7 +121,7 @@ int main() {
   st.reserve(4 * N);
   for (int i = 0; i < N; ++i) {
     for (int j = 0; j < 4; ++j) {
-      adj[i][j].reserve(2);
+      adj[i][j].reserve(4);
     }
   }
 
