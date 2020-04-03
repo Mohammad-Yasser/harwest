@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF75431454": {
+    "contest_id": 1329,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1329/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Dreamoon Likes Coloring",
+    "problem_url": "https://codeforces.com/contest/1329/problem/A",
+    "submission_id": "CF75431454",
+    "submission_url": "https://codeforces.com/contest/1329/submission/75431454",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Apr/03/2020 21:38"
+  },
   "CF75845710": {
     "contest_id": 1333,
     "language": "GNU C++17 (64)",
