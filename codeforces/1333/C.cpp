@@ -31,7 +31,7 @@ int main() {
 #define endl '\n'
 #endif
 
-  map<Long, int> last;
+  unordered_map<Long, int> last;
 
   int n;
   cin >> n;
