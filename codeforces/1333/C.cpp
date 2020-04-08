@@ -23,7 +23,6 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 typedef long long Long;
 typedef vector<int> vi;
 
-#include <bits/extc++.h> /** keep-include */
 const int RANDOM =
     chrono::high_resolution_clock::now().time_since_epoch().count();
 struct chash {  // To use most bits rather than just the lowest ones:
