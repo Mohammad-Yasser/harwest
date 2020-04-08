@@ -24,7 +24,7 @@ typedef long long Long;
 typedef vector<int> vi;
 
 struct chash {
-  const int RANDOM =
+  const Long RANDOM =
       (long long)(make_unique<char>().get()) ^
       chrono::high_resolution_clock::now().time_since_epoch().count();
   static unsigned long long hash_f(unsigned long long x) {
