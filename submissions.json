@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF76166683": {
+    "contest_id": 1334,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1334/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Minimum Euler Cycle",
+    "problem_url": "https://codeforces.com/contest/1334/problem/D",
+    "submission_id": "CF76166683",
+    "submission_url": "https://codeforces.com/contest/1334/submission/76166683",
+    "tags": [
+      "constructive algorithms",
+      "graphs",
+      "greedy",
+      "implementation",
+      "*1800"
+    ],
+    "timestamp": "Apr/10/2020 17:56"
+  },
   "CF76181371": {
     "contest_id": 1334,
     "language": "GNU C++17 (64)",
