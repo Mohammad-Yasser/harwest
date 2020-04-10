@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF76181371": {
+    "contest_id": 1334,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1334/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Divisor Paths",
+    "problem_url": "https://codeforces.com/contest/1334/problem/E",
+    "submission_id": "CF76181371",
+    "submission_url": "https://codeforces.com/contest/1334/submission/76181371",
+    "tags": [
+      "combinatorics",
+      "graphs",
+      "greedy",
+      "math",
+      "number theory",
+      "*2200"
+    ],
+    "timestamp": "Apr/10/2020 18:24"
+  },
   "CF76384067": {
     "contest_id": 1338,
     "language": "GNU C++17 (64)",
