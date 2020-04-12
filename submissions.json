@@ -971,6 +971,26 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF76384067": {
+    "contest_id": 1338,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1338/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Edge Weight Assignment",
+    "problem_url": "https://codeforces.com/contest/1338/problem/B",
+    "submission_id": "CF76384067",
+    "submission_url": "https://codeforces.com/contest/1338/submission/76384067",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "dfs and similar",
+      "greedy",
+      "math",
+      "trees",
+      "*1800"
+    ],
+    "timestamp": "Apr/12/2020 17:21"
+  },
   "CF76461068": {
     "contest_id": 1338,
     "language": "GNU C++17 (64)",
