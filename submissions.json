@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF76708478": {
+    "contest_id": 856,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/856/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Set Theory",
+    "problem_url": "https://codeforces.com/contest/856/problem/A",
+    "submission_id": "CF76708478",
+    "submission_url": "https://codeforces.com/contest/856/submission/76708478",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "*1600"
+    ],
+    "timestamp": "Apr/14/2020 17:10"
+  },
   "CF76760330": {
     "contest_id": 1168,
     "language": "GNU C++17 (64)",
