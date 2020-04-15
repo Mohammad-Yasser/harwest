@@ -23,7 +23,42 @@ const int MOD = 998244353;
 
 string t, s;
 
-int dp[2][N];
+int memo[N][N][2];
+
+int solve(int s_ind, int z, bool is_substring) {
+  int& res = memo[s_ind][z][is_substring];
+  if (res != -1) return res;
+  res = 0;
+
+  if (z == 0 && (!is_substring || s_ind == t.size())) {
+    res = 1;
+  }
+
+  if (s_ind == s.size()) {
+    return res;
+  }
+
+  // Back
+  if (z != 0 && t[z - 1] == s[s_ind]) {
+    res = (res + solve(s_ind + 1, z - 1, is_substring)) % MOD;
+  }
+  if (z == t.size()) {
+    res = (res + solve(s_ind + 1, z, is_substring)) % MOD;
+  }
+
+  // Front
+  if (is_substring) {
+    if (z + s_ind == t.size()) {
+      res = (res + solve(s_ind + 1, z, false)) % MOD;
+    } else if (t[z + s_ind] == s[s_ind]) {
+      res = (res + solve(s_ind + 1, z, true)) % MOD;
+    }
+  } else {
+    res = (res + solve(s_ind + 1, z, false)) % MOD;
+  }
+  // cout << s_ind << " " << z << " " << is_substring << " " << res << endl;
+  return res;
+}
 
 int main() {
   ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
@@ -34,40 +69,14 @@ int main() {
 #endif
 
   cin >> s >> t;
-  dp[0][t.size()] = 2;
-  int res = 0;
-  for (int i = 0; i < t.size(); ++i) {
-    if (t[i] == s[0]) {
-      dp[0][i] = 2;
+  memset(memo, -1, sizeof memo);
+  int res = solve(1, t.size(), false);
+  for (int z = 0; z < t.size(); ++z) {
+    if (t[z] == s[0]) {
+      res = (res + solve(1, z, true)) % MOD;
     }
   }
-
-  bool curr = 0;
-  for (int i = 1; i < s.size(); ++i) {
-    bool nxt = !curr;
-    memset(dp[nxt], 0, sizeof dp[nxt]);
-    if (i >= t.size()) {
-      res = (res + dp[curr][0]) % MOD;
-    }
-    // Back
-    for (int j = 0; j < t.size(); ++j) {
-      if (t[j] == s[i]) {
-        dp[nxt][j] = dp[curr][j + 1];
-      }
-    }
-    dp[nxt][t.size()] = dp[curr][t.size()];
-
-    // Front
-    for (int j = 0; j <= t.size(); ++j) {
-      if (j + i >= t.size()) {
-        dp[nxt][j] = (dp[nxt][j] + dp[curr][j]) % MOD;
-      } else if (t[j + i] == s[i]) {
-        dp[nxt][j] = (dp[nxt][j] + dp[curr][j]) % MOD;
-      }
-    }
-    curr ^= 1;
-  }
-  res = (res + dp[curr][0]) % MOD;
+  res = 2 * res % MOD;
   cout << res << endl;
   return 0;
 }
