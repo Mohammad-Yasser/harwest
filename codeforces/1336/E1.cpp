@@ -62,15 +62,12 @@ int getRank(const vector<Long>& mat) {
 
 const int N = 17;
 const int MOD = 998244353;
-int memo[N + 1][N][1 << N];
+int memo[N + 1][N + 1][1 << N];
 
 int solve(int cnt, int ind, int mask, const vector<Long>& basis) {
+  if (cnt < 0 || cnt > N) return 0;
   if (ind == basis.size()) return popCnt(mask) == cnt;
-  int lg_curr_basis = __lg(basis[ind]);
-  int filtered_mask = mask & ((1 << (lg_curr_basis + 1)) - 1);
-  cnt -= popCnt(mask ^ filtered_mask);
-  mask = filtered_mask;
-  if (cnt < 0 || cnt > 1 + lg_curr_basis) return 0;
+
   int& res = memo[cnt][ind][mask];
   if (res != -1) return res;
   res = solve(cnt, ind + 1, mask, basis);
@@ -86,17 +83,6 @@ int fastPower(int base, int p) {
     res = 1LL * res * base % MOD;
   }
   return res;
-}
-
-pair<vector<Long>, vector<Long>> divideBasis(const vector<Long>& basis) {
-  auto left_basis = basis;
-  vector<Long> right_basis;
-  while (!left_basis.empty() && left_basis.back() < (1 << N)) {
-    right_basis.emplace_back(left_basis.back());
-    left_basis.pop_back();
-  }
-  reverse(right_basis.begin(), right_basis.end());
-  return make_pair(left_basis, right_basis);
 }
 
 int main() {
@@ -116,8 +102,12 @@ int main() {
   }
 
   auto basis = getRREF(arr);
-  vector<Long> left_basis, right_basis;
-  tie(left_basis, right_basis) = divideBasis(basis);
+  auto left_basis = basis;
+  vector<Long> right_basis;
+  while (!left_basis.empty() && left_basis.back() < (1 << N)) {
+    right_basis.emplace_back(left_basis.back());
+    left_basis.pop_back();
+  }
 
   int left_cnt = left_basis.size();
 

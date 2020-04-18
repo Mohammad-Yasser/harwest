@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF77208430": {
+    "contest_id": 1336,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1336/E1.cpp",
+    "problem_index": "E1",
+    "problem_name": "Chiori and Doll Picking (easy version)",
+    "problem_url": "https://codeforces.com/contest/1336/problem/E1",
+    "submission_id": "CF77208430",
+    "submission_url": "https://codeforces.com/contest/1336/submission/77208430",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "combinatorics",
+      "math",
+      "*2700"
+    ],
+    "timestamp": "Apr/18/2020 19:22"
+  },
   "CF77216325": {
     "contest_id": 1336,
     "language": "GNU C++17 (64)",
