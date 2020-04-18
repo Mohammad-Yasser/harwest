@@ -64,11 +64,10 @@ const int N = 17;
 const int MOD = 998244353;
 int memo[N + 1][N][1 << N];
 int pop_cnt[1 << N];
-int lg[1 << N];
 
 int solve(int cnt, int ind, int mask, const vector<Long>& basis) {
   if (ind == basis.size()) return pop_cnt[mask] == cnt;
-  int lg_curr_basis = lg[basis[ind]];
+  int lg_curr_basis = __lg(basis[ind]);
   int filtered_mask = mask & ((1 << (lg_curr_basis + 1)) - 1);
   cnt -= pop_cnt[mask ^ filtered_mask];
   mask = filtered_mask;
@@ -102,10 +101,8 @@ pair<vector<Long>, vector<Long>> divideBasis(const vector<Long>& basis) {
 }
 
 void init() {
-  lg[0] = -1;
   for (int i = 1; i < (1 << N); ++i) {
     pop_cnt[i] = 1 + pop_cnt[i ^ (i & -i)];
-    lg[i] = lg[i - 1] + (i == (i & -i));
   }
 }
 
@@ -116,7 +113,6 @@ int main() {
 #else
 #define endl '\n'
 #endif
-
   init();
   int n, m;
   cin >> n >> m;
