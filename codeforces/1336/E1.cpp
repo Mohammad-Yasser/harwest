@@ -65,7 +65,7 @@ int getRank(const vector<Long>& mat) {
   return res;
 }
 
-const int N = 16;
+const int N = 17;
 const int MOD = 998244353;
 int memo[N + 1][N][1 << N];
 
