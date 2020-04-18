@@ -63,13 +63,12 @@ int getRank(const vector<Long>& mat) {
 const int N = 17;
 const int MOD = 998244353;
 int memo[N + 1][N][1 << N];
-int pop_cnt[1 << N];
 
 int solve(int cnt, int ind, int mask, const vector<Long>& basis) {
-  if (ind == basis.size()) return pop_cnt[mask] == cnt;
+  if (ind == basis.size()) return popCnt(mask) == cnt;
   int lg_curr_basis = __lg(basis[ind]);
   int filtered_mask = mask & ((1 << (lg_curr_basis + 1)) - 1);
-  cnt -= pop_cnt[mask ^ filtered_mask];
+  cnt -= popCnt(mask ^ filtered_mask);
   mask = filtered_mask;
   if (cnt < 0 || cnt > 1 + lg_curr_basis) return 0;
   int& res = memo[cnt][ind][mask];
@@ -100,12 +99,6 @@ pair<vector<Long>, vector<Long>> divideBasis(const vector<Long>& basis) {
   return make_pair(left_basis, right_basis);
 }
 
-void init() {
-  for (int i = 1; i < (1 << N); ++i) {
-    pop_cnt[i] = 1 + pop_cnt[i ^ (i & -i)];
-  }
-}
-
 int main() {
   ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 #ifdef Local
@@ -113,7 +106,7 @@ int main() {
 #else
 #define endl '\n'
 #endif
-  init();
+
   int n, m;
   cin >> n >> m;
   vector<Long> arr(n);
