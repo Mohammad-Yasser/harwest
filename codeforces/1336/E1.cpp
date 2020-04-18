@@ -1,8 +1,3 @@
-#pragma GCC optimize("O3")
-#pragma GCC optimize("unroll-loops")
-#pragma GCC target( \
-    "sse,sse2,sse3,ssse3,sse4,sse4.2,popcnt,abm,mmx,avx,tune=native")
-#pragma comment(linker, "/STACK:1024000000,1024000000")
 #include <bits/stdc++.h>
 
 #include <ext/numeric>
