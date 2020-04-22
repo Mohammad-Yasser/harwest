@@ -127,7 +127,7 @@ int main() {
       res -= 1LL * left * (left + 1) / 2;
       prev_x = x + 1;
     }
-    int right = bit.get(prev_x, N - 1);
+    int right = bit.get(prev_x, N - 10);
     res -= 1LL * right * (right + 1) / 2;
   }
 
