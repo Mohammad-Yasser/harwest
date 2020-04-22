@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF77685072": {
+    "contest_id": 1190,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1190/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Tokitsukaze, CSL and Stone Game",
+    "problem_url": "https://codeforces.com/contest/1190/problem/B",
+    "submission_id": "CF77685072",
+    "submission_url": "https://codeforces.com/contest/1190/submission/77685072",
+    "tags": [
+      "games",
+      "*1800"
+    ],
+    "timestamp": "Apr/22/2020 20:29"
+  },
   "CF77689335": {
     "contest_id": 1190,
     "language": "GNU C++17 (64)",
