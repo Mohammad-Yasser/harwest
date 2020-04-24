@@ -3,7 +3,7 @@ using namespace std;
 int n, m, g, r, a[10005], dist[11111111];
 
 // Not my code, trying sth
-static char buf[100 << 20];
+static char buf[200 << 20];
 static size_t last_size = 0;
 static size_t buf_nxt = sizeof buf;
 
