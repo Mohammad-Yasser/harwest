@@ -28,7 +28,58 @@ struct chash {  // To use most bits rather than just the lowest ones:
   int operator()(int x) const { return (*this)(Long(x)); }
 };
 
-__gnu_pbds::gp_hash_table<int, Long, chash> res({}, {}, {}, {}, {1 << 16});
+__gnu_pbds::gp_hash_table<int, Long, chash> hash_map({}, {}, {}, {}, {1 << 16});
+
+const int N = 1e5 + 5;
+const int LOG = 19;
+
+template <typename T, class F = function<T(const T&, const T&)>>
+struct SparseTable {
+  int n;
+  vector<vector<T>> sp;
+  F func;
+
+  SparseTable() {}
+
+  void init(const vector<T>& a, const F& f) {
+    func = f;
+    n = static_cast<int>(a.size());
+    int max_log = 32 - __builtin_clz(n);
+    sp.resize(max_log);
+    sp[0] = a;
+    for (int j = 1; j < max_log; ++j) {
+      sp[j].resize(n - (1 << j) + 1);
+      for (int i = 0; i <= n - (1 << j); ++i) {
+        sp[j][i] = func(sp[j - 1][i], sp[j - 1][i + (1 << (j - 1))]);
+      }
+    }
+  }
+
+  T query(int l, int r) const {
+    int lg = 32 - __builtin_clz(r - l + 1) - 1;
+    return func(sp[lg][l], sp[lg][r - (1 << lg) + 1]);
+  }
+};
+
+SparseTable<int> sparse_table;
+
+int n;
+
+int bs(int ind, int g) {
+  int l = ind, r = n, ans = n;
+
+  while (l <= r) {
+    int mid = (l + r) / 2;
+    if (sparse_table.query(ind, mid) < g) {
+      ans = mid;
+      r = mid - 1;
+    } else {
+      l = mid + 1;
+    }
+  }
+
+  return ans;
+}
 
 int main() {
   ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
@@ -38,24 +89,22 @@ int main() {
 #define endl '\n'
 #endif
 
-  int n;
   cin >> n;
   vector<int> v(n);
   for (int& x : v) {
     cin >> x;
   }
-
-  map<int, int> gcds;
+  v.emplace_back(1);
+  sparse_table.init(v, [](int x, int y) { return __gcd(x, y); });
 
   for (int i = 0; i < n; ++i) {
-    map<int, int> nxt;
-    ++nxt[v[i]];
-    for (auto& g : gcds) {
-      nxt[__gcd(g.first, v[i])] += g.second;
-    }
-    gcds = nxt;
-    for (auto& g : gcds) {
-      res[g.first] += g.second;
+    int prev = i;
+    int g = v[i];
+    while (prev != n) {
+      int curr = bs(i, g);
+      hash_map[g] += curr - prev;
+      prev = curr;
+      g = __gcd(g, v[prev]);
     }
   }
 
@@ -66,7 +115,7 @@ int main() {
   while (q--) {
     int x;
     cin >> x;
-    cout << res[x] << endl;
+    cout << hash_map[x] << endl;
   }
 
   return 0;
