@@ -33,36 +33,35 @@ __gnu_pbds::gp_hash_table<int, Long, chash> hash_map({}, {}, {}, {}, {1 << 16});
 const int N = 1e5 + 5;
 const int LOG = 19;
 
-template <typename T, class F = function<T(const T&, const T&)>>
 struct SparseTable {
-  int n;
-  vector<vector<T>> sp;
-  F func;
+  int table[N][LOG];
+  int lg2[N], n;
 
-  SparseTable() {}
+  SparseTable() {
+    memset(table, 0, sizeof(table));
+    memset(lg2, 0, sizeof(lg2));
+    n = 0;
+  }
 
-  void init(const vector<T>& a, const F& f) {
-    func = f;
-    n = static_cast<int>(a.size());
-    int max_log = 32 - __builtin_clz(n);
-    sp.resize(max_log);
-    sp[0] = a;
-    for (int j = 1; j < max_log; ++j) {
-      sp[j].resize(n - (1 << j) + 1);
-      for (int i = 0; i <= n - (1 << j); ++i) {
-        sp[j][i] = func(sp[j - 1][i], sp[j - 1][i + (1 << (j - 1))]);
+  void init(vector<int>& a) {
+    n = a.size();
+    for (int i = 2; i < n; i++) lg2[i] = lg2[i >> 1] + 1;
+    for (int i = 0; i < n; i++) table[i][0] = a[i];
+    for (int j = 1; (1 << j) <= n; j++)
+      for (int i = 0; i < n; i++) {
+        if (i + (1 << (j - 1)) >= n) {
+          table[i][j] = table[i][j - 1];
+          continue;
+        }
+        table[i][j] = __gcd(table[i][j - 1], table[i + (1 << (j - 1))][j - 1]);
       }
-    }
   }
 
-  T query(int l, int r) const {
-    int lg = 32 - __builtin_clz(r - l + 1) - 1;
-    return func(sp[lg][l], sp[lg][r - (1 << lg) + 1]);
+  int query(int l, int r) {
+    int k = lg2[r - l + 1];
+    return __gcd(table[l][k], table[r - (1 << k) + 1][k]);
   }
-};
-
-SparseTable<int> sparse_table;
-
+} sparse_table;
 int n;
 
 int bs(int ind, int g) {
@@ -95,7 +94,7 @@ int main() {
     cin >> x;
   }
   v.emplace_back(1);
-  sparse_table.init(v, [](int x, int y) { return __gcd(x, y); });
+  sparse_table.init(v);
 
   for (int i = 0; i < n; ++i) {
     int prev = i;

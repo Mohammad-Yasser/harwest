@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF78036789": {
+    "contest_id": 475,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/475/D.cpp",
+    "problem_index": "D",
+    "problem_name": "CGCDSSQ",
+    "problem_url": "https://codeforces.com/contest/475/problem/D",
+    "submission_id": "CF78036789",
+    "submission_url": "https://codeforces.com/contest/475/submission/78036789",
+    "tags": [
+      "brute force",
+      "data structures",
+      "math",
+      "*2000"
+    ],
+    "timestamp": "Apr/25/2020 16:50"
+  },
   "CF78038290": {
     "contest_id": 475,
     "language": "GNU C++17 (64)",
