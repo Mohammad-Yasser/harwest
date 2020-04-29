@@ -53,7 +53,7 @@ struct Point {
   Point operator+(const Point& p) const { return Point{x + p.x, y + p.y}; }
   Point operator-(const Point& p) const { return Point{x - p.x, y - p.y}; }
   Point operator*(T c) const { return Point(x * c, y * c); }
-  Point operator/(T c) const { return Point(x / c, y / c); }
+  Point operator/(T c) { return Point(x / c, y / c); }
   bool operator<(const Point& p) const {
     return (*this) != p && to_pair() < p.to_pair();
   }
@@ -64,12 +64,11 @@ struct Point {
   bool operator!=(const Point& p) const { return !(*this == p); }
   T cross(const P& p) const { return x * p.y - y * p.x; }
   T cross(const P& a, const P& b) const { return (a - *this).cross(b - *this); }
-  T dot(const P& p) const { return x * p.x + y * p.y; }
-  P midPoint(const P& p) const { return ((*this) + p) / 2; }
+  T dot(const P& p) { return x * p.x + y * p.y; }
+  P midPoint(const P& p) { return ((*this) + p) / 2; }
   P getVector(const P& p) const { return p - (*this); }
-  T dist2(const P& p) const { return getVector(p).length2(); }
-  T length2() const { return (*this).dot(*this); }
-  Double dist(const P& p) const { return sqrt(dist2(p)); }
+  T dist2(const P& p) { return getVector(p).dot(getVector(p)); }
+  Double dist(const P& p) { return sqrt(dist2(p)); }
   P rotateCCW90() const { return P(-y, x); }
   P rotateCCW90Around(const P& p) const {
     return p + p.getVector(*this).rotateCCW90();
@@ -87,7 +86,7 @@ struct Point {
   }
 
   // Project point c onto line segment through a and b (assuming a != b).
-  P projectOnSegment(const P& a, const P& b) const {
+  P projectOnSegment(const P& a, const P& b) {
     P ab = a.getVector(b);
     P ac = a.getVector(*this);
 
@@ -119,25 +118,29 @@ P moles[4];
 P homes[4];
 P rotations[4][4];
 
-bool isSquare(vector<P> points) {
-  if (points[0] == points[1] || points[0] == points[2] ||
-      points[0] == points[3])
-    return false;
-  if (points[0].dist2(points[1]) != points[1].dist2(points[2])) {
-    swap(points[2], points[1]);
-  }
-  if (points[0].dist2(points[1]) != points[1].dist2(points[2])) {
-    swap(points[2], points[3]);
-  }
-  return points[0].dist2(points[2]) == points[1].dist2(points[3]) &&
-         points[0].dist2(points[1]) == points[2].dist2(points[3]) &&
-         points[1].dist2(points[2]) == points[0].dist2(points[3]) &&
-         points[0].dist2(points[1]) == points[1].dist2(points[2]);
+bool check(const vector<P>& points) {
+  vector<int> perm = {0, 1, 2, 3};
+  do {
+    vector<P> sq = points;
+    bool valid = true;
+    for (int i = 0; i < 4; ++i) {
+      int curr = perm[i];
+      int before = perm[(i + 3) % 4];
+      int after = perm[(i + 1) % 4];
+      if (points[curr] == points[after] ||
+          points[after].rotateCCW90Around(points[curr]) != points[before]) {
+        valid = false;
+        break;
+      }
+    }
+    if (valid) return true;
+  } while (next_permutation(perm.begin() + 1, perm.end()));
+  return false;
 }
 
 int bt(int ind, vector<P>& points, int cost) {
   if (ind == 4) {
-    if (isSquare(points)) return cost;
+    if (check(points)) return cost;
     return INT_MAX;
   }
   int res = INT_MAX;
