@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF78436468": {
+    "contest_id": 439,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/439/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Devu and Birthday Celebration",
+    "problem_url": "https://codeforces.com/contest/439/problem/E",
+    "submission_id": "CF78436468",
+    "submission_url": "https://codeforces.com/contest/439/submission/78436468",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*2100"
+    ],
+    "timestamp": "Apr/29/2020 05:14"
+  },
   "CF78439714": {
     "contest_id": 50,
     "language": "GNU C++17 (64)",
