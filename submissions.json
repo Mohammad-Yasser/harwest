@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF78578326": {
+    "contest_id": 856,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/856/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Eleventh Birthday",
+    "problem_url": "https://codeforces.com/contest/856/problem/C",
+    "submission_id": "CF78578326",
+    "submission_url": "https://codeforces.com/contest/856/submission/78578326",
+    "tags": [
+      "combinatorics",
+      "dp",
+      "math",
+      "*2400"
+    ],
+    "timestamp": "Apr/30/2020 16:54"
+  },
   "CF78582877": {
     "contest_id": 490,
     "language": "GNU C++17 (64)",
