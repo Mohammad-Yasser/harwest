@@ -29,7 +29,7 @@ vector<int> adj[N];
 short memo[N][N];
 
 short solve(int node, int parent, int prev) {
-  short& res = memo[prev][node];
+  short& res = memo[node][prev];
   if (res != -1) return res;
   res = r[node] > r[prev];
   for (int v : adj[node]) {
@@ -77,4 +77,3 @@ int main() {
 
   return 0;
 }
-

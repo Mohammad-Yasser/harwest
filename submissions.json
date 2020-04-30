@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF78583136": {
+    "contest_id": 490,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/490/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Treeland Tour",
+    "problem_url": "https://codeforces.com/contest/490/problem/F",
+    "submission_id": "CF78583136",
+    "submission_url": "https://codeforces.com/contest/490/submission/78583136",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dp",
+      "trees",
+      "*2200"
+    ],
+    "timestamp": "Apr/30/2020 17:50"
+  },
   "CF78583287": {
     "contest_id": 490,
     "language": "GNU C++17 (64)",
