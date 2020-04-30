@@ -26,23 +26,50 @@ const int N = 6003;
 int r[N];
 
 vector<int> adj[N];
-int memo[N][N];
 
-int solve(int node, int parent, int prev) {
-  int& res = memo[node][prev];
-  if (res != -1) return res;
-  res = r[node] > r[prev];
+struct SegmentTree {
+  vector<int> tree;
+  SegmentTree() : tree(3 * N, 0) {}
+  void modify(int p, int value) {  // set value at position p
+    for (tree[p += N] = value; p > 1; p >>= 1)
+      tree[p >> 1] = max(tree[p], tree[p ^ 1]);
+  }
+  // r exclusive
+  int query(int l, int r) {
+    int res = 0;
+    for (l += N, r += N; l < r; l >>= 1, r >>= 1) {
+      if (l & 1) res = max(res, tree[l++]);
+      if (r & 1) res = max(res, tree[--r]);
+    }
+    return res;
+  }
+} seg_tree;
+
+int res = 0;
+void dfs(int node, int parent) {
+  int prev = seg_tree.query(r[node], r[node]);
+  int q = seg_tree.query(1, r[node]);
+  seg_tree.modify(r[node], q + 1);
+  res = max(res, q + 1);
   for (int v : adj[node]) {
     if (v == parent) continue;
-    res = max(res, solve(v, node, prev));
+    dfs(v, node);
   }
-  if (r[node] > r[prev]) {
-    for (int v : adj[node]) {
-      if (v == parent) continue;
-      res = max(res, 1 + solve(v, node, node));
-    }
+  seg_tree.modify(r[node], prev);
+}
+
+int n;
+
+void compress() {
+  vector<int> v;
+  for (int i = 1; i <= n; ++i) {
+    v.emplace_back(r[i]);
   }
-  return res;
+  v.emplace_back(0);
+  sort(v.begin(), v.end());
+  for (int i = 1; i <= n; ++i) {
+    r[i] = lower_bound(v.begin(), v.end(), r[i]) - v.begin();
+  }
 }
 
 int main() {
@@ -53,13 +80,11 @@ int main() {
 #define endl '\n'
 #endif
 
-  memset(memo, -1, sizeof memo);
-
-  int n;
   cin >> n;
   for (int i = 1; i <= n; ++i) {
     cin >> r[i];
   }
+  compress();
 
   for (int i = 1; i < n; ++i) {
     int x, y;
@@ -70,7 +95,9 @@ int main() {
   int res = 0;
 
   for (int i = 1; i <= n; ++i) {
-    res = max(res, 1 + solve(i, -1, i));
+    if (adj[i].size() != 1) continue;
+    dfs(i, -1);
+    res = max(res, ::res);
   }
 
   cout << res << endl;
