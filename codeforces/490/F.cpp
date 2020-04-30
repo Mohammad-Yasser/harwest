@@ -26,10 +26,10 @@ const int N = 6003;
 int r[N];
 
 vector<int> adj[N];
-short memo[N][N];
+int memo[N][N];
 
-short solve(int node, int parent, int prev) {
-  short& res = memo[node][prev];
+int solve(int node, int parent, int prev) {
+  int& res = memo[node][prev];
   if (res != -1) return res;
   res = r[node] > r[prev];
   for (int v : adj[node]) {
@@ -39,7 +39,7 @@ short solve(int node, int parent, int prev) {
   if (r[node] > r[prev]) {
     for (int v : adj[node]) {
       if (v == parent) continue;
-      res = max(res, (short)(1 + solve(v, node, node)));
+      res = max(res, 1 + solve(v, node, node));
     }
   }
   return res;
