@@ -119,36 +119,20 @@ P moles[4];
 P homes[4];
 P rotations[4][4];
 
-bool isCCWSquare(const vector<P>& points) {
-  for (int i = 0; i < 4; ++i) {
-    int before = (i + 3) % 4;
-    int after = (i + 1) % 4;
-    int curr = i;
-    if (points[after].rotateCCW90Around(points[curr]) != points[before])
-      return false;
-  }
-  return true;
-}
-
-// Returns false if degenerate.
-// Doesn't do multiplication, so can work with long long.
 bool isSquare(vector<P> points) {
   if (points[0] == points[1] || points[0] == points[2] ||
       points[0] == points[3])
-    return false;  // Degenerate
-
-  if (isCCWSquare(points)) return true;
-  swap(points[2], points[3]);
-  if (isCCWSquare(points)) return true;
-  swap(points[1], points[2]);
-  if (isCCWSquare(points)) return true;
-  swap(points[2], points[3]);
-  if (isCCWSquare(points)) return true;
-  swap(points[1], points[2]);
-  if (isCCWSquare(points)) return true;
-  swap(points[2], points[3]);
-  if (isCCWSquare(points)) return true;
-  return false;
+    return false;
+  if (points[0].dist2(points[1]) != points[1].dist2(points[2])) {
+    swap(points[2], points[1]);
+  }
+  if (points[0].dist2(points[1]) != points[1].dist2(points[2])) {
+    swap(points[2], points[3]);
+  }
+  return points[0].dist2(points[2]) == points[1].dist2(points[3]) &&
+         points[0].dist2(points[1]) == points[2].dist2(points[3]) &&
+         points[1].dist2(points[2]) == points[0].dist2(points[3]) &&
+         points[0].dist2(points[1]) == points[1].dist2(points[2]);
 }
 
 int bt(int ind, vector<P>& points, int cost) {
