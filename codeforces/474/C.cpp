@@ -137,12 +137,17 @@ bool isSquare(vector<P> points) {
       points[0] == points[3])
     return false;  // Degenerate
 
-  for (int i = 0; i < 3; ++i) {
-    if (isCCWSquare(points)) return true;
-    swap(points[2], points[3]);
-    if (isCCWSquare(points)) return true;
-    swap(points[1], points[2]);
-  }
+  if (isCCWSquare(points)) return true;
+  swap(points[2], points[3]);
+  if (isCCWSquare(points)) return true;
+  swap(points[1], points[2]);
+  if (isCCWSquare(points)) return true;
+  swap(points[2], points[3]);
+  if (isCCWSquare(points)) return true;
+  swap(points[1], points[2]);
+  if (isCCWSquare(points)) return true;
+  swap(points[2], points[3]);
+  if (isCCWSquare(points)) return true;
   return false;
 }
 
