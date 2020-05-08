@@ -26,9 +26,10 @@ void maximize(T& x, const T& y) {
 }
 
 typedef long long Long;
-constexpr int N = 2003;
+const int N = 2003;
 
-vector<vector<char>> grid(N, vector<char>(N, '.'));
+char grid[N][N];
+char tmp[N][N];
 
 int first_x[N];
 int last_x[N];
@@ -37,37 +38,6 @@ int total_cnt_x;
 int first_row;
 int last_row;
 int n, m;
-
-template <typename T>
-vector<vector<T>> transpose(const vector<vector<T>>& grid) {
-  int length = grid[0].size();
-  int width = grid.size();
-
-  vector<vector<T>> res(length, vector<T>(width));
-  for (int i = 0; i < length; ++i) {
-    for (int j = 0; j < width; ++j) {
-      res[i][j] = grid[j][i];
-    }
-  }
-  return res;
-}
-
-template <typename T>
-void print(const vector<T>& v, const string& sep = "\n") {
-  for (auto& x : v) {
-    cout << x << sep;
-  }
-  cout.flush();
-}
-
-template <typename T>
-void print(const vector<vector<T>>& v) {
-  for (auto& x : v) {
-    print(x, "");
-    cout << endl;
-  }
-  cout.flush();
-}
 
 char hyp[N][N];
 void print() {
@@ -159,18 +129,27 @@ int main() {
 #define endl '\n'
 #endif
 
+  memset(grid, '.', sizeof grid);
+  memset(tmp, '.', sizeof tmp);
   cin >> n >> m;
   for (int i = 1; i <= n; ++i) {
     for (int j = 1; j <= m; ++j) {
       cin >> grid[i][j];
+      tmp[j][i] = grid[i][j];
     }
   }
 
   build();
   int res = 1e9;
   res = min(res, solve());
+
   swap(n, m);
-  grid = transpose(grid);
+  memset(grid, '.', sizeof grid);
+  for (int i = 1; i <= n; ++i) {
+    for (int j = 1; j <= m; ++j) {
+      grid[i][j] = tmp[i][j];
+    }
+  }
   build();
   res = min(res, solve());
   if (res == 1e9) res = -1;
