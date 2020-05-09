@@ -138,8 +138,7 @@ int main() {
   }
 
   b = convexHull(b);
-  sort(all(a));
-  sort(all(b));
+  a = convexHull(a);
 
   cout << (a == b ? "YES" : "NO") << endl;
 
