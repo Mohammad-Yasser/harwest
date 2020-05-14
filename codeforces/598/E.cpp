@@ -33,7 +33,7 @@ int solve(int width, int length, int k) {
   if (res != -1) return res;
   res = OO;
   for (int s = 0; s < 2; ++s) {
-    for (int i = 1; i <= width - i; ++i) {
+    for (int i = 1; i < width; ++i) {
       for (int j = 0; j <= k; ++j) {
         res = min(res, length * length + solve(i, length, j) +
                            solve(width - i, length, k - j));
