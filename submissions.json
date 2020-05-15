@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF80190576": {
+    "contest_id": 939,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/939/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Cutlet",
+    "problem_url": "https://codeforces.com/contest/939/problem/F",
+    "submission_id": "CF80190576",
+    "submission_url": "https://codeforces.com/contest/939/submission/80190576",
+    "tags": [
+      "data structures",
+      "dp",
+      "*2400"
+    ],
+    "timestamp": "May/15/2020 06:35"
+  },
   "CF80195189": {
     "contest_id": 900,
     "language": "GNU C++17 (64)",
