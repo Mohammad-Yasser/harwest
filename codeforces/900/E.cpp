@@ -37,20 +37,24 @@ struct Result {
 };
 
 Result memo[N];
-int last[N][2];
+int end_[N];
 int cnt_q[N];
 
 string s;
 int n;
+
+vector<int> occ[2][2];
 
 Result solve(int ind) {
   if (ind + m > n) return Result(0, 0);
   auto& res = memo[ind];
   if (res.occ != -1) return res;
   res = solve(ind + 1);
-  if (last[ind][0] >= ind + m && s[ind] != 'b') {
+  if (end_[ind] >= ind + m && s[ind] != 'b') {
     res = min(res, Result(1, cnt_q[ind + m] - cnt_q[ind]) + solve(ind + m));
   }
+  // cout << ind << " " << res.occ << " " << res.cost << " " << end_[ind] <<
+  // endl;
   return res;
 }
 
@@ -66,14 +70,44 @@ int main() {
 
   cin >> n >> s >> m;
 
-  last[n][0] = last[n][1] = n;
-  for (int i = n - 1; i >= 0; --i) {
+  for (int i = 0; i < s.size(); ++i) {
+    if (s[i] == 'a') {
+      occ[0][i & 1].emplace_back(i);
+    } else if (s[i] == 'b') {
+      occ[1][i & 1].emplace_back(i);
+    }
+  }
+
+  for (int i = 0; i < 2; ++i) {
     for (int j = 0; j < 2; ++j) {
-      if (s[i] != '?' && s[i] != "ab"[j]) {
-        last[i][j] = i;
+      occ[i][j].emplace_back(N);
+    }
+  }
+  end_[n] = end_[n + 1] = end_[N] = N;
+  for (int i = n - 1; i >= 0; --i) {
+    if (s[i] == 'b') {
+      end_[i] = getPos(occ[1][~i & 1], i);
+    } else if (s[i] == 'a') {
+      end_[i] = getPos(occ[0][~i & 1], i);
+      int nxt_b = getPos(occ[1][i & 1], i);
+      end_[i] = min(end_[i], nxt_b);
+      nxt_b = min(nxt_b, getPos(occ[1][~i & 1], i));
+      end_[i] = min(end_[i], end_[i + 2]);
+      end_[i] = min(end_[i], end_[nxt_b]);
+    } else {
+      int nxt_a = getPos(occ[0][0], i);
+      nxt_a = min(nxt_a, getPos(occ[0][1], i));
+      if (nxt_a == N) {
+        end_[i] = N;
+      } else if ((nxt_a & 1) != (i & 1)) {
+        end_[i] = nxt_a;
       } else {
-        last[i][j] = last[i + 1][!j];
+        end_[i] = end_[nxt_a];
       }
+      int nxt_b = getPos(occ[1][i & 1], i);
+      end_[i] = min(end_[i], nxt_b);
+      nxt_b = min(nxt_b, getPos(occ[1][~i & 1], i));
+      end_[i] = min(end_[i], end_[nxt_b]);
     }
   }
 
