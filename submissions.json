@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF81436018": {
+    "contest_id": 1166,
+    "language": "GNU C++17",
+    "path": "codeforces/1166/E.cpp",
+    "problem_index": "E",
+    "problem_name": "The LCMs Must be Large",
+    "problem_url": "https://codeforces.com/contest/1166/problem/E",
+    "submission_id": "CF81436018",
+    "submission_url": "https://codeforces.com/contest/1166/submission/81436018",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "constructive algorithms",
+      "math",
+      "number theory",
+      "*2100"
+    ],
+    "timestamp": "May/26/2020 06:47"
+  },
   "CF81461837": {
     "contest_id": 908,
     "language": "GNU C++17 (64)",
