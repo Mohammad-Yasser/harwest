@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF81476055": {
+    "contest_id": 321,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/321/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Ciel and Robot",
+    "problem_url": "https://codeforces.com/contest/321/problem/A",
+    "submission_id": "CF81476055",
+    "submission_url": "https://codeforces.com/contest/321/submission/81476055",
+    "tags": [
+      "binary search",
+      "implementation",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "May/26/2020 15:42"
+  },
   "CF81487324": {
     "contest_id": 1358,
     "language": "GNU C++17 (64)",
