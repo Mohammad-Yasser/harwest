@@ -54,31 +54,7 @@ struct Fraction {
     // Must be normalized.
     return num == other.num && den == other.den;
   }
-
-  bool isNegative() const { return (num < 0) ^ (den < 0); }
-  Fraction reciprocal() const {
-    Fraction res(den, num);
-    res.normalize();
-    return res;
-  }
-
   bool operator<(const Fraction& other) const {
-    if ((*this) == other) return false;
-    if (den == 0) return false;
-    if (other.den == 0) return true;
-    if (isNegative() && !other.isNegative()) return true;
-    if (!isNegative() && other.isNegative()) return false;
-    if (isNegative() && other.isNegative())
-      return other * Fraction(-1) < (*this) * Fraction(-1);
-
-    if (num / den > other.num / other.den) return false;
-    if (num / den < other.num / other.den) return true;
-
-    Fraction a = Fraction(den, num % den);
-    Fraction b = Fraction(other.den, other.num % other.den);
-
-    return b < a;
-
     return num * other.den < den * other.num;
   }
   friend Fraction abs(const Fraction& x) {
