@@ -19,11 +19,6 @@ typedef long double Double;
 
 const int N = 1003;
 
-__int128 abs(__int128 x) {
-  if (x < 0) return -x;
-  return x;
-}
-
 template <typename Long>
 struct Fraction {
   Long num = 0, den = 1;
@@ -61,6 +56,11 @@ struct Fraction {
   }
 
   bool isNegative() const { return (num < 0) ^ (den < 0); }
+  Fraction reciprocal() const {
+    Fraction res(den, num);
+    res.normalize();
+    return res;
+  }
 
   bool operator<(const Fraction& other) const {
     if ((*this) == other) return false;
@@ -71,15 +71,13 @@ struct Fraction {
     if (isNegative() && other.isNegative())
       return other * Fraction(-1) < (*this) * Fraction(-1);
 
-    // Uncomment this if it's possible to overflow.
+    if (num / den > other.num / other.den) return false;
+    if (num / den < other.num / other.den) return true;
 
-    // if (num / den > other.num / other.den) return false;
-    // if (num / den < other.num / other.den) return true;
+    Fraction a = Fraction(den, num % den);
+    Fraction b = Fraction(other.den, other.num % other.den);
 
-    // Fraction a = Fraction(den, num % den);
-    // Fraction b = Fraction(other.den, other.num % other.den);
-
-    // return b < a;
+    return b < a;
 
     return num * other.den < den * other.num;
   }
@@ -95,17 +93,8 @@ struct Fraction {
   }
 };
 
-istream& operator>>(istream& is, __int128& n) {
-  Long x;
-  is >> x;
-  n = x;
-  return is;
-}
-
-typedef Fraction<__int128> Fract;
-
-Fract getAvg(Long n, int h, int c) {
-  return Fract(n / 2 * c + (n + 1) / 2 * h, n);
+Fraction<Long> getAvg(Long n, int h, int c) {
+  return Fraction(n / 2 * c + (n + 1) / 2 * h, n);
 }
 
 int main() {
@@ -121,7 +110,7 @@ int main() {
   vector<Long> candidates;
   while (t--) {
     Long h, c;
-    Fract tmp;
+    Fraction<Long> tmp;
     cin >> h >> c >> tmp.num;
     Long low = 0, high = round(1e7 + 1), ans = 0;
     while (low <= high) {
@@ -140,7 +129,7 @@ int main() {
       if (2 * (ans + i) + 1 > 0) candidates.emplace_back(2 * (ans + i) + 1);
     }
     sort(all(candidates));
-    Fract best = Fract(LLONG_MAX);
+    Fraction best = Fraction(LLONG_MAX);
     Long res = 1;
     for (Long n : candidates) {
       Fraction avg = getAvg(n, h, c);
