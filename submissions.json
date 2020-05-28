@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF81713044": {
+    "contest_id": 671,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/671/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Recycling Bottles",
+    "problem_url": "https://codeforces.com/contest/671/problem/A",
+    "submission_id": "CF81713044",
+    "submission_url": "https://codeforces.com/contest/671/submission/81713044",
+    "tags": [
+      "dp",
+      "geometry",
+      "greedy",
+      "implementation",
+      "*1800"
+    ],
+    "timestamp": "May/28/2020 16:11"
+  },
   "CF81716871": {
     "contest_id": 1359,
     "language": "GNU C++17 (64)",
