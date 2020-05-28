@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF81710645": {
+    "contest_id": 1176,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1176/D.cpp",
+    "problem_index": "D",
+    "problem_name": "Recover it!",
+    "problem_url": "https://codeforces.com/contest/1176/problem/D",
+    "submission_id": "CF81710645",
+    "submission_url": "https://codeforces.com/contest/1176/submission/81710645",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "greedy",
+      "number theory",
+      "sortings",
+      "*1800"
+    ],
+    "timestamp": "May/28/2020 15:43"
+  },
   "CF81713044": {
     "contest_id": 671,
     "language": "GNU C++17 (64)",
