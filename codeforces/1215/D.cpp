@@ -39,7 +39,12 @@ int getQ(const string& s) {
   return res;
 }
 
-// Proof: https://codeforces.com/blog/entry/69815?#comment-632499
+int n;
+bool winning(int diff, int cnt_left, int cnt_right) {
+  diff += (cnt_left + 1) / 2 * 9;
+  diff -= (cnt_right + 1) / 2 * 9;
+  return diff > 0;
+}
 
 int main() {
   ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
@@ -56,13 +61,13 @@ int main() {
   string right = s.substr(s.size() / 2);
   int diff = getSum(left) - getSum(right);
   int cnt_left = getQ(left), cnt_right = getQ(right);
-
-  if (9 * (cnt_right - cnt_left) == 2 * diff) {
-    cout << "Bicarp" << endl;
+  if (winning(diff, cnt_left, cnt_right) ||
+      winning(-diff, cnt_right, cnt_left)) {
+    cout << "Monocarp" << endl;
     return 0;
   }
 
-  cout << "Monocarp" << endl;
+  cout << "Bicarp" << endl;
 
   return 0;
 }
