@@ -35,8 +35,12 @@ int main() {
   for (int t = 0; t < 2; ++t) {
     int s1 = x1 + y1;
     int s2 = x2 + y2;
+    int tmp = 0;
+    if (s1 > s2) swap(s1, s2);
 
-    res = max(res, abs(s2 / a + (s2 > 0) - s1 / a - (s1 > 0)));
+    tmp = s2 / a + (s2 > 0) - s1 / a - (s1 > 0);
+
+    res = max(res, tmp);
     y1 *= -1, y2 *= -1;
     swap(a, b);
   }
