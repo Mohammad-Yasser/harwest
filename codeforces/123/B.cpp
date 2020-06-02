@@ -41,8 +41,11 @@ int main() {
       s1 *= -1, s2 *= -1;
       swap(s1, s2);
     }
-
-    tmp = s2 / a + 1 - s1 / a - (s1 > 0);
+    if (s1 <= 0) {
+      tmp = -s1 / a + s2 / a + 1;
+    } else {
+      tmp = s2 / a - (s1 - 1) / a;
+    }
 
     res = max(res, tmp);
     y1 *= -1, y2 *= -1;
