@@ -25,29 +25,25 @@ int main() {
 #define endl '\n'
 #endif
 
-  int a, b, x1, y1, x2, y2;
+  Long a, b, x1, y1, x2, y2;
   cin >> a >> b >> x1 >> y1 >> x2 >> y2;
 
   a *= 2, b *= 2;
 
-  int res = 0;
+  Long res = 0;
 
   for (int t = 0; t < 2; ++t) {
-    int s1 = x1 + y1;
-    int s2 = x2 + y2;
-    int tmp = 0;
+    Long s1 = x1 + y1;
+    Long s2 = x2 + y2;
+
     if (s1 > s2) swap(s1, s2);
-    if (s2 <= 0) {
-      s1 *= -1, s2 *= -1;
-      swap(s1, s2);
-    }
     if (s1 <= 0) {
-      tmp = -s1 / a + s2 / a + 1;
-    } else {
-      tmp = s2 / a - (s1 - 1) / a;
+      Long tmp = ((-s1 + a - 1) / a + 1) * a;
+      s1 += tmp;
+      s2 += tmp;
     }
 
-    res = max(res, tmp);
+    res = max(res, s2 / a - (s1 - 1) / a);
     y1 *= -1, y2 *= -1;
     swap(a, b);
   }
