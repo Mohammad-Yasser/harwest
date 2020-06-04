@@ -36,17 +36,9 @@ ostream& operator<<(ostream& os, vector<T>& v) {
 // https://github.com/kth-competitive-programming/kactl/blob/master/content/graph/EulerWalk.h
 vector<pii> eulerWalk(vector<vector<pii>>& gr, int nedges, int src = 0) {
   int n = sz(gr);
-
-  static vi D, its, eu;
-  D.clear(), D.resize(n);
-  its.clear(), its.resize(n);
-  eu.clear(), eu.resize(nedges);
-
-  static vector<pii> s;
-  s = {make_pair(src, -1)};
-  static vector<pii> ret;
-  ret.clear();
-
+  vi D(n), its(n), eu(nedges);
+  vector<pii> s = {make_pair(src, -1)};
+  vector<pii> ret;
   D[src]++;  // to allow Euler paths, not just cycles
   while (!s.empty()) {
     auto x = s.back();
