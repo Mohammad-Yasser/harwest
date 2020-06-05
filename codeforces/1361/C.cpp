@@ -32,13 +32,12 @@ ostream& operator<<(ostream& os, vector<T>& v) {
   }
   return os;
 }
-const int N = (1 << 20) + 1;
 
 // https://github.com/kth-competitive-programming/kactl/blob/master/content/graph/EulerWalk.h
 vector<pii> eulerWalk(vector<vector<pii>>& gr, int nedges, int src = 0) {
   int n = sz(gr);
 
-  static vi D(N), its(N), eu(N);
+  static vi D, its, eu;
   D.clear(), D.resize(n);
   its.clear(), its.resize(n);
   eu.clear(), eu.resize(nedges);
@@ -69,6 +68,7 @@ vector<pii> eulerWalk(vector<vector<pii>>& gr, int nedges, int src = 0) {
   return {ret.rbegin(), ret.rend()};
 }
 
+const int N = (1 << 20) + 1;
 vector<vector<pii>> graph(N);
 vector<pii> cycle;
 
