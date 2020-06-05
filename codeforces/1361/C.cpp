@@ -43,7 +43,7 @@ vector<pii> eulerWalk(vector<vector<pii>>& gr, int nedges, int src = 0) {
   its.clear(), its.resize(n);
   eu.clear(), eu.resize(nedges);
 
-  vector<pii> s;
+  static vector<pii> s;
   s = {make_pair(src, -1)};
   static vector<pii> ret;
   ret.clear();
