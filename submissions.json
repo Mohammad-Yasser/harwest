@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF82656877": {
+    "contest_id": 65,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/65/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Harry Potter and Three Spells",
+    "problem_url": "https://codeforces.com/contest/65/problem/A",
+    "submission_id": "CF82656877",
+    "submission_url": "https://codeforces.com/contest/65/submission/82656877",
+    "tags": [
+      "implementation",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Jun/05/2020 20:54"
+  },
   "CF82731435": {
     "contest_id": 5,
     "language": "GNU C++17 (64)",
