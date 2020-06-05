@@ -32,25 +32,28 @@ ostream& operator<<(ostream& os, vector<T>& v) {
   }
   return os;
 }
+const int N = (1 << 20) + 1;
 
 // https://github.com/kth-competitive-programming/kactl/blob/master/content/graph/EulerWalk.h
-vector<pii> eulerWalk(vector<vector<pii>>& gr, int nedges, int src = -1) {
+vector<pii> eulerWalk(vector<vector<pii>>& gr, int nedges, int src = 0) {
   int n = sz(gr);
-  if (src == -1) {
-    src = find_if(all(gr), [](const vector<pii>& v) { return !v.empty(); }) -
-          begin(gr);
-    if (src == n) return {};
-  }
 
-  vi D(n), its(n), eu(nedges);
-  vector<pii> s = {make_pair(src, -1)};
-  vector<pii> ret;
+  static vi D(N), its(N), eu(N);
+  D.clear(), D.resize(n);
+  its.clear(), its.resize(n);
+  eu.clear(), eu.resize(nedges);
+
+  vector<pii> s;
+  s = {make_pair(src, -1)};
+  static vector<pii> ret;
+  ret.clear();
+
   D[src]++;  // to allow Euler paths, not just cycles
   while (!s.empty()) {
     auto x = s.back();
     int y, e, &it = its[x.first], end = sz(gr[x.first]);
     if (it == end) {
-      ret.emplace_back(x);
+      ret.push_back(x);
       s.pop_back();
       continue;
     }
@@ -62,27 +65,26 @@ vector<pii> eulerWalk(vector<vector<pii>>& gr, int nedges, int src = -1) {
     }
   }
   for (int x : D)
-    if (x < 0) return {};
-  if (sz(ret) != nedges + 1) return {};
-  reverse(all(ret));
-  return ret;
+    if (x < 0 || sz(ret) != nedges + 1) return {};
+  return {ret.rbegin(), ret.rend()};
 }
 
-const int N = (1 << 20) + 1;
 vector<vector<pii>> graph(N);
 vector<pii> cycle;
 
 bool valid(int k, const vector<pii>& pearls) {
   graph.clear();
   graph.resize((1 << k));
+  int src;
   for (int i = 0; i < sz(pearls); ++i) {
     int u = (pearls[i].first & ((1 << k) - 1));
     int v = (pearls[i].second & ((1 << k) - 1));
     graph[u].emplace_back(v, i);
     graph[v].emplace_back(u, i);
+    src = u;
   }
-  cycle = eulerWalk(graph, pearls.size());
-  return !cycle.empty() && cycle.back().first == cycle[0].first;
+  cycle = eulerWalk(graph, pearls.size(), src);
+  return !cycle.empty() && cycle.back().first == src;
 }
 
 int main() {
