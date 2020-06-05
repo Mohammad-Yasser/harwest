@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF82655421": {
+    "contest_id": 201,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/201/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Guess That Car!",
+    "problem_url": "https://codeforces.com/contest/201/problem/B",
+    "submission_id": "CF82655421",
+    "submission_url": "https://codeforces.com/contest/201/submission/82655421",
+    "tags": [
+      "math",
+      "ternary search",
+      "*1800"
+    ],
+    "timestamp": "Jun/05/2020 20:25"
+  },
   "CF82656877": {
     "contest_id": 65,
     "language": "GNU C++17 (64)",
