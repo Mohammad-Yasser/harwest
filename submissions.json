@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF82877572": {
+    "contest_id": 1365,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1365/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Swaps Again",
+    "problem_url": "https://codeforces.com/contest/1365/problem/F",
+    "submission_id": "CF82877572",
+    "submission_url": "https://codeforces.com/contest/1365/submission/82877572",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "sortings",
+      "*2100"
+    ],
+    "timestamp": "Jun/07/2020 20:27"
+  },
   "CF82905028": {
     "contest_id": 1067,
     "language": "GNU C++17 (64)",
