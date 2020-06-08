@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF82905741": {
+    "contest_id": 1151,
+    "language": "Clang++17 Diagnostics",
+    "path": "codeforces/1151/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Problem for Nazar",
+    "problem_url": "https://codeforces.com/contest/1151/problem/C",
+    "submission_id": "CF82905741",
+    "submission_url": "https://codeforces.com/contest/1151/submission/82905741",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "*1800"
+    ],
+    "timestamp": "Jun/08/2020 06:33"
+  },
   "CF82906070": {
     "contest_id": 1151,
     "language": "GNU C++17 (64)",

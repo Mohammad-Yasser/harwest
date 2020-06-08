@@ -5,10 +5,6 @@
 
 #include <bits/stdc++.h>
 
-#include <ext/numeric>
-#include <ext/pb_ds/assoc_container.hpp>
-using namespace __gnu_pbds;
-using namespace __gnu_cxx;
 using namespace std;
 
 #define popCnt(x) (__builtin_popcountll(x))
@@ -50,7 +46,7 @@ int power(int base, int p) {
 int modInverse(int x) { return power(x, MOD - 2); }
 
 int sum(Long a, Long n) {
-  a %= MOD, n %= MOD;
+  a%=MOD, n%=MOD;
   int res = (2 * a + 1LL * (n - 1) * 2) % MOD;
   res = 1LL * res * n % MOD;
   res = 1LL * res * modInverse(2) % MOD;
@@ -60,19 +56,21 @@ int sum(Long a, Long n) {
 int solve(Long n) {
   Long curr_size = 1;
   bool odd = true;
-  Long cnt_odd = 0, cnt_even = 0;
-
+  Long nxt_odd = 1, nxt_even = 2;
+  int res = 0;
   while (n > 0) {
     if (n <= curr_size) curr_size = n;
+    Long a = (odd ? nxt_odd : nxt_even);
+    res = (res + sum(a, curr_size)) % MOD;
     n -= curr_size;
     if (odd)
-      cnt_odd += curr_size;
+      nxt_odd += 2 * curr_size;
     else
-      cnt_even += curr_size;
+      nxt_even += 2 * curr_size;
     curr_size *= 2;
     odd ^= 1;
   }
-  int res = (sum(1, cnt_odd) + sum(2, cnt_even)) % MOD;
+
   return res;
 }
 
@@ -87,6 +85,5 @@ int main() {
   Long l, r;
   cin >> l >> r;
   cout << (solve(r) - solve(l - 1) + MOD) % MOD << endl;
-
   return 0;
 }
