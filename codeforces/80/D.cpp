@@ -14,7 +14,7 @@ using namespace std;
 #define sz(x) ((int)(x.size()))
 #define all(v) begin(v), end(v)
 typedef long long Long;
-typedef long double Double;
+typedef double Double;
 
 template <class T>
 istream& operator>>(istream& is, vector<T>& v) {
@@ -45,7 +45,6 @@ Double solve(Double a, Double b) {
   b = min(b, a / 4);
   Double res = (a - 4 * b) / a;
   a = 4 * b;
-  // Integrate the function f(a): the probability of q being good if p == a.
   res += a * a / (8 * original_b) / original_a;
   res = 0.5 * (res + 1);
   return res;
