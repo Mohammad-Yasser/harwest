@@ -971,6 +971,25 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF83701201": {
+    "contest_id": 1364,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1364/E.cpp",
+    "problem_index": "E",
+    "problem_name": "X-OR",
+    "problem_url": "https://codeforces.com/contest/1364/problem/E",
+    "submission_id": "CF83701201",
+    "submission_url": "https://codeforces.com/contest/1364/submission/83701201",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "divide and conquer",
+      "interactive",
+      "probabilities",
+      "*2700"
+    ],
+    "timestamp": "Jun/13/2020 23:27"
+  },
   "CF83701208": {
     "contest_id": 1364,
     "language": "GNU C++17 (64)",
