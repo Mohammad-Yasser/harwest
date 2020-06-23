@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF84839066": {
+    "contest_id": 413,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/413/D.cpp",
+    "problem_index": "D",
+    "problem_name": "2048",
+    "problem_url": "https://codeforces.com/contest/413/problem/D",
+    "submission_id": "CF84839066",
+    "submission_url": "https://codeforces.com/contest/413/submission/84839066",
+    "tags": [
+      "bitmasks",
+      "dp",
+      "*2000"
+    ],
+    "timestamp": "Jun/23/2020 23:30"
+  },
   "CF84902410": {
     "contest_id": 466,
     "language": "GNU C++17 (64)",
