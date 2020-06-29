@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF85492086": {
+    "contest_id": 1055,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1055/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Lucky Days",
+    "problem_url": "https://codeforces.com/contest/1055/problem/C",
+    "submission_id": "CF85492086",
+    "submission_url": "https://codeforces.com/contest/1055/submission/85492086",
+    "tags": [
+      "math",
+      "number theory",
+      "*1900"
+    ],
+    "timestamp": "Jun/29/2020 22:34"
+  },
   "CF85805951": {
     "contest_id": 1067,
     "language": "GNU C++17 (64)",
