@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF85937968": {
+    "contest_id": 1375,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1375/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Neighbor Grid",
+    "problem_url": "https://codeforces.com/contest/1375/problem/B",
+    "submission_id": "CF85937968",
+    "submission_url": "https://codeforces.com/contest/1375/submission/85937968",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "*1200"
+    ],
+    "timestamp": "Jul/04/2020 16:57"
+  },
   "CF85945654": {
     "contest_id": 1375,
     "language": "GNU C++17 (64)",
