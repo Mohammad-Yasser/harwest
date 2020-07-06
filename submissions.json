@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF86153860": {
+    "contest_id": 149,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/149/E.cpp",
+    "problem_index": "E",
+    "problem_name": "Martian Strings",
+    "problem_url": "https://codeforces.com/contest/149/problem/E",
+    "submission_id": "CF86153860",
+    "submission_url": "https://codeforces.com/contest/149/submission/86153860",
+    "tags": [
+      "string suffix structures",
+      "strings",
+      "*2300"
+    ],
+    "timestamp": "Jul/06/2020 21:42"
+  },
   "CF86165085": {
     "contest_id": 956,
     "language": "GNU C++17 (64)",
