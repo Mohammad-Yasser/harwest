@@ -971,6 +971,26 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF87596681": {
+    "contest_id": 1381,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1381/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Mastermind",
+    "problem_url": "https://codeforces.com/contest/1381/problem/C",
+    "submission_id": "CF87596681",
+    "submission_url": "https://codeforces.com/contest/1381/submission/87596681",
+    "tags": [
+      "constructive algorithms",
+      "graph matchings",
+      "greedy",
+      "implementation",
+      "sortings",
+      "two pointers",
+      "*2500"
+    ],
+    "timestamp": "Jul/21/2020 19:26"
+  },
   "CF87740251": {
     "contest_id": 832,
     "language": "GNU C++17 (64)",
