@@ -36,7 +36,7 @@ ostream& operator<<(ostream& os, vector<T>& v) {
 
 const int MOD = round(1e9 + 7);
 
-int power(int base, int p, int MOD = MOD) {
+int power(int base, int p) {
   if (p == 0) return 1;
   int res = power(base, p / 2);
   res = 1LL * res * res % MOD;
@@ -46,7 +46,7 @@ int power(int base, int p, int MOD = MOD) {
   return res;
 }
 
-int modInverse(int x, int MOD = MOD) { return power(x, MOD - 2, MOD); }
+int modInverse(int x, int MOD = MOD) { return power(x, MOD - 2); }
 
 using Row = vector<int>;
 using Matrix = vector<Row>;
@@ -92,6 +92,15 @@ Matrix getRREF(const Matrix& mat, int mod, int& rank) {
   }
   return res;
 }
+int n, m;
+
+inline Row parse(const string& s) {
+  Row res(m);
+  for (int i = 0; i < m; ++i) {
+    res[i] = s[i] - 'a';
+  }
+  return res;
+}
 
 bool covered(const Matrix& rref, Row vctr, int mod) {
   int n = sz(rref);
@@ -108,16 +117,6 @@ bool covered(const Matrix& rref, Row vctr, int mod) {
     vctr = subMultiple(vctr, rref[row], multiple, mod);
   }
   return isZero(vctr);
-}
-
-int n, m;
-
-inline Row parse(const string& s) {
-  Row res(m);
-  for (int i = 0; i < m; ++i) {
-    res[i] = s[i] - 'a';
-  }
-  return res;
 }
 
 int main() {
