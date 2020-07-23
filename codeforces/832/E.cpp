@@ -48,7 +48,7 @@ int power(int base, int p, int MOD = MOD) {
 
 int modInverse(int x, int MOD = MOD) { return power(x, MOD - 2, MOD); }
 
-using Row = vector<char>;
+using Row = vector<int>;
 using Matrix = vector<Row>;
 
 bool isZero(const Row& row) { return *max_element(all(row)) == 0; }
@@ -62,7 +62,7 @@ T subMod(T x, V y, int mod) {
 Row subMultiple(const Row& a, const Row& b, int multiple, int mod) {
   Row res = a;
   for (int i = 0; i < sz(a); ++i) {
-    res[i] = subMod(res[i], b[i] * multiple % mod, mod);
+    res[i] = subMod(res[i], 1LL * b[i] * multiple % mod, mod);
   }
   return res;
 }
@@ -85,7 +85,7 @@ Matrix getRREF(const Matrix& mat, int mod, int& rank) {
     ++rank;
     for (int i = row + 1; i < n; ++i) {
       if (res[i][col] == 0) continue;
-      auto multiple = res[i][col] * modInverse(res[row][col], mod) % mod;
+      auto multiple = 1LL * res[i][col] * modInverse(res[row][col], mod) % mod;
       res[i] = subMultiple(res[i], res[row], multiple, mod);
     }
     ++row;
@@ -103,7 +103,8 @@ bool covered(const Matrix& rref, Row vctr, int mod) {
     while (curr_col < m && vctr[curr_col] == 0) ++curr_col;
     if (first_col > curr_col) return false;
     if (first_col < curr_col) continue;
-    int multiple = vctr[curr_col] * modInverse(rref[row][curr_col], mod) % mod;
+    int multiple =
+        1LL * vctr[curr_col] * modInverse(rref[row][curr_col], mod) % mod;
     vctr = subMultiple(vctr, rref[row], multiple, mod);
   }
   return isZero(vctr);
