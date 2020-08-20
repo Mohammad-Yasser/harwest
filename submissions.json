@@ -971,6 +971,22 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF90473850": {
+    "contest_id": 889,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/889/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Maximum Element",
+    "problem_url": "https://codeforces.com/contest/889/problem/C",
+    "submission_id": "CF90473850",
+    "submission_url": "https://codeforces.com/contest/889/submission/90473850",
+    "tags": [
+      "dp",
+      "math",
+      "*2400"
+    ],
+    "timestamp": "Aug/20/2020 17:00"
+  },
   "CF90896950": {
     "contest_id": 832,
     "language": "GNU C++17 (64)",
