@@ -971,6 +971,23 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF90467255": {
+    "contest_id": 889,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/889/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Restoration of string",
+    "problem_url": "https://codeforces.com/contest/889/problem/B",
+    "submission_id": "CF90467255",
+    "submission_url": "https://codeforces.com/contest/889/submission/90467255",
+    "tags": [
+      "dsu",
+      "graphs",
+      "strings",
+      "*2000"
+    ],
+    "timestamp": "Aug/20/2020 15:43"
+  },
   "CF90473850": {
     "contest_id": 889,
     "language": "GNU C++17 (64)",
