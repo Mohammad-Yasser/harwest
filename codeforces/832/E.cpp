@@ -1,5 +1,5 @@
 #ifndef Local
-#pragma GCC optimize("Ofast,fast-math")
+#pragma GCC optimize("Ofast")
 #endif
 #include <bits/stdc++.h>
 
@@ -10,6 +10,7 @@ using namespace std;
 #define all(v) begin(v), end(v)
 #define rall(v) rbegin(v), rend(v)
 typedef long long Long;
+typedef double Double;
 
 template <class U, class V>
 istream& operator>>(istream& is, pair<U, V>& p) {
@@ -25,9 +26,9 @@ istream& operator>>(istream& is, vector<T>& v) {
 }
 
 template <class T>
-ostream& operator<<(ostream& os, const vector<T>& v) {
+ostream& operator<<(ostream& os, vector<T>& v) {
   for (auto& x : v) {
-    os << int(x) << " ";
+    os << x << " ";
   }
   return os;
 }
@@ -49,7 +50,7 @@ int modInverse(int x, int MOD = MOD) { return power(x, MOD - 2, MOD); }
 using Row = vector<char>;
 using Matrix = vector<Row>;
 
-inline bool isZero(const Row& row) { return count(all(row), 0) == sz(row); }
+bool isZero(const Row& row) { return *max_element(all(row)) == 0; }
 
 template <class T, class V>
 T subMod(T x, V y, int mod) {
@@ -60,15 +61,16 @@ T subMod(T x, V y, int mod) {
 Row subMultiple(const Row& a, const Row& b, int multiple, int mod) {
   Row res = a;
   for (int i = 0; i < sz(a); ++i) {
-    res[i] = (res[i] - b[i] * multiple) % mod;
+    res[i] = subMod(res[i], b[i] * multiple % mod, mod);
   }
   return res;
 }
 
-Matrix getREF(const Matrix& mat, int mod, int& rank) {
+Matrix getRREF(const Matrix& mat, int mod, int& rank) {
   if (mat.empty()) return mat;
   int n = sz(mat);     // no. of vectors.
   int m = sz(mat[0]);  // no. of columns.
+
   Matrix res = mat;
   rank = 0;
   for (int row = 0, col = 0; row < n && col < m; ++col) {
@@ -82,7 +84,7 @@ Matrix getREF(const Matrix& mat, int mod, int& rank) {
     ++rank;
     for (int i = row + 1; i < n; ++i) {
       if (res[i][col] == 0) continue;
-      auto multiple = res[i][col] * modInverse(res[row][col], mod);
+      auto multiple = res[i][col] * modInverse(res[row][col], mod) % mod;
       res[i] = subMultiple(res[i], res[row], multiple, mod);
     }
     ++row;
@@ -94,14 +96,13 @@ bool covered(const Matrix& rref, Row vctr, int mod) {
   int n = sz(rref);
   int m = sz(vctr);
   int curr_col = 0;
-  int first_col = 0;
-
   for (int row = 0; row < n && !isZero(rref[row]); ++row) {
+    int first_col = 0;
     while (rref[row][first_col] == 0) ++first_col;
     while (curr_col < m && vctr[curr_col] == 0) ++curr_col;
     if (first_col > curr_col) return false;
     if (first_col < curr_col) continue;
-    int multiple = vctr[curr_col] * modInverse(rref[row][curr_col], mod);
+    int multiple = vctr[curr_col] * modInverse(rref[row][curr_col], mod) % mod;
     vctr = subMultiple(vctr, rref[row], multiple, mod);
   }
   return isZero(vctr);
@@ -135,7 +136,7 @@ int main() {
   }
   int mod = 5;
   int rank = 0;
-  auto rref = getREF(mat, mod, rank);
+  auto rref = getRREF(mat, mod, rank);
   int redundant = n - rank;
   int res = power(mod, redundant);
 
