@@ -44,7 +44,7 @@ int power(int base, int p, int MOD = MOD) {
   return res;
 }
 
-char mod_inverse[] = {0, 1, 3, 2, 4, 0, 1, 3, 2, 4};
+int mod_inverse[] = {0, 1, 3, 2, 4, 0, 1, 3, 2, 4};
 
 using Row = vector<char>;
 using Matrix = vector<Row>;
