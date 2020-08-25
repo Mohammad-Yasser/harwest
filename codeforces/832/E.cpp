@@ -44,7 +44,7 @@ int power(int base, int p, int MOD = MOD) {
   return res;
 }
 
-inline int modInverse(int x) { return x * x * x; }
+int modInverse(int x, int MOD = MOD) { return x * x * x; }
 
 using Row = vector<char>;
 using Matrix = vector<Row>;
@@ -82,7 +82,7 @@ Matrix getREF(const Matrix& mat, int mod, int& rank) {
     ++rank;
     for (int i = row + 1; i < n; ++i) {
       if (res[i][col] == 0) continue;
-      auto multiple = res[i][col] * modInverse(res[row][col]);
+      auto multiple = res[i][col] * modInverse(res[row][col], mod);
       res[i] = subMultiple(res[i], res[row], multiple, mod);
     }
     ++row;
@@ -101,7 +101,7 @@ bool covered(const Matrix& rref, Row vctr, int mod) {
     while (curr_col < m && vctr[curr_col] == 0) ++curr_col;
     if (first_col > curr_col) return false;
     if (first_col < curr_col) continue;
-    int multiple = vctr[curr_col] * modInverse(rref[row][curr_col]);
+    int multiple = vctr[curr_col] * modInverse(rref[row][curr_col], mod);
     vctr = subMultiple(vctr, rref[row], multiple, mod);
   }
   return isZero(vctr);
