@@ -34,7 +34,7 @@ ostream& operator<<(ostream& os, vector<T>& v) {
   return os;
 }
 
-static char buf[200 << 20];
+static char buf[250 << 20];
 static size_t last_size = 0;
 static size_t buf_nxt = sizeof buf;
 
