@@ -34,19 +34,19 @@ ostream& operator<<(ostream& os, vector<T>& v) {
   return os;
 }
 
-static char buf[200 << 20];
-static size_t last_size = 0;
+static char buf[100 << 20];
+// static size_t last_size = 0;
 static size_t buf_nxt = sizeof buf;
 
 void* operator new(size_t s) {
-  last_size = s;
+  // last_size = s;
   return (void*)&buf[buf_nxt -= s];
 }
 
 void operator delete(void* ptr) {
-  if (ptr == ((void*)&buf[buf_nxt])) {
-    buf_nxt += last_size;
-  }
+  // if (ptr == ((void*)&buf[buf_nxt])) {
+  //   buf_nxt += last_size;
+  // }
 }
 
 const int N = 1e6 + 5;
@@ -105,16 +105,6 @@ vector<int> solve(int node, int parent) {
   return d;
 }
 
-inline int read() {
-  int now = 0;
-  char c = getchar();
-  for (; !isdigit(c); c = getchar())
-    ;
-  for (; isdigit(c); now = now * 10 + c - '0', c = getchar())
-    ;
-  return now;
-}
-
 int main() {
   ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 #ifdef Local
@@ -123,9 +113,11 @@ int main() {
 #define endl '\n'
 #endif
 
-  int n = read();
+  int n;
+  cin >> n;
   for (int i = 1; i < n; ++i) {
-    int u = read(), v = read();
+    int u, v;
+    cin >> u >> v;
     adj[u].emplace_back(v);
     adj[v].emplace_back(u);
   }
