@@ -34,21 +34,6 @@ ostream& operator<<(ostream& os, vector<T>& v) {
   return os;
 }
 
-static char buf[250 << 20];
-static size_t last_size = 0;
-static size_t buf_nxt = sizeof buf;
-
-void* operator new(size_t s) {
-  last_size = s;
-  return (void*)&buf[buf_nxt -= s];
-}
-
-void operator delete(void* ptr) {
-  if (ptr == ((void*)&buf[buf_nxt])) {
-    buf_nxt += last_size;
-  }
-}
-
 const int N = 1e6 + 5;
 
 int res[N];
