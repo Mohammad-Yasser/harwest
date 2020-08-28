@@ -36,85 +36,47 @@ ostream& operator<<(ostream& os, vector<T>& v) {
   return os;
 }
 
-bool isZero(Long x) { return x == 0; }
-
-template <typename T = Double>
-struct Point {
-  typedef Point P;
-  const static P Invalid;
-  const static P Origin;
-
-  T x = 0, y = 0;
-  Point(T x, T y) : x(x), y(y) {}
-  Point() {}
-  pair<T, T> to_pair() const { return make_pair(x, y); }
-  Point operator+(const Point& p) const { return Point{x + p.x, y + p.y}; }
-  Point operator-(const Point& p) const { return Point{x - p.x, y - p.y}; }
-  Point operator*(T c) const { return Point(x * c, y * c); }
-  Point operator/(T c) const { return Point(x / c, y / c); }
-  bool operator<(const Point& p) const {
-    return (*this) != p && to_pair() < p.to_pair();
-  }
-  bool operator>(const Point& p) const { return (*this) != p && !(*this < p); }
-  bool operator==(const Point& p) const {
-    return isZero(this->x - p.x) && isZero(this->y - p.y);
-  }
-  bool operator!=(const Point& p) const { return !(*this == p); }
-  T cross(const P& p) const { return x * p.y - y * p.x; }
-  T cross(const P& a, const P& b) const { return (a - *this).cross(b - *this); }
-  T dot(const P& p) const { return x * p.x + y * p.y; }
-  P midPoint(const P& p) const { return ((*this) + p) / 2; }
-  P getVector(const P& p) const { return p - (*this); }
-  T dist2(const P& p) const { return getVector(p).dist2(); }
-  T dist2() const { return (*this).dot(*this); }
-  Double dist(const P& p) const { return sqrt(dist2(p)); }
-  Double dist() const { return sqrt(dist2()); }
-
-  friend istream& operator>>(istream& is, P& p) { return is >> p.x >> p.y; }
-
-  friend ostream& operator<<(ostream& os, P& p) {
-    return os << p.x << " " << p.y;
-  }
+struct Line {
+  mutable Long k, m, p;
+  bool operator<(const Line& o) const { return k < o.k; }
+  bool operator<(Long x) const { return p < x; }
 };
 
-template <typename T>
-const Point<T> Point<T>::Invalid = Point<T>(numeric_limits<T>::max(),
-                                            numeric_limits<T>::max());
-template <typename T>
-const Point<T> Point<T>::Origin = Point<T>(0, 0);
-
-typedef Point<Long> P;
-
-// Add pairs (m, c) then query(x) returns min {m * x + c}.
-// Complexity: O(number of insertions + number of queries).
-// Maintains the lower convex hull.
-// Lines added must be sorted non-decreasingly by slope.
-// Queries must be sorted non-increasingly by x.
-struct LinearLineContainer {
-  deque<P>
-      lines;  // Each line is represented as a 2D point (slope, y-intercept).
-  void add(Long m, Long c) {
-    P line(m, c);
-    while (sz(lines) >= 2 &&
-           lines[sz(lines) - 2].cross(lines[sz(lines) - 1], line) <= 0) {
-      lines.pop_back();
-    }
-    if (!lines.empty() && lines.back().x == line.x) {
-      lines.back().y = min(lines.back().y, line.y);
-    } else {
-      lines.emplace_back(line);
-    }
+template <bool MAX = true>
+struct LineContainer : multiset<Line, less<>> {
+  // (for doubles, use inf = 1/.0, div(a,b) = a/b)
+  const Long inf = LLONG_MAX;
+  Long div(Long a, Long b) {  // floored division
+    return a / b - ((a ^ b) < 0 && a % b);
   }
-
+  bool isect(iterator x, iterator y) {
+    if (y == end()) {
+      x->p = inf;
+      return false;
+    }
+    if (x->k == y->k)
+      x->p = x->m > y->m ? inf : -inf;
+    else
+      x->p = div(y->m - x->m, x->k - y->k);
+    return x->p >= y->p;
+  }
+  void add(Long k, Long m) {
+    if (!MAX) k *= -1, m *= -1;
+    auto z = insert({k, m, 0}), y = z++, x = y;
+    while (isect(y, z)) z = erase(z);
+    if (x != begin() && isect(--x, y)) isect(x, y = erase(y));
+    while ((y = x) != begin() && (--x)->p >= y->p) isect(x, erase(y));
+  }
   Long query(Long x) {
-    P p(x, 1);
-    while (sz(lines) > 1 && lines[1].dot(p) <= lines[0].dot(p)) {
-      lines.pop_front();
-    }
-    return lines[0].dot(p);
+    assert(!empty());
+    auto l = *lower_bound(x);
+    auto res = l.k * x + l.m;
+    if (!MAX) res *= -1;
+    return res;
   }
 };
 
+const int P = 100;
 const int N = 1e5 + 5;
 
 Long dp[2][N];
@@ -144,14 +106,14 @@ int main() {
   }
   sort(cat_time + 1, cat_time + m + 1);
 
-  LinearLineContainer line_container;
+  LineContainer<false> line_container;
   for (int i = 1; i <= p; ++i) {
-    line_container.lines.clear();
+    line_container.clear();
     bool curr = (i & 1);
     bool prev = !curr;
     for (int j = 0; j <= m; ++j) {
-      if (i > 1 || j == 0) line_container.add(j, dp[prev][j]);
-      dp[curr][j] = line_container.query(-cat_time[j]) + j * cat_time[j];
+      if (i > 1 || j == 0) line_container.add(-j, dp[prev][j]);
+      dp[curr][j] = line_container.query(cat_time[j]) + j * cat_time[j];
     }
   }
 
