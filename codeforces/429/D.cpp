@@ -71,14 +71,13 @@ struct Point {
 Long getClosestPairOfPoints(int l, int r, vector<Point>& points) {
   if (l == r) return LLONG_MAX;
   int m = (l + r) / 2;
-  auto pivot = points[m];
   Long res = min(getClosestPairOfPoints(l, m, points),
                  getClosestPairOfPoints(m + 1, r, points));
   inplace_merge(begin(points) + l, begin(points) + m + 1, begin(points) + r + 1,
                 [](const auto& a, const auto& b) { return a.y < b.y; });
   vector<Point> candidates;
   for (int i = l; i <= r; ++i) {
-    if (square(pivot.x - points[i].x) < res) candidates.emplace_back(points[i]);
+    if (abs(points[i].x - m) <= res) candidates.emplace_back(points[i]);
   }
   for (int i = 0; i < sz(candidates); ++i) {
     int j = i + 1;
