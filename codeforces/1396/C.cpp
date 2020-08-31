@@ -61,17 +61,16 @@ Long solve(int ind, bool go_back, bool end_back) {
   // Use pistol or laser
   Long go_left = LLONG_MAX, go_right = LLONG_MAX;
   if (ind != 0) {
-    go_left = 2 * d +
-              (ind == n - 1 ? 0 : d + solve(ind + 1, end_back, end_back)) +
-              d * end_back;
+    go_left =
+        2 * d + (ind == n - 1 ? 0 : d + solve(ind + 1, end_back, end_back));
   }
   if (ind != n - 1) {
     go_right = d + solve(ind + 1, true, go_back) + d * go_back;
   }
   // Pistol
-  res = min(res, pistol * (a[ind] + 2) + min(go_left, go_right));
+  res = min(res, pistol * (a[ind] + 2) + min(go_left + d * end_back, go_right));
   // Laser
-  res = min(res, laser + pistol + min(go_left, go_right));
+  res = min(res, laser + pistol + min(go_left + d * end_back, go_right));
   return res;
 }
 
