@@ -31,28 +31,9 @@ ostream& operator<<(ostream& os, vector<T>& v) {
 
 using Double = long double;
 
-const Double EPS = 1e-10;
-
-enum Relation { LESS_THAN, EQUAL, GREATER_THAN };
-
-bool areEqual(Double x, Double y, Double eps = EPS) {
-  auto diff = abs(x - y);
-  x = abs(x), y = abs(y);
-  if (diff <= eps) return true;
-  if (min(x, y) <= eps) return false;
-  return diff <= eps * max(x, y);
-}
-
-bool isZero(Double x, Double eps = EPS) { return abs(x) <= eps; }
 bool isZero(Long x) { return x == 0; }
 
-int compareDoubles(Double x, Double y, Double eps = EPS) {
-  if (areEqual(x, y, eps)) return Relation::EQUAL;
-  if (x < y) return Relation::LESS_THAN;
-  return Relation::GREATER_THAN;
-}
-
-template <typename T = Double>
+template <typename T>
 struct Point {
   typedef Point P;
   const static P Invalid;
@@ -84,38 +65,10 @@ struct Point {
   Double dist(const P& p) const { return sqrt(dist2(p)); }
   Double dist() const { return sqrt(dist2()); }
   P rotateCCW90() const { return P(-y, x); }
-  P rotateCCW90Around(const P& p) const {
-    return p + p.getVector(*this).rotateCCW90();
-  }
   // Scales the plane by 1/cos(45 degrees)
   P rotateCCW45WithScale() const { return P(x - y, x + y); }
-  P rotateCCW(Double angle) const {
-    return Point(x * cos(angle) - y * sin(angle),
-                 x * sin(angle) + y * cos(angle));
-  }
-
-  // Project point onto line through a and b (assuming a != b).
-  P projectOnLine(const P& a, const P& b) const {
-    P ab = a.getVector(b);
-    P ac = a.getVector(*this);
-    return a + ab * ac.dot(ab) / a.dist2(b);
-  }
-
-  // Project point c onto line segment through a and b (assuming a != b).
-  P projectOnSegment(const P& a, const P& b) const {
-    P& c = *this;
-    P ab = a.getVector(b);
-    P ac = a.getVector(c);
-
-    Double r = dot(ac, ab), d = a.dist2(b);
-    if (r < 0) return a;
-    if (r > d) return b;
-
-    return a + ab * r / d;
-  }
-
-  P reflectAroundLine(const P& a, const P& b) const {
-    return projectOnLine(a, b) * 2 - (*this);
+  P rotateCCW90Around(const P& p) const {
+    return p + p.getVector(*this).rotateCCW90();
   }
 
   friend istream& operator>>(istream& is, P& p) { return is >> p.x >> p.y; }
@@ -131,8 +84,7 @@ const Point<T> Point<T>::Invalid = Point<T>(numeric_limits<T>::max(),
 template <typename T>
 const Point<T> Point<T>::Origin = Point<T>(0, 0);
 
-typedef Point<Double> Vector;
-typedef Point<Double> P;
+typedef Point<Long> P;
 
 bool inRange(int x, int l, int r) { return min(l, r) <= x && x <= max(l, r); }
 
@@ -148,7 +100,6 @@ struct Square {
       b.y = max(b.y, p.y);
     }
   }
-  P center() const { return (a + b) / 2; }
   bool contains(const P& p) {
     return inRange(p.x, a.x, b.x) && inRange(p.y, a.y, b.y);
   }
@@ -164,23 +115,18 @@ int main() {
 
   vector<P> v1(4), v2(4);
   cin >> v1 >> v2;
-  auto rotated_v2 = v2;
-  for (auto& p : rotated_v2) {
+  for (auto& p : v2) {
     p = p.rotateCCW45WithScale();
   }
-  Square sq1(v1), sq2(v2), rotated_sq2(rotated_v2);
-  v1.emplace_back(sq1.center());
-  v2.emplace_back(sq2.center());
-  for (auto& p : v1) {
-    if (rotated_sq2.contains(p.rotateCCW45WithScale())) {
-      cout << "YES" << endl;
-      return 0;
-    }
-  }
-  for (auto& p : v2) {
-    if (sq1.contains(p)) {
-      cout << "YES" << endl;
-      return 0;
+  Square sq1(v1), sq2(v2);
+  for (int i = -100; i <= 100; ++i) {
+    for (int j = -100; j <= 100; ++j) {
+      P p(i, j);
+      P rotated = p.rotateCCW45WithScale();
+      if (sq1.contains(p) && sq2.contains(rotated)) {
+        cout << "YES" << endl;
+        return 0;
+      }
     }
   }
   cout << "NO" << endl;
