@@ -146,7 +146,6 @@ int solve(int node, int curr_day) {
   for (auto [u, day] : comp_nodes[comp[node][curr_day]]) {
     for (int v : graph[u]) {
       if (scc_id[u] != scc_id[v]) {
-        assert(scc_id[v] > scc_id[u]);
         res = max(res, solve(v, day + 1));
       }
     }
