@@ -35,51 +35,26 @@ ostream& operator<<(ostream& os, vector<T>& v) {
 }
 
 const int N = 5e4 + 5;
+const int K = 501;
 vector<int> adj[N];
 
 Long res;
 int k;
 
 vector<int> dfs(int node, int parent) {
-  vector<vector<int>> children_cnt;
-  children_cnt.reserve(sz(adj[node]) - (parent != -1));
-  int big_child = -1;
+  vector<int> cnt(K);
+  cnt[0] = 1;
   for (int v : adj[node]) {
     if (parent == v) continue;
-    children_cnt.emplace_back(dfs(v, node));
-    if (big_child == -1 ||
-        sz(children_cnt.back()) > sz(children_cnt[big_child])) {
-      big_child = sz(children_cnt) - 1;
+    auto child_cnt = dfs(v, node);
+    for (int i = 0; i < k; ++i) {
+      res += 1LL * cnt[i] * child_cnt[k - i - 1];
+    }
+    for (int i = 1; i < K; ++i) {
+      cnt[i] += child_cnt[i - 1];
     }
   }
-  if (big_child == -1) {
-    children_cnt.emplace_back(vector<int>());
-    big_child = 0;
-  }
-  auto& curr_cnt = children_cnt[big_child];
-  curr_cnt.emplace_back(1);
-  if (sz(curr_cnt) >= k + 1) {
-    res += curr_cnt[sz(curr_cnt) - k - 1];
-  }
-  for (int i = 0; i < sz(children_cnt); ++i) {
-    if (i == big_child) continue;
-    for (int j = 0; j < sz(children_cnt[i]); ++j) {
-      int child_depth = sz(children_cnt[i]) - j;
-      if (child_depth > k) continue;
-      int curr_depth = k - child_depth;
-      int curr_idx = sz(curr_cnt) - curr_depth - 1;
-      if (curr_idx >= 0) {
-        assert(curr_idx < sz(curr_cnt));
-        res += 1LL * curr_cnt[curr_idx] * children_cnt[i][j];
-      }
-    }
-    for (int j = 0; j < sz(children_cnt[i]); ++j) {
-      assert(sz(curr_cnt) - j - 2 >= 0);
-      curr_cnt[sz(curr_cnt) - j - 2] +=
-          children_cnt[i][sz(children_cnt[i]) - 1 - j];
-    }
-  }
-  return move(children_cnt[big_child]);
+  return cnt;
 }
 
 int main() {
