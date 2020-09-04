@@ -40,8 +40,8 @@ vector<int> adj[N];
 Long res;
 int k;
 
-deque<int> dfs(int node, int parent) {
-  vector<deque<int>> children_cnt;
+vector<int> dfs(int node, int parent) {
+  vector<vector<int>> children_cnt;
   children_cnt.reserve(sz(adj[node]) - (parent != -1));
   int big_child = -1;
   for (int v : adj[node]) {
@@ -53,26 +53,30 @@ deque<int> dfs(int node, int parent) {
     }
   }
   if (big_child == -1) {
-    children_cnt.emplace_back(deque<int>());
+    children_cnt.emplace_back(vector<int>());
     big_child = 0;
   }
   auto& curr_cnt = children_cnt[big_child];
-  curr_cnt.emplace_front(1);
-  if (sz(curr_cnt) > k) {
-    res += curr_cnt[k];
+  curr_cnt.emplace_back(1);
+  if (sz(curr_cnt) >= k + 1) {
+    res += curr_cnt[sz(curr_cnt) - k - 1];
   }
   for (int i = 0; i < sz(children_cnt); ++i) {
     if (i == big_child) continue;
     for (int j = 0; j < sz(children_cnt[i]); ++j) {
-      int child_depth = j + 1;
+      int child_depth = sz(children_cnt[i]) - j;
       if (child_depth > k) continue;
       int curr_depth = k - child_depth;
-      if (curr_depth >= 0 && curr_depth < sz(curr_cnt)) {
-        res += 1LL * curr_cnt[curr_depth] * children_cnt[i][j];
+      int curr_idx = sz(curr_cnt) - curr_depth - 1;
+      if (curr_idx >= 0) {
+        assert(curr_idx < sz(curr_cnt));
+        res += 1LL * curr_cnt[curr_idx] * children_cnt[i][j];
       }
     }
     for (int j = 0; j < sz(children_cnt[i]); ++j) {
-      curr_cnt[j + 1] += children_cnt[i][j];
+      assert(sz(curr_cnt) - j - 2 >= 0);
+      curr_cnt[sz(curr_cnt) - j - 2] +=
+          children_cnt[i][sz(children_cnt[i]) - 1 - j];
     }
   }
   return move(children_cnt[big_child]);
