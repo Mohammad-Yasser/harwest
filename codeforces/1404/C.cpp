@@ -170,13 +170,15 @@ SegmentTree<Node, Update> segment_tree;
 int n;
 
 void process(int l) {
-  while (true) {
-    auto tmp = segment_tree.query(l, n - 1);
-    int val = tmp.min_value;
-    int ind = tmp.min_index;
-    if (val > 0) return;
+  int ind = l;
+  int val = segment_tree.query(ind, ind).min_value;
+
+  while (val <= 0) {
     segment_tree.upd(ind, ind, Update(N, 1));
     segment_tree.upd(ind + 1, n - 1, Update(-1, 0));
+    auto tmp = segment_tree.query(l, n - 1);
+    val = tmp.min_value;
+    ind = tmp.min_index;
   }
 }
 
