@@ -48,26 +48,18 @@ int main() {
   while (t--) {
     int n;
     cin >> n;
-    vector<pair<int, int>> a(n);
-    for (auto& p : a) {
-      cin >> p.first;
-      p.second = p.first;
-    }
-    vector<int> res;
-    while (sz(res) < n) {  // log max(a) iterations
-      sort(all(a));
-      res.emplace_back(a.back().second);
-      int x = a.back().first;
-      a.pop_back();
-      while (!a.empty() && a.back().first == x) {
-        res.emplace_back(a.back().second);
-        a.pop_back();
+    vector<int> a(n), d;
+    cin >> a;
+    d = a;
+    vector<int> res(n);
+    for (int& x : res) {
+      int ind = max_element(all(a)) - begin(a);
+      x = d[ind];
+      for (int& t : a) {
+        if (t != INT_MIN) t = __gcd(t, x);
       }
-      for (auto& p : a) {
-        p.first = __gcd(p.first, x);
-      }
+      a[ind] = INT_MIN;
     }
-
     cout << res << endl;
   }
 
