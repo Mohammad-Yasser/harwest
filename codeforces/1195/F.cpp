@@ -71,11 +71,12 @@ template <class INT, int nLeaves>
 struct BIT {
   const int kMaxSize = 1 << (int)ceil(log2(nLeaves + 1e-9));
   vector<INT> arr;
+  INT size = 0;
 
   BIT() { arr.resize(kMaxSize); }
 
   INT get(int i) {
-    ++i;
+    i++;
     INT r = 0;
     while (i) {
       r += arr[i - 1];
@@ -91,7 +92,8 @@ struct BIT {
   }
 
   void add(int i, INT val = 1) {
-    ++i;
+    size += val;
+    i++;
     while (i <= kMaxSize) {
       arr[i - 1] += val;
       i += i & -i;
@@ -140,17 +142,17 @@ int main() {
       int j = (k + 1) % sz(polys[i]);
       auto v = (polys[i][j] - polys[i][k]).normalize();
       if (ht.find(v) == end(ht)) {
-        bit.add(N - i);
+        bit.add(i);
         ht[v] = i;
       } else {
-        bit.add(N - ht[v], -1);
+        bit.add(ht[v], -1);
         ht[v] = i;
-        bit.add(N - i);
+        bit.add(i);
       }
     }
 
     for (int q : queries[i]) {
-      res[q] = bit.get(N - l[q]);
+      res[q] = bit.get(l[q], i);
     }
   }
 
