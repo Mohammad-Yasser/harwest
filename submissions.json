@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF94175500": {
+    "contest_id": 1416,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1416/A.cpp",
+    "problem_index": "A",
+    "problem_name": "k-Amazing Numbers",
+    "problem_url": "https://codeforces.com/contest/1416/problem/A",
+    "submission_id": "CF94175500",
+    "submission_url": "https://codeforces.com/contest/1416/submission/94175500",
+    "tags": [
+      "binary search",
+      "data structures",
+      "implementation",
+      "two pointers",
+      "*1500"
+    ],
+    "timestamp": "Sep/29/2020 06:04"
+  },
   "CF94180866": {
     "contest_id": 1416,
     "language": "GNU C++17 (64)",
