@@ -35,7 +35,7 @@ ostream& operator<<(ostream& os, vector<T>& v) {
 }
 
 const int N = 3e5 + 5;
-const int K = 3;
+const int K = 27;
 const Long OO = LLONG_MAX / 3;
 int a[N];
 int b[N];
