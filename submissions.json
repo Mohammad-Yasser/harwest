@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF94787041": {
+    "contest_id": 1423,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1423/H.cpp",
+    "problem_index": "H",
+    "problem_name": "Virus",
+    "problem_url": "https://codeforces.com/contest/1423/problem/H",
+    "submission_id": "CF94787041",
+    "submission_url": "https://codeforces.com/contest/1423/submission/94787041",
+    "tags": [
+      "data structures",
+      "divide and conquer",
+      "dsu",
+      "graphs",
+      "*2500"
+    ],
+    "timestamp": "Oct/05/2020 17:35"
+  },
   "CF94849576": {
     "contest_id": 1423,
     "language": "GNU C++17 (64)",
