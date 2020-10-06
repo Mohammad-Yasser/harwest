@@ -971,6 +971,21 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF94849576": {
+    "contest_id": 1423,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1423/E.cpp",
+    "problem_index": "E",
+    "problem_name": "5G Antenna Towers",
+    "problem_url": "https://codeforces.com/contest/1423/problem/E",
+    "submission_id": "CF94849576",
+    "submission_url": "https://codeforces.com/contest/1423/submission/94849576",
+    "tags": [
+      "geometry",
+      "*2700"
+    ],
+    "timestamp": "Oct/06/2020 14:44"
+  },
   "CF95092804": {
     "contest_id": 1427,
     "language": "GNU C++17 (64)",
