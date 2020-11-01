@@ -971,6 +971,24 @@
     ],
     "timestamp": "Dec/20/2020 20:04"
   },
+  "CF97357690": {
+    "contest_id": 1444,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1444/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Team-Building",
+    "problem_url": "https://codeforces.com/contest/1444/problem/C",
+    "submission_id": "CF97357690",
+    "submission_url": "https://codeforces.com/contest/1444/submission/97357690",
+    "tags": [
+      "data structures",
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "*2500"
+    ],
+    "timestamp": "Nov/01/2020 15:39"
+  },
   "CF98712799": {
     "contest_id": 1439,
     "language": "GNU C++17 (64)",
