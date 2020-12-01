@@ -1,4 +1,22 @@
 {
+  "CF100117147": {
+    "contest_id": 403,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/403/B.cpp",
+    "problem_index": "B",
+    "problem_name": "Upgrading Array",
+    "problem_url": "https://codeforces.com/contest/403/problem/B",
+    "submission_id": "CF100117147",
+    "submission_url": "https://codeforces.com/contest/403/submission/100117147",
+    "tags": [
+      "dp",
+      "greedy",
+      "math",
+      "number theory",
+      "*1800"
+    ],
+    "timestamp": "Dec/01/2020 15:34"
+  },
   "CF100138862": {
     "contest_id": 403,
     "language": "GNU C++17 (64)",
