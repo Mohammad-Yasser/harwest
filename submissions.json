@@ -1,4 +1,19 @@
 {
+  "CF100207200": {
+    "contest_id": 1010,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1010/C.cpp",
+    "problem_index": "C",
+    "problem_name": "Border",
+    "problem_url": "https://codeforces.com/contest/1010/problem/C",
+    "submission_id": "CF100207200",
+    "submission_url": "https://codeforces.com/contest/1010/submission/100207200",
+    "tags": [
+      "number theory",
+      "*1800"
+    ],
+    "timestamp": "Dec/02/2020 17:57"
+  },
   "CF100525018": {
     "contest_id": 1450,
     "language": "GNU C++17 (64)",
