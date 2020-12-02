@@ -51,10 +51,13 @@ int main() {
     cin >> x;
     g = __gcd(g, x);
   }
-  cout << k / g << endl;
-  for (int i = 0; i < k; i += g) {
-      cout << i << " ";
+  vector<int> res;
+  for (int i = 0; i < k; ++i) {
+    if (i % g == 0) {
+      res.emplace_back(i);
+    }
   }
-  cout << endl;
+  cout << sz(res) << endl;
+  cout << res << endl;
   return 0;
 }
