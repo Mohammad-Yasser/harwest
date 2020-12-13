@@ -1,7 +1,7 @@
-#ifndef Local
-#pragma GCC optimize("Ofast,no-stack-protector")
-#pragma GCC target("popcnt,abm,mmx,avx2")
-#endif
+// #ifndef Local
+// #pragma GCC optimize("Ofast,no-stack-protector")
+// #pragma GCC target("popcnt,abm,mmx,avx2")
+// #endif
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -15,13 +15,13 @@ typedef long long Long;
 typedef double Double;
 
 // Either globally or in a single class:
-static char buf[200 << 20];
-void* operator new(size_t s) {
-  static size_t i = sizeof buf;
-  assert(s < i);
-  return (void*)&buf[i -= s];
-}
-void operator delete(void*) {}
+// static char buf[200 << 20];
+// void* operator new(size_t s) {
+//   static size_t i = sizeof buf;
+//   assert(s < i);
+//   return (void*)&buf[i -= s];
+// }
+// void operator delete(void*) {}
 
 template <class U, class V>
 istream& operator>>(istream& is, pair<U, V>& p) {
@@ -66,7 +66,9 @@ struct DSU {
 
 using vi = vector<int>;
 
-using Constraint = tuple<int, int, int>;
+using Constraint = pair<int, int>;
+
+vector<Constraint> cons[N];
 
 vector<int> my_adj[N];
 vector<int> other_adj[N];
@@ -175,7 +177,6 @@ struct Update {
   int val = OO;
   Update(int val = OO) : val(val) {}
   Update operator+(const Update& right) const {
-    // return right;
     Update res = *this;
     res.val = min(res.val, right.val);
     return res;
@@ -272,14 +273,13 @@ int main() {
     dsu.join(u, v);
   }
 
-  vector<Constraint> cons;
-
   while (m--) {
     int u, v, w;
     cin >> u >> v >> w;
     --u, --v;
     if (dsu.getRoot(u) == dsu.getRoot(v)) {
-      cons.emplace_back(u, v, w);
+      cons[u].emplace_back(v, w);
+      cons[v].emplace_back(u, w);
     } else {
       dsu.join(u, v);
       other_adj[u].emplace_back(v);
@@ -290,10 +290,12 @@ int main() {
   }
 
   HLD<true> hld(all_adj);
-  reverse(all(cons));
 
-  for (auto& [u, v, w] : cons) {
-    hld.modifyPath(u, v, w);
+  for (int i = 0; i < n; ++i) {
+    for (auto [v, w] : cons[i]) {
+      if (i > v) continue;
+      hld.modifyPath(i, v, w);
+    }
   }
 
   Long res = 0;
