@@ -72,8 +72,160 @@ vector<int> my_adj[N];
 vector<int> other_adj[N];
 vector<vi> all_adj;
 
+// Source:
+// https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Data%20Structures/SparseTable.cpp
+template <class T>
+struct Minimizer {
+  T operator()(T a, T b) { return std::min(a, b); }
+};
+
+template <class T, class Merger = Minimizer<T>>
+class SparseTable {
+ public:
+  void init(const std::vector<T>& a) {
+    int e = 0;
+    int n = a.size();
+    while ((1 << e) / 2 < n) {
+      e++;
+    }
+    table.assign(e, std::vector<T>(n));
+    get.assign(n + 1, -1);
+    for (int i = 0; i < n; i++) {
+      table[0][i] = a[i];
+      get[i + 1] = get[(i + 1) / 2] + 1;
+    }
+    for (int i = 0; i + 1 < e; i++) {
+      for (int j = 0; j + (1 << i) < n; j++) {
+        table[i + 1][j] = merge(table[i][j], table[i][j + (1 << i)]);
+      }
+    }
+  }
+
+  T qry(int l, int r) {
+    int e = get[r - l];
+    return merge(table[e][l], table[e][r - (1 << e)]);
+  }
+
+  int getPos(int x) {
+    while (x >= (int)get.size()) get.push_back(get[(int)get.size() / 2] + 1);
+    return get[x];
+  }
+
+ private:
+  std::vector<std::vector<T>> table;
+  std::vector<int> get;
+  Merger merge;
+};
+
+// Source:
+// https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Data%20Structures/FastRMQ.cpp
+// O(N) preprocessing, O(1) query Range Minimum Query
+
+template <class T>
+class FastRMQ {
+ public:
+  void init(const std::vector<T>& a) {
+    original = a;
+    int n = (int)a.size();
+    if (n == 0) return;
+    e = 1;
+    while ((1 << e) < n) e++;
+    std::vector<T> groups;
+    for (int i = 0; i < n; i++) {
+      if (i % e == 0) {
+        groups.push_back(a[i]);
+      } else if (a[i] < groups.back()) {
+        groups.back() = a[i];
+      }
+    }
+    table.init(groups);
+    mask.resize(n);
+    for (int i = 0, curMask = 0; i < n; i++) {
+      curMask = (curMask << 1) & ((1 << e) - 1);
+      while (curMask) {
+        int j = i - table.getPos(curMask & -curMask);
+        if (a[i] < a[j]) {
+          curMask ^= curMask & -curMask;
+        } else {
+          break;
+        }
+      }
+      curMask |= 1;
+      mask[i] = curMask;
+    }
+  }
+
+  T qry(int l, int r) {
+    // query in [l, r)
+    if (r - l <= e) {
+      return i_qry(r - 1, r - l);
+    } else {
+      T ans = std::min(i_qry(l + e - 1, e), i_qry(r - 1, e));
+      if (l / e + 1 < r / e) {
+        ans = std::min(ans, table.qry(l / e + 1, r / e));
+      }
+      return ans;
+    }
+  }
+
+ private:
+  int e;
+  SparseTable<T> table;
+  std::vector<T> original;
+  std::vector<int> mask;
+
+  T i_qry(int r, int size) {
+    int curMask = mask[r] & ((1 << size) - 1);
+    int pos = r - table.getPos(curMask);
+    return original[pos];
+  }
+};
+
+// Source:
+// https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Graph/SimpleEulerTourTree.cpp
+template <const bool REPEAT = false>
+struct SimpleEulerTourTree {
+  void init(const std::vector<std::vector<int>>& edges, int root = 0) {
+    a.clear();
+    in = out = std::vector<int>(edges.size(), 0);
+    dfs(root, root, edges, 0);
+  }
+
+  void dfs(int on, int par, const std::vector<std::vector<int>>& edges, int h) {
+    in[on] = (int)a.size();
+    a.emplace_back(h, on);
+    for (auto to : edges[on]) {
+      if (to == par) continue;
+      dfs(to, on, edges, h + 1);
+      if (REPEAT) a.emplace_back(h, on);
+    }
+    out[on] = (int)a.size();
+  }
+
+  std::vector<int> in, out;
+  std::vector<std::pair<int, int>> a;
+};
+
+// Source:
+// https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Graph/FastLCA.cpp
+class FastLCA {
+ public:
+  void init(const std::vector<std::vector<int>>& edges, int root) {
+    ett.init(edges, root);
+    rmq.init(ett.a);
+  }
+
+  int lca(int u, int v) {
+    if (ett.in[u] > ett.in[v]) std::swap(u, v);
+    return rmq.qry(ett.in[u], ett.out[v]).second;
+  }
+
+ private:
+  SimpleEulerTourTree<true> ett;
+  FastRMQ<std::pair<int, int>> rmq;
+};
+
 int parent[N];
-int depth[N];
 bool is_set[N];
 bool my_edge[N];
 
@@ -82,17 +234,28 @@ int getRoot(int node) {
   return parent[node] = getRoot(parent[node]);
 }
 
-void dfs(int node) {
-  for (int i = 0; i < 2; ++i) {
-    my_adj[node].swap(other_adj[node]);
-    for (int v : my_adj[node]) {
-      if (v == parent[node]) continue;
-      my_edge[v] = i;
-      parent[v] = node;
-      depth[v] = depth[node] + 1;
-      dfs(v);
-    }
+void dfs(int node, int p) {
+  parent[node] = p;
+  for (int v : my_adj[node]) {
+    if (v == p) continue;
+    my_edge[v] = true;
+    dfs(v, node);
   }
+  for (int v : other_adj[node]) {
+    if (v == p) continue;
+    dfs(v, node);
+  }
+}
+
+inline int read() {
+  int x = 0;
+  char ch = getchar();
+  while (ch < '0' || ch > '9') ch = getchar();
+  while (ch >= '0' && ch <= '9') {
+    x = x * 10 + ch - '0';
+    ch = getchar();
+  }
+  return x;
 }
 
 int main() {
@@ -104,13 +267,13 @@ int main() {
 #define endl '\n'
 #endif
 
-  int n, k, m;
-  cin >> n >> k >> m;
+  int n = read(), k = read(), m = read();
+  // cin >> n >> k >> m;
   dsu.init();
   all_adj.resize(n);
   while (k--) {
-    int u, v;
-    cin >> u >> v;
+    int u = read(), v = read();
+    // cin >> u >> v;
     --u, --v;
 
     my_adj[u].emplace_back(v);
@@ -125,8 +288,8 @@ int main() {
   vector<Constraint> cons;
 
   while (m--) {
-    int u, v, w;
-    cin >> u >> v >> w;
+    int u = read(), v = read(), w = read();
+    // cin >> u >> v >> w;
     --u, --v;
     if (dsu.getRoot(u) == dsu.getRoot(v)) {
       cons.emplace_back(u, v, w);
@@ -140,16 +303,19 @@ int main() {
     }
   }
 
-  dfs(0);
-
+  dfs(0, 0);
+  FastLCA lca_finder;
+  lca_finder.init(all_adj, 0);
   Long res = 0;
   for (auto& [u, v, w] : cons) {
-    u = getRoot(u), v = getRoot(v);
-    while (u != v) {
-      if (depth[u] < depth[v]) swap(u, v);
-      is_set[u] = true;
-      res += my_edge[u] * w;
-      u = getRoot(parent[u]);
+    int lca = lca_finder.lca(u, v);
+    lca = getRoot(lca), u = getRoot(u), v = getRoot(v);
+    for (int x : {u, v}) {
+      while (x != lca) {
+        is_set[x] = true;
+        res += my_edge[x] * w;
+        x = getRoot(parent[x]);
+      }
     }
   }
 
