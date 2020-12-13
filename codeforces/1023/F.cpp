@@ -175,7 +175,7 @@ struct Update {
   int val = OO;
   Update(int val = OO) : val(val) {}
   Update operator+(const Update& right) const {
-    return right;
+    // return right;
     Update res = *this;
     res.val = min(res.val, right.val);
     return res;
