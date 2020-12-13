@@ -247,17 +247,6 @@ void dfs(int node, int p) {
   }
 }
 
-inline int read() {
-  int x = 0;
-  char ch = getchar();
-  while (ch < '0' || ch > '9') ch = getchar();
-  while (ch >= '0' && ch <= '9') {
-    x = x * 10 + ch - '0';
-    ch = getchar();
-  }
-  return x;
-}
-
 int main() {
   ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 #ifdef Local
@@ -267,13 +256,13 @@ int main() {
 #define endl '\n'
 #endif
 
-  int n = read(), k = read(), m = read();
-  // cin >> n >> k >> m;
+  int n, k, m;
+  cin >> n >> k >> m;
   dsu.init();
   all_adj.resize(n);
   while (k--) {
-    int u = read(), v = read();
-    // cin >> u >> v;
+    int u, v;
+    cin >> u >> v;
     --u, --v;
 
     my_adj[u].emplace_back(v);
@@ -288,8 +277,8 @@ int main() {
   vector<Constraint> cons;
 
   while (m--) {
-    int u = read(), v = read(), w = read();
-    // cin >> u >> v >> w;
+    int u, v, w;
+    cin >> u >> v >> w;
     --u, --v;
     if (dsu.getRoot(u) == dsu.getRoot(v)) {
       cons.emplace_back(u, v, w);
