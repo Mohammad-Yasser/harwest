@@ -1,7 +1,7 @@
-// #ifndef Local
-// #pragma GCC optimize("Ofast,no-stack-protector")
-// #pragma GCC target("popcnt,abm,mmx,avx2")
-// #endif
+#ifndef Local
+#pragma GCC optimize("Ofast,no-stack-protector")
+#pragma GCC target("popcnt,abm,mmx,avx2")
+#endif
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -15,13 +15,13 @@ typedef long long Long;
 typedef double Double;
 
 // Either globally or in a single class:
-// static char buf[200 << 20];
-// void* operator new(size_t s) {
-//   static size_t i = sizeof buf;
-//   assert(s < i);
-//   return (void*)&buf[i -= s];
-// }
-// void operator delete(void*) {}
+static char buf[200 << 20];
+void* operator new(size_t s) {
+  static size_t i = sizeof buf;
+  assert(s < i);
+  return (void*)&buf[i -= s];
+}
+void operator delete(void*) {}
 
 template <class U, class V>
 istream& operator>>(istream& is, pair<U, V>& p) {
