@@ -1,7 +1,7 @@
-// #ifndef Local
-// #pragma GCC optimize("Ofast,no-stack-protector")
+#ifndef Local
+#pragma GCC optimize("Ofast,no-stack-protector")
 // #pragma GCC target("popcnt,abm,mmx,avx2")
-// #endif
+#endif
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -59,12 +59,13 @@ using vi = vector<int>;
 
 using Constraint = tuple<int, int, int>;
 
-vector<int> adj[N];
-int my_adj_sz[N];
+vector<int> my_adj[N];
+vector<int> other_adj[N];
 
 int parent[N];
 int depth[N];
-vector<bool> is_set, my_edge;
+bool is_set[N];
+bool my_edge[N];
 
 int getRoot(int node) {
   if (!is_set[node]) return node;
@@ -72,13 +73,15 @@ int getRoot(int node) {
 }
 
 void dfs(int node) {
-  for (int i = 0; i < sz(adj[node]); ++i) {
-    int v = adj[node][i];
-    if (v == parent[node]) continue;
-    my_edge[v] = (i < my_adj_sz[node]);
-    parent[v] = node;
-    depth[v] = depth[node] + 1;
-    dfs(v);
+  for (int i = 0; i < 2; ++i) {
+    my_adj[node].swap(other_adj[node]);
+    for (int v : my_adj[node]) {
+      if (v == parent[node]) continue;
+      my_edge[v] = i;
+      parent[v] = node;
+      depth[v] = depth[node] + 1;
+      dfs(v);
+    }
   }
 }
 
@@ -90,25 +93,20 @@ int main() {
 #else
 #define endl '\n'
 #endif
+
   int n, k, m;
   cin >> n >> k >> m;
   dsu.init();
-  is_set.resize(n);
-  my_edge.resize(n);
 
   while (k--) {
     int u, v;
     cin >> u >> v;
     --u, --v;
 
-    adj[u].emplace_back(v);
-    adj[v].emplace_back(u);
+    my_adj[u].emplace_back(v);
+    my_adj[v].emplace_back(u);
 
     dsu.join(u, v);
-  }
-
-  for (int i = 0; i < n; ++i) {
-    my_adj_sz[i] = sz(adj[i]);
   }
 
   vector<Constraint> cons;
@@ -117,14 +115,12 @@ int main() {
     int u, v, w;
     cin >> u >> v >> w;
     --u, --v;
-    int ru = dsu.getRoot(u);
-    int rv = dsu.getRoot(v);
-    if (ru == rv) {
+    if (dsu.getRoot(u) == dsu.getRoot(v)) {
       cons.emplace_back(u, v, w);
     } else {
-      dsu.parent[ru] = rv;
-      adj[u].emplace_back(v);
-      adj[v].emplace_back(u);
+      dsu.join(u, v);
+      other_adj[u].emplace_back(v);
+      other_adj[v].emplace_back(u);
     }
   }
 
