@@ -1,6 +1,6 @@
 #ifndef Local
 #pragma GCC optimize("Ofast,no-stack-protector")
-// #pragma GCC target("popcnt,abm,mmx,avx2")
+#pragma GCC target("popcnt,abm,mmx,avx2")
 #endif
 #include <bits/stdc++.h>
 
