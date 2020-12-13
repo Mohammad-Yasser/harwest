@@ -169,13 +169,20 @@ struct Node {
   }
 };
 
+// The default value must not change an update when merged.
+// I.e. any_update + Update() must be = any_update.
 struct Update {
   int val = OO;
   Update(int val = OO) : val(val) {}
-  Update operator+(const Update& right) const { return right; }
+  Update operator+(const Update& right) const {
+    return right;
+    Update res = *this;
+    res.val = min(res.val, right.val);
+    return res;
+  }
   Node operator()(const Node& node) const {
     Node res = node;
-    res.val = val;
+    res.val = min(res.val, val);
     return res;
   }
 };
