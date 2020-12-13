@@ -1,4 +1,22 @@
 {
+  "CF101086062": {
+    "contest_id": 1023,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/1023/F.cpp",
+    "problem_index": "F",
+    "problem_name": "Mobile Phone Network",
+    "problem_url": "https://codeforces.com/contest/1023/problem/F",
+    "submission_id": "CF101086062",
+    "submission_url": "https://codeforces.com/contest/1023/submission/101086062",
+    "tags": [
+      "dfs and similar",
+      "dsu",
+      "graphs",
+      "trees",
+      "*2600"
+    ],
+    "timestamp": "Dec/13/2020 11:34"
+  },
   "CF101086338": {
     "contest_id": 1023,
     "language": "GNU C++17 (64)",

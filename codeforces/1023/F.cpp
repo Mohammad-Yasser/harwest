@@ -1,7 +1,7 @@
-// #ifndef Local
-// #pragma GCC optimize("Ofast,no-stack-protector")
-// #pragma GCC target("popcnt,abm,mmx,avx2")
-// #endif
+#ifndef Local
+#pragma GCC optimize("Ofast,no-stack-protector")
+#pragma GCC target("popcnt,abm,mmx,avx2")
+#endif
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -13,6 +13,15 @@ using namespace std;
 #define rep(i, l, r) for (int i = l; i < r; ++i)
 typedef long long Long;
 typedef double Double;
+
+// Either globally or in a single class:
+static char buf[200 << 20];
+void* operator new(size_t s) {
+  static size_t i = sizeof buf;
+  assert(s < i);
+  return (void*)&buf[i -= s];
+}
+void operator delete(void*) {}
 
 template <class U, class V>
 istream& operator>>(istream& is, pair<U, V>& p) {
@@ -61,6 +70,7 @@ using Constraint = tuple<int, int, int>;
 
 vector<int> my_adj[N];
 vector<int> other_adj[N];
+vector<vi> all_adj;
 
 int parent[N];
 int depth[N];
@@ -97,7 +107,7 @@ int main() {
   int n, k, m;
   cin >> n >> k >> m;
   dsu.init();
-
+  all_adj.resize(n);
   while (k--) {
     int u, v;
     cin >> u >> v;
@@ -105,6 +115,9 @@ int main() {
 
     my_adj[u].emplace_back(v);
     my_adj[v].emplace_back(u);
+
+    all_adj[u].emplace_back(v);
+    all_adj[v].emplace_back(u);
 
     dsu.join(u, v);
   }
@@ -121,6 +134,9 @@ int main() {
       dsu.join(u, v);
       other_adj[u].emplace_back(v);
       other_adj[v].emplace_back(u);
+
+      all_adj[u].emplace_back(v);
+      all_adj[v].emplace_back(u);
     }
   }
 
