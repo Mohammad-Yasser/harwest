@@ -36,7 +36,7 @@ ostream& operator<<(ostream& os, const vector<T>& v) {
 }
 int n, m;
 
-int cnt[31];
+int cnt[32];
 
 bool valid(const vector<int>& a, const vector<int>& b, int mid) {
   memset(cnt, 0, sizeof cnt);
@@ -44,7 +44,7 @@ bool valid(const vector<int>& a, const vector<int>& b, int mid) {
     ++cnt[b[i]];
   }
   for (int x : a) {
-    for (int i = 30; i >= 0; --i) {
+    for (int i = 31; i >= 0; --i) {
       while (cnt[i] > 0 && (1 << i) <= x) {
         --cnt[i];
         x -= (1 << i);
