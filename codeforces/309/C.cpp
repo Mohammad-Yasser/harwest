@@ -36,23 +36,8 @@ ostream& operator<<(ostream& os, const vector<T>& v) {
 }
 int n, m;
 
-int cnt[31];
-
-bool valid(const vector<int>& a, const vector<int>& b, int mid) {
-  memset(cnt, 0, sizeof cnt);
-  for (int i = 0; i < mid; ++i) {
-    ++cnt[b[i]];
-  }
-  for (int x : a) {
-    for (int i = 30; i >= 0; --i) {
-        if (cnt[i] == 0) continue;
-        int tmp = min(cnt[i], x >> i);
-        cnt[i] -= tmp;
-        x -= tmp << i;
-    }
-  }
-  return *max_element(all(cnt)) == 0;
-}
+const int B = 32;
+vector<int> v[B];
 
 int main() {
   ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
@@ -67,22 +52,33 @@ int main() {
   vector<int> a(n);
   cin >> a;
   sort(rall(a));
-  vector<int> b(m);
-  cin >> b;
-  sort(all(b));
+  while (m--) {
+    int x;
+    cin >> x;
+    v[x].emplace_back(1);
+  }
 
-  int low = 1, high = m, ans = 0;
-  while (low <= high) {
-    int mid = (low + high) / 2;
-    if (valid(a, b, mid)) {
-      low = mid + 1;
-      ans = mid;
-    } else {
-      high = mid - 1;
+  int res = 0;
+  for (int b = 0; b + 1 < B; ++b) {
+    for (int x : a) {
+      if (v[b].empty()) break;
+      if (((x >> b) & 1)) {
+        res += v[b].back();
+        v[b].pop_back();
+      }
+    }
+
+    for (int i = 0; i < sz(v[b]); ++i) {
+      if (i == 0 && (sz(v[b]) & 1)) {
+        v[b + 1].emplace_back(v[b][0]);
+      } else {
+        v[b + 1].emplace_back(v[b][i] + v[b][i + 1]);
+        ++i;
+      }
     }
   }
 
-  cout << ans << endl;
+  cout << res << endl;
 
   return 0;
 }
