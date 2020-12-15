@@ -38,23 +38,23 @@ int n, m;
 
 int cnt[31];
 
-bool valid(const vector<int>& a, const vector<int>& b, int mid) {
+bool valid(vector<int> a, const vector<int>& b, int mid) {
   memset(cnt, 0, sizeof cnt);
   for (int i = 0; i < mid; ++i) {
     ++cnt[b[i]];
   }
-  for (int x : a) {
-      bool first = true;
-    for (int i = 30; i >= 0; --i) {
-        if (cnt[i] == 0) continue;
-        int tmp = min(cnt[i], x >> i);
-        if (first && tmp == 0) return false;
-        first = false;
-        cnt[i] -= tmp;
-        x -= tmp << i;
+  
+  for (int i = 30; i >= 0; --i) {
+    for (int& x : a) {
+      if (cnt[i] == 0) break;
+      int tmp = min(cnt[i], x >> i);
+      cnt[i] -= tmp;
+      x -= tmp << i;
     }
+    if (cnt[i]) return false;
   }
-  return *max_element(all(cnt)) == 0;
+  
+  return true;
 }
 
 int main() {
