@@ -40,12 +40,11 @@ vector<int> values;
 template <class INT, int kMaxSize>
 struct BIT {
   vector<INT> arr;
-  INT size = 0;
   BIT() { arr.resize(kMaxSize); }
 
   INT get(int x) {
     int i = lower_bound(all(values), x) - begin(values);
-    // assert(i != sz(values) && values[i] == x);
+    assert(i != sz(values) && values[i] == x);
     ++i;
     INT r = 0;
     while (i) {
@@ -61,12 +60,9 @@ struct BIT {
     return get(r) - get(l - 1);
   }
 
-  INT getSuffix(int l) { return size - get(l - 1); }
-
   void add(int x, INT val = 1) {
-    size += val;
     int i = lower_bound(all(values), x) - begin(values);
-    // assert(i != sz(values) && values[i] == x);
+    assert(i != sz(values) && values[i] == x);
     ++i;
     while (i <= kMaxSize) {
       arr[i - 1] += val;
@@ -120,7 +116,7 @@ Long solve(const vector<int>& v, int length, int t) {
     }
     res += (rc + 1) * (r - l) + curr_lc;
     if (rmod != 0) {
-      res += bit.getSuffix(length - rmod);
+      res += bit.get(length - rmod, length);
     }
     --r;
   }

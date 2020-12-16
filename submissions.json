@@ -1,4 +1,21 @@
 {
+  "CF101384280": {
+    "contest_id": 309,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces/309/A.cpp",
+    "problem_index": "A",
+    "problem_name": "Morning run",
+    "problem_url": "https://codeforces.com/contest/309/problem/A",
+    "submission_id": "CF101384280",
+    "submission_url": "https://codeforces.com/contest/309/submission/101384280",
+    "tags": [
+      "binary search",
+      "math",
+      "two pointers",
+      "*2000"
+    ],
+    "timestamp": "Dec/16/2020 07:48"
+  },
   "CF101387974": {
     "contest_id": 309,
     "language": "GNU C++17 (64)",
