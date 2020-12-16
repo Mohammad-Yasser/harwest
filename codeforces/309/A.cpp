@@ -35,16 +35,6 @@ ostream& operator<<(ostream& os, const vector<T>& v) {
   return os;
 }
 
-#include <ext/pb_ds/assoc_container.hpp>
-using namespace __gnu_pbds;
-const int RANDOM =
-    chrono::high_resolution_clock::now().time_since_epoch().count();
-struct chash {  // To use most bits rather than just the lowest ones:
-  const uint64_t C = Long(4e18 * acos(0)) | 71;  // large odd number
-  Long operator()(Long x) const { return __builtin_bswap64((x ^ RANDOM) * C); }
-  int operator()(int x) const { return (*this)(Long(x)); }
-};
-__gnu_pbds::gp_hash_table<int, int, chash> ht({}, {}, {}, {}, {1 << 16});
 vector<int> values;
 
 template <class INT, int kMaxSize>
@@ -54,7 +44,8 @@ struct BIT {
   BIT() { arr.resize(kMaxSize); }
 
   INT get(int x) {
-    int i = ht[x];
+    int i = lower_bound(all(values), x) - begin(values);
+    // assert(i != sz(values) && values[i] == x);
     ++i;
     INT r = 0;
     while (i) {
@@ -74,7 +65,8 @@ struct BIT {
 
   void add(int x, INT val = 1) {
     size += val;
-    int i = ht[x];
+    int i = lower_bound(all(values), x) - begin(values);
+    // assert(i != sz(values) && values[i] == x);
     ++i;
     while (i <= kMaxSize) {
       arr[i - 1] += val;
@@ -108,9 +100,6 @@ Long solve(const vector<int>& v, int length, int t) {
   }
   values.emplace_back(length);
   sort(all(values));
-  for (int i = 0; i < sz(values); ++i) {
-    ht[values[i]] = i;
-  }
   int r = sz(conc_v) - 1;
   int l = r;
   Long res = 0;
