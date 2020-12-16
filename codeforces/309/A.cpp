@@ -104,7 +104,7 @@ Long solve(const vector<int>& v, int length, int t) {
   int l = r;
   Long res = 0;
   Long curr_lc = 0;
-  BIT<int, int(4e6 + 3)> bit;
+  BIT<int, int(8e6 + 3)> bit;
   while (r > sz(v) - 1) {
     if (r != sz(conc_v) - 1 && l <= r) {
       bit.add(conc_v[r] % length, -1);
