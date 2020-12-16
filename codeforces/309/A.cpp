@@ -42,17 +42,11 @@ const int RANDOM =
 struct chash {  // To use most bits rather than just the lowest ones:
   const uint64_t C = Long(4e18 * acos(0)) | 71;  // large odd number
   Long operator()(Long x) const { return __builtin_bswap64((x ^ RANDOM) * C); }
-  int operator()(int x) const { return x ^ RANDOM; }
+  int operator()(int x) const { return (*this)(Long(x)); }
 };
-
-template <typename K, typename V>
-using HashTable = __gnu_pbds::gp_hash_table<
-    K, V, chash, equal_to<K>, direct_mask_range_hashing<K>, linear_probe_fn<>,
-    hash_standard_resize_policy<hash_exponential_size_policy<>,
-                                hash_load_check_resize_trigger<true>, true>>;
-
+__gnu_pbds::gp_hash_table<int, int, chash> ht({}, {}, {}, {}, {1 << 16});
 vector<int> values;
-HashTable<int, int> ht;
+
 template <class INT, int kMaxSize>
 struct BIT {
   vector<INT> arr;
@@ -153,7 +147,6 @@ int main() {
 #define endl '\n'
 #endif
 
-  ht.resize(1 << 22);
   int n, l, t;
   cin >> n >> l >> t;
   vector<int> a(n);
